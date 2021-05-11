@@ -29,10 +29,24 @@ export default {
 
 <style scoped>
 header {
-  display: grid;
+  /* display: grid;
+  grid-template: 60px / auto 1fr;
+  align-items: center;
+  background-color: #333; */
+  display: flex;
+  justify-content: space-between;
   grid-template: 60px / auto 1fr;
   align-items: center;
   background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  min-height: 80px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 .app-links {
   justify-self: end;
