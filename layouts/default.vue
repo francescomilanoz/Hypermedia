@@ -1,8 +1,8 @@
 <template>
   <div class="app-container">
-    <TheHeader />
+    <TheHeader @sidenavToggle="displaySidenav = !displaySidenav" />
 
-    <TheSideNav />
+    <TheSideNav :show="displaySidenav" @close="displaySidenav = false" />
 
     <div class="app-content">
       <nuxt />
@@ -13,26 +13,19 @@
 </template>
 
 <script>
-import TheHeader from '~/components/TheHeader'
-import TheFooter from '~/components/TheFooter'
-import TheSideNav from '~/components/TheSideNav'
+import TheHeader from '~/components/navigation/TheHeader'
+import TheSideNav from '~/components/navigation/TheSideNav'
+import TheFooter from '~/components/navigation/TheFooter'
 export default {
   components: {
     TheHeader,
     TheSideNav,
     TheFooter,
   },
-  computed: {
-    isSidebar() {
-      return this.$store.getters['nav/toggleSidebar']
-    },
-  },
-  watch: {
-    $route() {
-      if (process.client && this.isSidebar && window.innerWidth < 768) {
-        this.$store.dispatch('nav/toggleSidebar')
-      }
-    },
+  data() {
+    return {
+      displaySidenav: false,
+    }
   },
 }
 </script>
@@ -43,18 +36,5 @@ body {
   margin: 0;
   height: 100%;
   width: 100%;
-}
-.app-container {
-  height: 100%;
-  position: relative;
-  display: grid;
-  grid-template: auto 1fr auto / 1fr;
-}
-.app-content {
-  min-height: 100vh;
-  padding: 24px;
-  display: grid;
-  align-items: center;
-  justify-items: center;
 }
 </style>
