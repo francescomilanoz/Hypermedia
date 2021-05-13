@@ -1,7 +1,7 @@
 <template>
   <div class="header-container">
     <header class="the-header">
-      <TheSideNavToggle @toggle="$emit('sidenavToggle')" />
+      <TheSidenavToggle @toggle="$emit('sidenavToggle')" />
       <div class="logo">
         <nuxt-link to="/">
           <img src="~/assets/img/logo.png" alt="Hypermood logo" />
@@ -26,12 +26,12 @@
 </template>
 
 <script>
-import TheSideNavToggle from '@/components/Navigation/TheSideNavToggle'
+import TheSidenavToggle from '@/components/Navigation/TheSidenavToggle'
 
 export default {
   name: 'TheHeader',
   components: {
-    TheSideNavToggle,
+    TheSidenavToggle,
   },
 }
 </script>

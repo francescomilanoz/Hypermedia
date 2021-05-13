@@ -2,7 +2,7 @@
   <div class="app-container">
     <TheHeader @sidenavToggle="displaySidenav = !displaySidenav" />
 
-    <TheSideNav :show="displaySidenav" @close="displaySidenav = false" />
+    <TheSidenav :show="displaySidenav" @close="displaySidenav = false" />
 
     <div class="app-content">
       <nuxt />
@@ -13,13 +13,13 @@
 </template>
 
 <script>
-import TheHeader from '~/components/navigation/TheHeader'
-import TheSideNav from '~/components/navigation/TheSideNav'
-import TheFooter from '~/components/navigation/TheFooter'
+import TheHeader from '~/components/Navigation/TheHeader'
+import TheSidenav from '~/components/Navigation/TheSidenav'
+import TheFooter from '~/components/Navigation/TheFooter'
 export default {
   components: {
     TheHeader,
-    TheSideNav,
+    TheSidenav,
     TheFooter,
   },
   data() {
