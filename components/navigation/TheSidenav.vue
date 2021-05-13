@@ -4,14 +4,14 @@
     <transition name="slide-side">
       <div v-if="show" class="sidenav">
         <ul class="nav-list" @click="$emit('close')">
-          <li class="nav-item"><nuxt-link to="/areas">Areas</nuxt-link></li>
+          <li class="nav-item"><nuxt-link to="/areas">AREAS</nuxt-link></li>
           <li class="nav-item">
-            <nuxt-link to="/services">Services</nuxt-link>
+            <nuxt-link to="/services">SERVICES</nuxt-link>
           </li>
-          <li class="nav-item"><nuxt-link to="/people">People</nuxt-link></li>
-          <li class="nav-item"><nuxt-link to="/about">About</nuxt-link></li>
+          <li class="nav-item"><nuxt-link to="/people">PEOPLE</nuxt-link></li>
+          <li class="nav-item"><nuxt-link to="/about">ABOUT</nuxt-link></li>
           <li class="nav-item">
-            <nuxt-link to="/contact-us">Contact Us</nuxt-link>
+            <nuxt-link to="/contact-us">CONTACT US</nuxt-link>
           </li>
         </ul>
       </div>
@@ -80,13 +80,13 @@ export default {
 
 .nav-item a {
   text-decoration: none;
-  color: black;
+  color: var(--blue);
   font-size: 1.5rem;
 }
 
 .nav-item a:hover,
 .nav-item a:active,
 .nav-item a.nuxt-link-active {
-  color: red;
+  text-decoration: underline;
 }
 </style>

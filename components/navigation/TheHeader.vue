@@ -3,19 +3,21 @@
     <header class="the-header">
       <TheSideNavToggle @toggle="$emit('sidenavToggle')" />
       <div class="logo">
-        <nuxt-link to="/">WD BLOG</nuxt-link>
+        <nuxt-link to="/">
+          <img src="~/assets/img/logo.png" alt="Hypermood logo" />
+        </nuxt-link>
       </div>
       <div class="spacer"></div>
       <div class="navigation-items">
         <ul class="nav-list">
-          <li class="nav-item"><nuxt-link to="/areas">Areas</nuxt-link></li>
+          <li class="nav-item"><nuxt-link to="/areas">AREAS</nuxt-link></li>
           <li class="nav-item">
-            <nuxt-link to="/services">Services</nuxt-link>
+            <nuxt-link to="/services">SERVICES</nuxt-link>
           </li>
-          <li class="nav-item"><nuxt-link to="/people">People</nuxt-link></li>
-          <li class="nav-item"><nuxt-link to="/about">About</nuxt-link></li>
+          <li class="nav-item"><nuxt-link to="/people">PEOPLE</nuxt-link></li>
+          <li class="nav-item"><nuxt-link to="/about">ABOUT</nuxt-link></li>
           <li class="nav-item">
-            <nuxt-link to="/contact-us">Contact Us</nuxt-link>
+            <nuxt-link to="/contact-us">CONTACT US</nuxt-link>
           </li>
         </ul>
       </div>
@@ -37,6 +39,7 @@ export default {
 <style scoped>
 .header-container {
   height: 60px;
+  top: 0;
 }
 
 .the-header {
@@ -46,20 +49,18 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: black;
+  background-color: rgb(255, 255, 255, 0.9);
   z-index: 100;
   box-sizing: border-box;
   padding: 0 20px;
+  top: 0;
 }
 
-.logo {
+.logo img {
   margin: 0 10px;
-  font-size: 1.3rem;
-}
-
-.logo a {
-  text-decoration: none;
-  color: white;
+  float: left;
+  height: 50px;
+  opacity: 100%;
 }
 
 .spacer {
@@ -89,12 +90,12 @@ export default {
 
 .nav-item a {
   text-decoration: none;
-  color: white;
+  color: var(--blue);
 }
 
 .nav-item a:hover,
 .nav-item a:active,
 .nav-item a.nuxt-link-active {
-  color: red;
+  text-decoration: underline;
 }
 </style>
