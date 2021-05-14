@@ -33,27 +33,9 @@ export default {
 </script>
 
 <style scoped>
-.post-preview {
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 2px #ccc;
-  background-color: white;
-  width: 90%;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-@media (min-width: 850px) {
-  .post-preview {
-    width: 400px;
-    margin: 10px;
-  }
-}
 .container {
   width: 100%;
-  height: 300px;
+  height: 400px;
   position: relative;
   background-position: center;
   background-size: cover;
@@ -62,7 +44,7 @@ a {
 
 .bar-container {
   width: 100%;
-  height: 300px;
+  height: 400px;
   position: relative;
   background-position: center;
   background-size: cover;
@@ -70,7 +52,7 @@ a {
 }
 .patina {
   width: 100%;
-  height: 300px;
+  height: 400px;
   position: absolute;
   top: 0;
   left: 0;
@@ -80,14 +62,21 @@ a {
 }
 
 .bar-content {
-  width: 100%;
+  width: 30%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  padding: 10px;
+  padding-left: 10%;
+  padding-top: 100px;
   text-align: left;
   color: white;
   z-index: +2;
+}
+
+@media (max-width: 640px) {
+  .bar-content {
+    width: 70%;
+  }
 }
 </style>

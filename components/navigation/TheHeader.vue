@@ -49,7 +49,7 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: rgb(255, 255, 255, 0.9);
+  background-color: rgb(255, 255, 255, 0.85);
   z-index: 100;
   box-sizing: border-box;
   padding: 0 20px;
