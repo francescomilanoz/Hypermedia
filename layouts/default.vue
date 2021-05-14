@@ -37,4 +37,9 @@ body {
   height: 100%;
   width: 100%;
 }
+
+.app-container {
+  position: relative;
+  padding-bottom: 100px;
+}
 </style>

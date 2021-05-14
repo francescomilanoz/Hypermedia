@@ -1,20 +1,28 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
-        <ul class="list-inline mb-2">
-          <li class="list-inline-item"><a href="#!">About</a></li>
-          <li class="list-inline-item">⋅</li>
-          <li class="list-inline-item"><a href="#!">Contact</a></li>
-          <li class="list-inline-item">⋅</li>
-          <li class="list-inline-item"><a href="#!">Terms of Use</a></li>
-          <li class="list-inline-item">⋅</li>
-          <li class="list-inline-item"><a href="#!">Privacy Policy</a></li>
-        </ul>
-        <p class="text-muted small mb-4 mb-lg-0">
-          © Your Website 2021. All Rights Reserved.
-        </p>
-      </div>
+  <div id="theFooter">
+    <div id="footerLogo">
+      <nuxt-link to="/">
+        <img src="~/assets/img/textlogo.png" alt="Hypermood text logo" />
+      </nuxt-link>
+    </div>
+    <div id="footerList">
+      <ul>
+        <li>
+          <nuxt-link to="/">
+            <img src="~/assets/img/icon-insta.png" alt="Instagram link" />
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/"
+            ><img src="~/assets/img/icon-facebook.png" alt="Facebook link" />
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/"
+            ><img src="~/assets/img/icon-twitter.png" alt="Twitter link" />
+          </nuxt-link>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -24,68 +32,77 @@ export default {}
 </script>
 
 <style scoped>
-.container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.row {
+#theFooter {
+  position: absolute;
   display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-}
-
-.col-lg-6 {
-  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 0;
   width: 100%;
+  background-color: #ffff;
+  color: white;
+  text-align: center;
+}
+
+#footerList li {
+  display: inline;
   padding-right: 15px;
-  padding-left: 15px;
+  height: 50px;
 }
 
-.h-100 {
-  height: 100% !important;
-}
-
-.text-center {
-  text-align: center !important;
-}
-
-@media (min-width: 992px) {
-  .text-lg-left {
-    text-align: left !important;
+@media (max-width: 400px) {
+  #footerList li {
+    display: inline;
+    padding-right: 10px;
+    height: 50px;
   }
 }
 
-.my-auto {
-  margin-top: auto !important;
+@media (max-width: 310px) {
+  #footerList li {
+    display: inline;
+    padding-right: 5px;
+    height: 50px;
+  }
 }
 
-.mb-2 {
-  margin-bottom: 0.5rem !important;
+#footerList li img {
+  height: 30px;
 }
 
-.mb-4 {
-  margin-bottom: 1.5rem !important;
+@media (max-width: 310px) {
+  #footerList li img {
+    height: 22px;
+  }
 }
 
-.list-inline {
-  padding-left: 0;
-  list-style: none;
+#footerLogo {
+  margin: 0 25px;
+  float: left;
+  opacity: 100%;
 }
 
-.text-muted {
-  color: #6c757d !important;
+@media (max-width: 400px) {
+  #footerLogo {
+    margin: 0 10px;
+    float: left;
+    opacity: 100%;
+  }
 }
 
-small {
-  font-size: 80%;
+#footerLogo img {
+  height: 50px;
 }
 
-.mb-lg-0 {
-  margin-bottom: 0 !important;
+@media (max-width: 400px) {
+  #footerLogo img {
+    height: 40px;
+  }
+}
+
+@media (max-width: 310px) {
+  #footerLogo img {
+    height: 30px;
+  }
 }
 </style>
