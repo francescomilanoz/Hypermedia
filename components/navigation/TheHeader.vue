@@ -63,6 +63,15 @@ export default {
   opacity: 100%;
 }
 
+@media (max-width: 400px) {
+  .logo img {
+    margin: 0 10px;
+    float: left;
+    height: 40px;
+    opacity: 100%;
+  }
+}
+
 .spacer {
   flex: 1;
 }

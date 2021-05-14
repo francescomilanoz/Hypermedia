@@ -101,4 +101,31 @@ export default {
 .nav-item a.nuxt-link-active {
   text-decoration: underline;
 }
+
+@media (max-width: 350px) {
+  .logo img {
+    margin: 0px 20px 20px 0px;
+    float: left;
+    height: 40px;
+    opacity: 100%;
+  }
+
+  .sidenav {
+    height: 100%;
+    width: 200px;
+    background-color: white;
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 30px;
+  }
+
+  .nav-item a {
+    text-decoration: none;
+    color: var(--blue);
+    font-size: 1rem;
+  }
+}
 </style>

@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 50%;
+  height: 40%;
   width: 35px;
   cursor: pointer;
 }
