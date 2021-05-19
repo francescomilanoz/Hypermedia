@@ -70,14 +70,11 @@ function defineDatabaseStructure() {
     }
   )
   Person.hasMany(RoleArea, { foreignKey: 'person_id' })
-  db._tables = {
-    RoleArea,
-    Person,
-  }
   Area.hasMany(RoleArea, { foreignKey: 'area_id' })
   Service.hasMany(RoleService, { foreignKey: 'service_id' })
-
   Person.hasMany(RoleService, { foreignKey: 'person_id' })
+  RoleService.belongsTo(Person)
+  RoleService.belongsTo(Service)
   Area.hasMany(Service, { foreignKey: 'area_id' })
 
   db._tables = {
@@ -136,15 +133,23 @@ async function insertFakeData() {
   const firstRoleService = await RoleService.create({
     role: 'ciao',
   })
+  const secondRoleArea = await RoleArea.create({
+    role: 'Responsibile2',
+  })
+  const secondRoleService = await RoleService.create({
+    role: 'ciao2',
+  })
   await firstArea.addService(secondService.id)
   await firstArea.addService(firstService.id)
 
   await firstService.addRoleService(firstRoleService.id)
   await firstArea.addRoleArea(firstRoleArea.id)
+  await secondService.addRoleService(secondRoleService.id)
+  await firstArea.addRoleArea(secondRoleArea.id)
   await firstPerson.addRoleService(firstRoleService.id)
   await firstPerson.addRoleArea(firstRoleArea.id)
-  await secondPerson.addRoleService(firstRoleService.id)
-  await secondPerson.addRoleArea(firstRoleArea.id)
+  await secondPerson.addRoleService(secondRoleService.id)
+  await secondPerson.addRoleArea(secondRoleArea.id)
 }
 /**
  * Function to initialize the database. This is exported and called in the main api.js file

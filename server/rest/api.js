@@ -28,18 +28,45 @@ async function init() {
     return res.json(roleareas)
   })
   app.get('/roleservices', async (req, res) => {
-    const roleservices = await RoleService.findAll()
+    const roleservices = await RoleService.findAll({
+      include: [{ model: Person }, { model: Service }],
+    })
     return res.json(roleservices)
   })
-  // API to get an article by ID.
-  // This one will return also the comments
+  app.get('/roleservicesbyrole/:role', async (req, res) => {
+    const { role } = req.params
+    const roleservices = await RoleService.findAll({
+      where: { role },
+      include: [{ model: Person }, { model: Service }],
+    })
+    return res.json(roleservices)
+  })
+  // API to get a person by ID.
   app.get('/people/:id', async (req, res) => {
     const { id } = req.params
     const person = await Person.findOne({
       where: { id },
-      include: { model: RoleArea, RoleService }, // -> this is the way we "include" also comments inside Articles
+      include: [{ model: RoleArea }, { model: RoleService }],
     })
     return res.json(person)
+  })
+  // API to get a service by ID.
+  app.get('/services/:id', async (req, res) => {
+    const { id } = req.params
+    const service = await Service.findOne({
+      where: { id },
+      include: [{ model: RoleService }, { model: Area }],
+    })
+    return res.json(service)
+  })
+  // API to get an area by ID.
+  app.get('/areas/:id', async (req, res) => {
+    const { id } = req.params
+    const area = await Area.findOne({
+      where: { id },
+      include: [{ model: RoleArea }, { model: Service }],
+    })
+    return res.json(area)
   })
 }
 
