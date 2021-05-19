@@ -9,27 +9,37 @@ async function init() {
   // Call the init function that returns the Database
   const db = await initializeDatabase()
   // Let's extract all the objects we need to perform queries inside the endpoints
-  const { Article, Comment } = db._tables
+  const { Area, Service, Person, RoleArea, RoleService } = db._tables
   // API to get all the articles
-  app.get('/articles', async (req, res) => {
-    const articles = await Article.findAll()
-    return res.json(articles)
+  app.get('/areas', async (req, res) => {
+    const areas = await Area.findAll()
+    return res.json(areas)
+  })
+  app.get('/services', async (req, res) => {
+    const services = await Service.findAll()
+    return res.json(services)
+  })
+  app.get('/people', async (req, res) => {
+    const people = await Person.findAll()
+    return res.json(people)
+  })
+  app.get('/roleareas', async (req, res) => {
+    const roleareas = await RoleArea.findAll()
+    return res.json(roleareas)
+  })
+  app.get('/roleservices', async (req, res) => {
+    const roleservices = await RoleService.findAll()
+    return res.json(roleservices)
   })
   // API to get an article by ID.
   // This one will return also the comments
-  app.get('/article/:id', async (req, res) => {
+  app.get('/people/:id', async (req, res) => {
     const { id } = req.params
-    const article = await Article.findOne({
+    const person = await Person.findOne({
       where: { id },
-      include: { model: Comment }, // -> this is the way we "include" also comments inside Articles
+      include: { model: RoleArea, RoleService }, // -> this is the way we "include" also comments inside Articles
     })
-    return res.json(article)
-  })
-  // This one is just an example
-  app.get('/ad', (req, res) => {
-    return res.json({
-      url: 'https://wordstream-files-prod.s3.amazonaws.com/s3fs-public/styles/simple_image/public/images/media/images/google-display-ads-example-2-final.png?oV7qevVB2XtFyF_O64TG6L27AFM3M2oL&itok=TBfuuTM_',
-    })
+    return res.json(person)
   })
 }
 

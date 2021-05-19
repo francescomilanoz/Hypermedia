@@ -14,37 +14,78 @@ const db = new Sequelize('postgres://user:user@localhost:5432/hypermood')
  * Function to define the structure of the database
  */
 function defineDatabaseStructure() {
-  const Article = db.define(
-    'article',
+  const Area = db.define(
+    'area',
     {
-      title: DataTypes.STRING,
-      content: DataTypes.TEXT,
-      summary: DataTypes.STRING,
+      name: DataTypes.STRING,
+      shortDescription: DataTypes.TEXT,
+      description: DataTypes.TEXT,
       image: DataTypes.STRING,
     },
     {
       underscored: true,
     }
   )
-  const Comment = db.define(
-    'comment',
+  const Service = db.define(
+    'service',
     {
-      content: DataTypes.TEXT,
-      image: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
+      name: DataTypes.STRING,
+      shortDescription: DataTypes.TEXT,
+      description: DataTypes.TEXT,
+      image: DataTypes.STRING,
     },
     {
       underscored: true,
     }
   )
-  // Creating the 1 -> N association between Article and Comment
-  // More on association: https://sequelize.org/master/manual/assocs.html
-  Article.hasMany(Comment, { foreignKey: 'article_id' })
+  const Person = db.define(
+    'person',
+    {
+      name: DataTypes.STRING,
+      email: DataTypes.STRING,
+      description: DataTypes.TEXT,
+      image: DataTypes.STRING,
+    },
+    {
+      underscored: true,
+    }
+  )
+  const RoleArea = db.define(
+    'roleArea',
+    {
+      role: DataTypes.STRING,
+    },
+    {
+      underscored: true,
+    }
+  )
+
+  const RoleService = db.define(
+    'roleService',
+    {
+      role: DataTypes.STRING,
+    },
+    {
+      underscored: true,
+    }
+  )
+  Person.hasMany(RoleArea, { foreignKey: 'person_id' })
   db._tables = {
-    Article,
-    Comment,
+    RoleArea,
+    Person,
+  }
+  Area.hasMany(RoleArea, { foreignKey: 'area_id' })
+  Service.hasMany(RoleService, { foreignKey: 'service_id' })
+
+  Person.hasMany(RoleService, { foreignKey: 'person_id' })
+  Area.hasMany(Service, { foreignKey: 'area_id' })
+
+  db._tables = {
+    Area,
+    Service,
+    Person,
+    RoleService,
+    RoleArea,
   }
 }
 
@@ -52,34 +93,58 @@ function defineDatabaseStructure() {
  * Function to insert some fake info in the database
  */
 async function insertFakeData() {
-  const { Article, Comment } = db._tables
+  const { Area, Service, Person, RoleArea, RoleService } = db._tables
   // Create the first Article
-  const firstArticle = await Article.create({
-    title: 'Such good article',
-    summary: 'This is the summary of the first good article',
-    content: 'The content of the first article',
-    image:
-      'https://www.meme-arsenal.com/memes/98c0fb217e3b35d20518647668cea5dc.jpg',
-  })
-  await Article.create({
-    title: 'Why Fallout 76 is not broken',
-    summary: '..no really... why?',
-    content:
-      'After more than 50 hours plundering the irradiated wasteland of Fallout 76, the greatest mystery still lingering is who this mutated take on Fallout is intended for. Like many of Vault-Tec’s underground bunkers, Bethesda’s multiplayer riff on its post-nuclear RPG series is an experiment gone awry. There are bright spots entangled in this mass of frustratingly buggy and sometimes conflicting systems, but what fun I was able to salvage from the expansive but underpopulated West Virginia map was consistently overshadowed by the monotony of its gathering and crafting treadmill.\nOn the surface, Fallout 76 is another dose of Bethesda’s tried-and-true open-world RPG formula on a larger-than-ever map that’s begging to be explored. As you emerge from Vault 76 you’ll start in a relatively peaceful forest and venture out into more dangerous pockets of the irradiated wasteland. My favorite is traveling the lengths of the Cranberry Bog, where the pinkish-red fields are seemingly inviting from afar but turn out to be full of a snaking system of trenches and alien forests that hide the worst horrors of the wasteland, but there are many more.',
+  const firstArea = await Area.create({
+    name: 'Database',
+    shortDescription: 'Prova',
+    description: 'Prova',
     image:
       'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
   })
-  const comment1 = await Comment.create({
-    content: 'Great article! Keep posting',
+  const firstService = await Service.create({
+    name: 'SQL',
+    shortDescription: 'ciao',
+    description: 'ciao',
+    image:
+      'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
   })
-  const comment2 = await Comment.create({
-    content: 'Such Doge.',
+  const secondService = await Service.create({
+    name: 'eee',
+    shortDescription: '2',
+    description: '2',
+    image:
+      'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
   })
+  const firstPerson = await Person.create({
+    name: 'ciao',
+    email: 'ciao',
+    description: 'ciao',
+    image:
+      'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
+  })
+  const secondPerson = await Person.create({
+    name: 'ciao2',
+    email: 'ciao2',
+    description: 'ciao2',
+    image:
+      'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
+  })
+  const firstRoleArea = await RoleArea.create({
+    role: 'Responsibile',
+  })
+  const firstRoleService = await RoleService.create({
+    role: 'ciao',
+  })
+  await firstArea.addService(secondService.id)
+  await firstArea.addService(firstService.id)
 
-  // Adding the first comment to the first article
-  await firstArticle.addComment(comment1.id)
-  // Adding the second comment to the first article
-  await firstArticle.addComment(comment2.id)
+  await firstService.addRoleService(firstRoleService.id)
+  await firstArea.addRoleArea(firstRoleArea.id)
+  await firstPerson.addRoleService(firstRoleService.id)
+  await firstPerson.addRoleArea(firstRoleArea.id)
+  await secondPerson.addRoleService(firstRoleService.id)
+  await secondPerson.addRoleArea(firstRoleArea.id)
 }
 /**
  * Function to initialize the database. This is exported and called in the main api.js file
