@@ -39,6 +39,7 @@ export default {
   position: relative;
   background-position: center;
   background-size: cover;
+  padding: 0px;
   top: -60px; /* Same size as header - It makes it go under it from the beginning */
 }
 

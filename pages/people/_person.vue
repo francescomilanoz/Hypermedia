@@ -2,7 +2,7 @@
   <div>
     <Cover
       :title="person2.name"
-      :preview-text="person2.roleServices[0].service_id"
+      :preview-text="ciao"
       thumbnail="https://www.lago.it/wp-content/uploads/2015/03/luoghi-di-lavoro-accoglienti_L2R3272_01.jpg"
     />
   </div>
