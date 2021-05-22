@@ -1,0 +1,93 @@
+<template>
+  <div>
+    <div class="service-container">
+      <div class="service-grid">
+        <div
+          v-for="service in services"
+          :key="service.service_id"
+          class="service-element"
+        >
+          <div>
+            <ServicePreview
+              :id="service.service_id"
+              :name="service.name"
+              :preview-text="service.preview"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import ServicePreview from '~/components/Services/ServicePreview'
+export default {
+  name: 'ServicesPreviewList',
+  components: {
+    ServicePreview,
+  },
+  props: {
+    services: {
+      type: Array,
+      required: true,
+    },
+  },
+}
+</script>
+
+<style scoped>
+.service-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-grid {
+  display: grid;
+  grid-gap: 0.8rem;
+  max-width: 1400px;
+  margin: 1rem auto;
+}
+
+.service-element {
+  padding: 1rem;
+  width: 80%;
+  margin: auto;
+}
+
+/* Screen larger than 550px? 2 column*/
+@media (min-width: 550px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* Adds a margin to reach the beginning of the word (same size as image before area name + margin) */
+  .service-container {
+    margin-left: 4rem;
+  }
+  .service-element {
+    width: auto;
+    margin: 0;
+  }
+}
+
+/* Screen larger than 800px? 3 column */
+@media (min-width: 800px) {
+  .service-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Screen larger than 1100px? 4 column */
+@media (min-width: 1100px) {
+  .service-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Screen larger than 1300px? 5 columns */
+@media (min-width: 1300px) {
+  .service-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+</style>

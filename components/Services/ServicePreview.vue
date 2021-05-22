@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'Service',
+  name: 'ServicePreview',
   props: {
     id: {
       type: String,
