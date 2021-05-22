@@ -56,13 +56,14 @@ export default {
 }
 
 /* Screen larger than 550px? 2 column*/
-@media (min-width: 550px) {
+@media (min-width: 600px) {
   .service-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   /* Adds a margin to reach the beginning of the word (same size as image before area name + margin) */
   .service-container {
-    margin-left: 4rem;
+    margin-left: 10%;
+    margin-right: 10%;
   }
   .service-element {
     width: auto;
@@ -71,21 +72,21 @@ export default {
 }
 
 /* Screen larger than 800px? 3 column */
-@media (min-width: 800px) {
+@media (min-width: 950px) {
   .service-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 /* Screen larger than 1100px? 4 column */
-@media (min-width: 1100px) {
+@media (min-width: 1200px) {
   .service-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
 /* Screen larger than 1300px? 5 columns */
-@media (min-width: 1300px) {
+@media (min-width: 1550px) {
   .service-grid {
     grid-template-columns: repeat(5, 1fr);
   }
