@@ -4,7 +4,7 @@
       <TheSidenavToggle @toggle="$emit('sidenavToggle')" />
       <div class="logo">
         <nuxt-link to="/">
-          <img src="~/assets/img/logo.png" alt="Hypermood logo" />
+          <img src="~/assets/img/Logov2.svg" alt="Hypermood logo" />
         </nuxt-link>
       </div>
       <div class="spacer"></div>
@@ -61,6 +61,7 @@ export default {
   float: left;
   height: 50px;
   opacity: 100%;
+  padding-top: 5px;
 }
 
 @media (max-width: 400px) {

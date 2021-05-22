@@ -134,6 +134,20 @@ async function insertFakeData() {
     image:
       'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
   })
+  const Person4 = await Person.create({
+    name: 'ciao2',
+    email: 'ciao2',
+    description: 'ciao2',
+    image:
+      'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
+  })
+  const Person5 = await Person.create({
+    name: 'ciao2',
+    email: 'ciao2',
+    description: 'ciao2',
+    image:
+      'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
+  })
   const firstRoleArea = await RoleArea.create({
     role: 'Responsibile',
   })
@@ -159,6 +173,10 @@ async function insertFakeData() {
   await secondPerson.addRoleArea(secondRoleArea.id)
   await thirdPerson.addRoleService(secondRoleService.id)
   await thirdPerson.addRoleArea(secondRoleArea.id)
+  await Person4.addRoleService(secondRoleService.id)
+  await Person4.addRoleArea(secondRoleArea.id)
+  await Person5.addRoleService(secondRoleService.id)
+  await Person5.addRoleArea(secondRoleArea.id)
 }
 /**
  * Function to initialize the database. This is exported and called in the main api.js file

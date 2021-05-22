@@ -40,11 +40,11 @@ export default {}
 .mapAndTextContainer {
   margin-top: 100px;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 100px;
   display: flex;
   padding-left: 10%;
   padding-right: 10%;
-  background-color: #e7f5fc;
+  background-color: var(--blue);
   align-items: center;
 }
 .containerColumn {
@@ -73,14 +73,14 @@ export default {}
 }
 h3 {
   font-size: 30px;
-  color: #55ccd9;
+  color: white;
 }
 #text {
-  color: #7a8d9f;
+  color: white;
   font-size: 20px;
 }
 p {
-  color: #7a8d9f;
+  color: white;
   font-size: 20px;
 }
 #button {
@@ -90,13 +90,13 @@ p {
   border-radius: 30px;
   border-width: 0px;
   cursor: pointer;
-  background: #55ccd9;
-  color: white;
+  background: white;
+  color: var(--blue);
   font-weight: bold;
   margin-top: 20px;
 }
 #linkButton {
-  color: white;
+  color: var(--blue);
   font-weight: bold;
   text-decoration: none;
 }

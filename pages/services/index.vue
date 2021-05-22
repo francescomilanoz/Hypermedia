@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app-container">
     <Cover
       title="Services"
       preview-text="Founded in Italy in 2000, today Hypermood is a multinational group that focuses its consulting offering on hard technology challenges with large-scale business impact in databases, networking, machine learning and security."
@@ -192,5 +192,8 @@ a {
   .service-grid {
     grid-template-columns: repeat(5, 1fr);
   }
+}
+.app-container {
+  padding-bottom: 80px;
 }
 </style>

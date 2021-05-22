@@ -60,7 +60,7 @@ export default {
 }
 #item-1 {
   background-color: white;
-  border-right: 1px solid #7a8d9f;
+  border-right: 1px solid var(--blue);
   padding-bottom: 30px;
   padding-right: 5%;
 }
@@ -77,10 +77,10 @@ export default {
   }
 }
 h3 {
-  color: #55ccd9;
+  color: var(--blue);
 }
 #text {
-  color: #7a8d9f;
+  color: var(--blue);
   font-size: 20px;
 }
 </style>

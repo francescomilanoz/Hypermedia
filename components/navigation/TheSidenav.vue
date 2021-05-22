@@ -5,7 +5,7 @@
       <div v-if="show" class="sidenav">
         <div class="logo">
           <nuxt-link to="/">
-            <img src="~/assets/img/textlogo.png" alt="Hypermood text logo" />
+            <img src="~/assets/img/Logov2-nome.svg" alt="Hypermood text logo" />
           </nuxt-link>
         </div>
         <ul class="nav-list" @click="$emit('close')">
@@ -40,7 +40,7 @@ export default {
 .logo img {
   margin: 0px 20px 20px 0px;
   float: left;
-  height: 50px;
+  height: 35px;
   opacity: 100%;
 }
 
@@ -106,7 +106,7 @@ export default {
   .logo img {
     margin: 0px 20px 20px 0px;
     float: left;
-    height: 40px;
+    height: 20px;
     opacity: 100%;
   }
 

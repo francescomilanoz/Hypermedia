@@ -26,7 +26,7 @@
     <br />
     <h2>Or use our contacts:</h2>
     <p>Tel.: +39 347 2049382</p>
-    <p>Mail: customer@hypermood.it</p>
+    <p id="last-element">Mail: customer@hypermood.it</p>
   </div>
 </template>
 
@@ -36,7 +36,7 @@ export default {}
 
 <style scoped>
 h2 {
-  color: #55ccd9;
+  color: var(--blue);
   padding-left: 10%;
   padding-right: 5%;
 }
@@ -52,34 +52,34 @@ textarea {
   min-width: 185px;
   min-height: 25px;
   border-radius: 6px;
-  border-color: rgba(85, 204, 217, 0.5);
+  border-color: var(--blue);
   box-shadow: none;
   border-width: 1px;
   border-style: solid;
   padding: 8px 20px 8px 20px;
-  color: #55ccd9;
+  color: var(--blue);
   resize: none;
 }
 
 textarea:focus,
 input:focus {
-  outline-color: rgba(85, 204, 217, 1);
+  outline-color: var(--blue);
 }
 
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #bce0fd;
+  color: var(--blue);
   opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: #bce0fd;
+  color: var(--blue);
 }
 
 ::-ms-input-placeholder {
   /* Microsoft Edge */
-  color: #bce0fd;
+  color: var(--blue);
 }
 
 #submit {
@@ -89,15 +89,19 @@ input:focus {
   border-radius: 30px;
   border-width: 0px;
   cursor: pointer;
-  background: #55ccd9;
+  background: var(--blue);
   color: white;
   font-weight: bold;
 }
 
 p {
   padding-left: 10%;
-  color: #7a8d9f;
+  color: var(--blue);
   font-size: 15px;
   padding-right: 5%;
+}
+#last-element {
+  padding-bottom: 100px;
+  margin-bottom: 0px;
 }
 </style>

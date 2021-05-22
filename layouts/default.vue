@@ -40,6 +40,5 @@ body {
 
 .app-container {
   position: relative;
-  padding-bottom: 100px;
 }
 </style>

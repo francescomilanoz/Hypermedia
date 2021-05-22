@@ -2,24 +2,24 @@
   <div id="theFooter">
     <div id="footerLogo">
       <nuxt-link to="/">
-        <img src="~/assets/img/textlogo.png" alt="Hypermood text logo" />
+        <img src="~/assets/img/logov2-nome.svg" alt="Hypermood text logo" />
       </nuxt-link>
     </div>
     <div id="footerList">
       <ul>
         <li>
           <nuxt-link to="/">
-            <img src="~/assets/img/icon-insta.png" alt="Instagram link" />
+            <img src="~/assets/img/IG.svg" alt="Instagram link" />
           </nuxt-link>
         </li>
         <li>
           <nuxt-link to="/"
-            ><img src="~/assets/img/icon-facebook.png" alt="Facebook link" />
+            ><img src="~/assets/img/FB.svg" alt="Facebook link" />
           </nuxt-link>
         </li>
         <li>
           <nuxt-link to="/"
-            ><img src="~/assets/img/icon-twitter.png" alt="Twitter link" />
+            ><img src="~/assets/img/TW.svg" alt="Twitter link" />
           </nuxt-link>
         </li>
       </ul>
@@ -67,12 +67,12 @@ export default {}
 }
 
 #footerList li img {
-  height: 30px;
+  height: 25px;
 }
 
 @media (max-width: 310px) {
   #footerList li img {
-    height: 22px;
+    height: 17px;
   }
 }
 
@@ -91,18 +91,18 @@ export default {}
 }
 
 #footerLogo img {
-  height: 50px;
+  height: 30px;
 }
 
 @media (max-width: 400px) {
   #footerLogo img {
-    height: 40px;
+    height: 20px;
   }
 }
 
 @media (max-width: 310px) {
   #footerLogo img {
-    height: 30px;
+    height: 15px;
   }
 }
 </style>
