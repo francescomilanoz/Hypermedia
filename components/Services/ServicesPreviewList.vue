@@ -55,7 +55,7 @@ export default {
   margin: auto;
 }
 
-/* Screen larger than 550px? 2 column*/
+/* Screen larger than 600px? 2 column*/
 @media (min-width: 600px) {
   .service-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -71,21 +71,21 @@ export default {
   }
 }
 
-/* Screen larger than 800px? 3 column */
+/* Screen larger than 950px? 3 column */
 @media (min-width: 950px) {
   .service-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* Screen larger than 1100px? 4 column */
+/* Screen larger than 1200px? 4 column */
 @media (min-width: 1200px) {
   .service-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-/* Screen larger than 1300px? 5 columns */
+/* Screen larger than 1550px? 5 columns */
 @media (min-width: 1550px) {
   .service-grid {
     grid-template-columns: repeat(5, 1fr);
