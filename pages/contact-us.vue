@@ -26,7 +26,10 @@
     <br />
     <h2>Or use our contacts:</h2>
     <p>Tel.: +39 347 2049382</p>
-    <p id="last-element">Mail: customer@hypermood.it</p>
+    <p id="last-element">
+      Mail:
+      <a href="mailto:customer@hypermood.it">customer@hypermood.it</a>
+    </p>
   </div>
 </template>
 
