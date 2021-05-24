@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="'/person/' + id">
+  <nuxt-link :to="link + id">
     <div class="container">
       <div
         class="img-container"
@@ -24,6 +24,10 @@ export default {
     },
     id: {
       type: Number,
+      required: true,
+    },
+    link: {
+      type: String,
       required: true,
     },
   },
