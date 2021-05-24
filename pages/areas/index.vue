@@ -10,7 +10,7 @@
         :id="area.id"
         :name="area.name"
         :logo="area.image"
-        :short-description="area.shortDescription"
+        :description="area.description"
       />
     </div>
   </div>

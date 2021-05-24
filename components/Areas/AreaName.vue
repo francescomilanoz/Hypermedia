@@ -4,7 +4,7 @@
       ><div class="area-container">
         <img class="area-logo" :src="logo" :alt="name" />
         <h1 class="area-name">{{ name }}</h1>
-        <p class="area-short-description">{{ shortDescription }}</p>
+        <p class="area-description">{{ description }}</p>
       </div></nuxt-link
     >
   </div>
@@ -26,7 +26,7 @@ export default {
       type: String,
       required: true,
     },
-    shortDescription: {
+    description: {
       type: String,
       default: '',
       required: false,
@@ -46,6 +46,8 @@ a {
 }
 
 .area-container {
+  padding-left: 10%;
+  padding-right: 10%;
   max-width: 1550px;
   margin: auto;
 }
@@ -64,19 +66,26 @@ a {
   margin: -6px 24px 0 32px;
 }
 
-.area-short-description {
+.area-description {
   color: var(--blue);
   font-size: 20px;
   grid-template-columns: auto;
   word-wrap: normal;
   padding-left: 5.2em;
   padding-bottom: 15px;
-  max-width: 800px;
 }
 
-@media (max-width: 440px) {
-  .area-short-description {
+@media (max-width: 600px) {
+  .area-description {
     padding-top: 25px;
+    padding-left: 1.8em;
+  }
+}
+
+@media (max-width: 335px) {
+  .area-container {
+    padding-left: 1%;
+    padding-right: 1%;
   }
 }
 </style>

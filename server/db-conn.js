@@ -97,7 +97,7 @@ async function insertFakeData() {
     shortDescription:
       'Services to speed up, enhance, scale your databases. Always up to date with the most modern SQL and noSQL standards.',
     description:
-      'DatabaseDescriptionDatabaseDescriptionDatabaseDescriptionDatabaseDescriptionDatabaseDescriptionDatabaseDescriptionDatabaseDescriptionDatabaseDescriptionDatabaseDescriptionDatabaseDescriptionDatabaseDescriptionDatabaseDescription',
+      'Services to speed up, enhance, scale your databases. Always up to date with the most modern SQL and noSQL standards. Services to speed up, enhance, scale your databases. Always up to date with the most modern SQL and noSQL standards. Services to speed up, enhance, scale your databases. Always up to date with the most modern SQL and noSQL standards. Services to speed up, enhance, scale your databases. Always up to date with the most modern SQL and noSQL standards. Services to speed up, enhance, scale your databases. Always up to date with the most modern SQL and noSQL standards.',
     image:
       'https://icon-library.com/images/database-png-icon/database-png-icon-22.jpg',
   })
@@ -107,7 +107,7 @@ async function insertFakeData() {
     shortDescription:
       'Create virtual and non-virtual networks of tens to thousands of connected computers. 24/7 support in case of breakdowns.',
     description:
-      'NetworkDescriptionNetworkDescriptionNetworkDescriptionNetworkDescriptionNetworkDescriptionNetworkDescriptionNetworkDescriptionNetworkDescriptionNetworkDescriptionNetworkDescriptionNetworkDescriptionNetworkDescription',
+      'Create virtual and non-virtual networks of tens to thousands of connected computers. 24/7 support in case of breakdowns. Create virtual and non-virtual networks of tens to thousands of connected computers. 24/7 support in case of breakdowns. Create virtual and non-virtual networks of tens to thousands of connected computers. 24/7 support in case of breakdowns. Create virtual and non-virtual networks of tens to thousands of connected computers. 24/7 support in case of breakdowns. Create virtual and non-virtual networks of tens to thousands of connected computers. 24/7 support in case of breakdowns. ',
     image:
       'https://cdn.iconscout.com/icon/free/png-256/internet-network-2238581-1923035.png',
   })
@@ -117,7 +117,7 @@ async function insertFakeData() {
     shortDescription:
       'Whether you need to analyze images, text or build an intelligent chatbot, we will be by your side to help you and provide you with all the computational power you need.',
     description:
-      'MachineLearningDescriptionMachineLearningDescriptionMachineLearningDescriptionMachineLearningDescriptionMachineLearningDescriptionMachineLearningDescriptionMachineLearningDescriptionMachineLearningDescriptionMachineLearningDescription',
+      'Whether you need to analyze images, text or build an intelligent chatbot, we will be by your side to help you and provide you with all the computational power you need. Whether you need to analyze images, text or build an intelligent chatbot, we will be by your side to help you and provide you with all the computational power you need. Whether you need to analyze images, text or build an intelligent chatbot, we will be by your side to help you and provide you with all the computational power you need. Whether you need to analyze images, text or build an intelligent chatbot, we will be by your side to help you and provide you with all the computational power you need. ',
     image:
       'https://i.pinimg.com/originals/a2/aa/45/a2aa45502770db5ee345064f63fdb7af.png',
   })
@@ -127,7 +127,7 @@ async function insertFakeData() {
     shortDescription:
       'No longer be afraid of cyber attacks or security holes. We have the most modern algorithms in existence to prevent any type of attack.',
     description:
-      'SecuriryDescriptionSecuriryDescriptionSecuriryDescriptionSecuriryDescriptionSecuriryDescriptionSecuriryDescriptionSecuriryDescriptionSecuriryDescriptionSecuriryDescriptionSecuriryDescriptionSecuriryDescriptionSecuriryDescriptionSecuriryDescription',
+      'No longer be afraid of cyber attacks or security holes. We have the most modern algorithms in existence to prevent any type of attack. No longer be afraid of cyber attacks or security holes. We have the most modern algorithms in existence to prevent any type of attack. No longer be afraid of cyber attacks or security holes. We have the most modern algorithms in existence to prevent any type of attack. No longer be afraid of cyber attacks or security holes. We have the most modern algorithms in existence to prevent any type of attack. No longer be afraid of cyber attacks or security holes. We have the most modern algorithms in existence to prevent any type of attack. ',
     image:
       'https://media.istockphoto.com/vectors/security-shield-with-lock-security-icon-vector-id1137073693?k=6&m=1137073693&s=170667a&w=0&h=ayT1jnGHwSt5ANspgCTyZADdXi7DaiMKl58_UIL2GuE=',
   })
