@@ -44,7 +44,7 @@
 <script>
 import Cover from '~/components/Cover'
 import CardImage from '~/components/CardImage'
-import OrientationInfo from '~/components/Navigation/OrientationInfo'
+import OrientationInfo from '~/components/navigation/OrientationInfo'
 export default {
   components: {
     Cover,
