@@ -5,7 +5,10 @@
       <div v-if="show" class="sidenav">
         <div class="logo">
           <nuxt-link to="/">
-            <img src="~/assets/img/Logov2-nome.svg" alt="Hypermood text logo" />
+            <img
+              src="~/assets/img/logov2onlytext.svg"
+              alt="Hypermood text logo"
+            />
           </nuxt-link>
         </div>
         <ul class="nav-list" @click="$emit('close')">
