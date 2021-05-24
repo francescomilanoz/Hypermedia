@@ -68,10 +68,10 @@ a {
 
 .area-description {
   color: var(--blue);
-  font-size: 20px;
+  font-size: 16px;
   grid-template-columns: auto;
   word-wrap: normal;
-  padding-left: 5.2em;
+  padding-left: 6.5em;
   padding-bottom: 15px;
 }
 
@@ -79,7 +79,6 @@ a {
   .area-description {
     padding-top: 25px;
     padding-left: 1.8em;
-    font-size: 15px;
   }
 }
 
