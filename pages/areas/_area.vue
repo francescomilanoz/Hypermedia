@@ -19,9 +19,10 @@
     <div class="people-container">
       <div v-for="roleAreas in areaRetrieved.roleAreas" :key="roleAreas.id">
         <CardImage
-          :id="roleAreas.person_id.id"
-          :thumbnail="roleAreas.person_id.image"
-          :name="roleAreas.person_id.name"
+          v-if="roleAreas.role === 'Responsible'"
+          :id="roleAreas.person.id"
+          :thumbnail="roleAreas.person.image"
+          :name="roleAreas.person.name"
         />
       </div>
     </div>
