@@ -38,8 +38,4 @@ export default {
 .app-container {
   padding-bottom: 80px;
 }
-
-#all-areas {
-  padding-right: 10%;
-}
 </style>

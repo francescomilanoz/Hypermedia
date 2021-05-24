@@ -40,10 +40,8 @@ export default {
   height: 100px;
   position: relative;
   text-align: center;
-  padding-right: 40px;
   padding-bottom: 40px;
 }
-
 .img-container {
   width: 100%;
   height: 100%;

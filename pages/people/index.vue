@@ -36,16 +36,18 @@ export default {
 
 <style scoped>
 .people-container {
-  display: flex;
-  flex-wrap: wrap;
   padding-left: 10%;
-  padding-right: 5%;
+  padding-right: 10%;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 @media (max-width: 640px) {
   .people-container {
-    justify-content: center;
     padding-right: 10%;
-    margin-right: -40px;
+    justify-content: center;
+    padding-left: 10%;
+    gap: 30px;
   }
 }
 a {

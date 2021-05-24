@@ -54,7 +54,6 @@ a {
 
 .area-name {
   text-align: left;
-  margin-left: 1rem;
   height: 50px;
   color: var(--blue);
 }
@@ -63,7 +62,7 @@ a {
   width: 3rem;
   height: 3rem;
   float: left;
-  margin: -6px 24px 0 32px;
+  margin: -6px 24px 0 0;
 }
 
 .area-description {
@@ -71,21 +70,12 @@ a {
   font-size: 16px;
   grid-template-columns: auto;
   word-wrap: normal;
-  padding-left: 6.5em;
   padding-bottom: 15px;
 }
 
 @media (max-width: 600px) {
   .area-description {
     padding-top: 25px;
-    padding-left: 1.8em;
-  }
-}
-
-@media (max-width: 335px) {
-  .area-container {
-    padding-left: 1%;
-    padding-right: 1%;
   }
 }
 </style>
