@@ -63,7 +63,7 @@ export default {
 #footerLogo {
   margin: 0 32px;
   float: left;
-  opacity: 100%;
+  opacity: 1;
 }
 
 #footerLogo img {
@@ -79,7 +79,7 @@ export default {
   #footerLogo {
     margin: 0 10px;
     float: left;
-    opacity: 100%;
+    opacity: 1;
   }
   #footerLogo img {
     height: 20px;

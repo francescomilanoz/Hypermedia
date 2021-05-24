@@ -58,7 +58,7 @@ export default {
   top: 0;
   left: 0;
   background-color: black;
-  opacity: 50%;
+  opacity: 0.5;
   z-index: +1;
 }
 

@@ -60,7 +60,7 @@ export default {
   margin: 0 10px;
   float: left;
   height: 50px;
-  opacity: 100%;
+  opacity: 1;
   padding-top: 5px;
 }
 
@@ -69,7 +69,7 @@ export default {
     margin: 0 10px;
     float: left;
     height: 40px;
-    opacity: 100%;
+    opacity: 1;
   }
 }
 

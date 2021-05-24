@@ -44,7 +44,7 @@ export default {
   margin: 0px 20px 20px 0px;
   float: left;
   height: 35px;
-  opacity: 100%;
+  opacity: 1;
 }
 
 .sidenav-container {
@@ -110,7 +110,7 @@ export default {
     margin: 0px 20px 20px 0px;
     float: left;
     height: 20px;
-    opacity: 100%;
+    opacity: 1;
   }
 
   .sidenav {
