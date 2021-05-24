@@ -205,7 +205,7 @@ async function insertFakeData() {
       'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
   })
   const firstRoleArea = await RoleArea.create({
-    role: 'Responsibile',
+    role: 'Responsible',
   })
   const firstRoleService = await RoleService.create({
     role: 'ciao',
