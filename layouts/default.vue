@@ -13,9 +13,9 @@
 </template>
 
 <script>
-import TheHeader from '~/components/Navigation/TheHeader'
-import TheSidenav from '~/components/Navigation/TheSidenav'
-import TheFooter from '~/components/Navigation/TheFooter'
+import TheHeader from '~/components/navigation/TheHeader'
+import TheSidenav from '~/components/navigation/TheSidenav'
+import TheFooter from '~/components/navigation/TheFooter'
 export default {
   components: {
     TheHeader,
