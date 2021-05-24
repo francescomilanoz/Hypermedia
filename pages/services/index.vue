@@ -69,7 +69,7 @@ export default {
       },
       {
         area_id: '2',
-        name: 'Security',
+        name: 'Machine Learning',
         area_logo:
           'https://icon-library.com/images/database-png-icon/database-png-icon-22.jpg',
         services: [
