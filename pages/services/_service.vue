@@ -6,6 +6,7 @@
       :thumbnail="service.image"
     />
     <div class="descritpion-container">
+      <OrientationInfo text="Services" section-name="services" />
       <h1>Descritpion</h1>
       <p>{{ service.description }}</p>
     </div>
@@ -41,10 +42,12 @@
 <script>
 import Cover from '~/components/Cover'
 import CardImage from '~/components/CardImage'
+import OrientationInfo from '~/components/Navigation/OrientationInfo.vue'
 export default {
   components: {
     Cover,
     CardImage,
+    OrientationInfo,
   },
   data() {
     const service = {
