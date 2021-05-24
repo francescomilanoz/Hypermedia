@@ -3,7 +3,7 @@ export default {
   target: 'server',
   env: {
     BASE_URL: 'https://hypermood.herokuapp.com', // Production URL
-    //BASE_URL: '', // Development URL
+    // BASE_URL: '', // Development URL
   },
   serverMiddleware: [
     {
