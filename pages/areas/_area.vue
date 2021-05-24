@@ -21,6 +21,21 @@
         <CardImage
           v-if="roleAreas.role === 'Responsible'"
           :id="roleAreas.person.id"
+          link="/people/"
+          :thumbnail="roleAreas.person.image"
+          :name="roleAreas.person.name"
+        />
+      </div>
+    </div>
+    <br />
+    <br />
+    <h1>Area Team</h1>
+    <div class="people-container">
+      <div v-for="roleAreas in areaRetrieved.roleAreas" :key="roleAreas.id">
+        <CardImage
+          v-if="roleAreas.role === 'Team'"
+          :id="roleAreas.person.id"
+          link="/people/"
           :thumbnail="roleAreas.person.image"
           :name="roleAreas.person.name"
         />
