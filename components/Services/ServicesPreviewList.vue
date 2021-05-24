@@ -4,14 +4,14 @@
       <div class="service-grid">
         <div
           v-for="service in services"
-          :key="service.service_id"
+          :key="service.id"
           class="service-element"
         >
           <div>
             <ServicePreview
-              :id="service.service_id"
+              :id="service.id"
               :name="service.name"
-              :preview-text="service.preview"
+              :preview-text="service.shortDescription"
             />
           </div>
         </div>

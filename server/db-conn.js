@@ -21,6 +21,7 @@ function defineDatabaseStructure() {
       shortDescription: DataTypes.TEXT,
       description: DataTypes.TEXT,
       image: DataTypes.STRING,
+      bigImage: DataTypes.STRING,
     },
     {
       underscored: true,
@@ -76,6 +77,8 @@ function defineDatabaseStructure() {
   RoleService.belongsTo(Person)
   RoleService.belongsTo(Service)
   Area.hasMany(Service, { foreignKey: 'area_id' })
+  RoleArea.belongsTo(Person)
+  RoleArea.belongsTo(Area)
 
   db._tables = {
     Area,
@@ -100,6 +103,8 @@ async function insertFakeData() {
       'Services to speed up, enhance, scale your databases. Always up to date with the most modern SQL and noSQL standards. Services to speed up, enhance, scale your databases. Always up to date with the most modern SQL and noSQL standards. Services to speed up, enhance, scale your databases. Always up to date with the most modern SQL and noSQL standards. Services to speed up, enhance, scale your databases. Always up to date with the most modern SQL and noSQL standards. Services to speed up, enhance, scale your databases. Always up to date with the most modern SQL and noSQL standards.',
     image:
       'https://icon-library.com/images/database-png-icon/database-png-icon-22.jpg',
+    bigImage:
+      'https://cdn.html.it/P0BChsd96pbJ6mXgeDR_cUzr1_U=/740x422/smart/https://www.html.it/app/uploads/2015/01/optimize-wordpress-database.jpg',
   })
 
   const secondArea = await Area.create({
@@ -110,6 +115,7 @@ async function insertFakeData() {
       'Create virtual and non-virtual networks of tens to thousands of connected computers. 24/7 support in case of breakdowns. Create virtual and non-virtual networks of tens to thousands of connected computers. 24/7 support in case of breakdowns. Create virtual and non-virtual networks of tens to thousands of connected computers. 24/7 support in case of breakdowns. Create virtual and non-virtual networks of tens to thousands of connected computers. 24/7 support in case of breakdowns. Create virtual and non-virtual networks of tens to thousands of connected computers. 24/7 support in case of breakdowns. ',
     image:
       'https://cdn.iconscout.com/icon/free/png-256/internet-network-2238581-1923035.png',
+    bigImage: 'https://udinesenews.com/wp-content/uploads/2020/09/network.jpg',
   })
 
   const thirdArea = await Area.create({
@@ -120,6 +126,8 @@ async function insertFakeData() {
       'Whether you need to analyze images, text or build an intelligent chatbot, we will be by your side to help you and provide you with all the computational power you need. Whether you need to analyze images, text or build an intelligent chatbot, we will be by your side to help you and provide you with all the computational power you need. Whether you need to analyze images, text or build an intelligent chatbot, we will be by your side to help you and provide you with all the computational power you need. Whether you need to analyze images, text or build an intelligent chatbot, we will be by your side to help you and provide you with all the computational power you need. ',
     image:
       'https://i.pinimg.com/originals/a2/aa/45/a2aa45502770db5ee345064f63fdb7af.png',
+    bigImage:
+      'https://www.ionos.it/digitalguide/fileadmin/DigitalGuide/Teaser/machine-learning-t.jpg',
   })
 
   const fourthArea = await Area.create({
@@ -130,32 +138,34 @@ async function insertFakeData() {
       'No longer be afraid of cyber attacks or security holes. We have the most modern algorithms in existence to prevent any type of attack. No longer be afraid of cyber attacks or security holes. We have the most modern algorithms in existence to prevent any type of attack. No longer be afraid of cyber attacks or security holes. We have the most modern algorithms in existence to prevent any type of attack. No longer be afraid of cyber attacks or security holes. We have the most modern algorithms in existence to prevent any type of attack. No longer be afraid of cyber attacks or security holes. We have the most modern algorithms in existence to prevent any type of attack. ',
     image:
       'https://media.istockphoto.com/vectors/security-shield-with-lock-security-icon-vector-id1137073693?k=6&m=1137073693&s=170667a&w=0&h=ayT1jnGHwSt5ANspgCTyZADdXi7DaiMKl58_UIL2GuE=',
+    bigImage:
+      'https://www.bitmat.it/wp-content/uploads/2021/02/bigstock-Internet-Security-Firewall-Or-326464240_1024X684.png',
   })
   const firstService = await Service.create({
     name: 'SQL',
-    shortDescription: 'ciao',
-    description: 'ciao',
+    shortDescription: 'descrizione del primo servizio',
+    description: 'descrizione del primo servizio',
     image:
       'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
   })
   const secondService = await Service.create({
     name: 'eee',
-    shortDescription: '2',
-    description: '2',
+    shortDescription: 'descrizione del secondo servizio',
+    description: 'descrizione del secondo servizio',
     image:
       'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
   })
   const thirdService = await Service.create({
     name: '3',
-    shortDescription: '333333333333333333333333333333333333',
-    description: '3',
+    shortDescription: 'descrizione del terzo servizio',
+    description: 'descrizione del terzo servizio',
     image:
       'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
   })
   const fourthService = await Service.create({
     name: '4',
-    shortDescription: '4444444444444444444444444444444444444444444',
-    description: '4',
+    shortDescription: 'descrizione del quarto servizio',
+    description: 'descrizione del quarto servizio',
     image:
       'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
   })
@@ -201,7 +211,10 @@ async function insertFakeData() {
     role: 'ciao',
   })
   const secondRoleArea = await RoleArea.create({
-    role: 'Responsibile2',
+    role: 'Team',
+  })
+  const thirdRoleArea = await RoleArea.create({
+    role: 'Team',
   })
   const secondRoleService = await RoleService.create({
     role: 'ciao2',
@@ -219,10 +232,12 @@ async function insertFakeData() {
   await firstArea.addRoleArea(firstRoleArea.id)
   await secondService.addRoleService(secondRoleService.id)
   await firstArea.addRoleArea(secondRoleArea.id)
+  await firstArea.addRoleArea(thirdRoleArea.id)
   await firstPerson.addRoleService(firstRoleService.id)
   await firstPerson.addRoleArea(firstRoleArea.id)
   await secondPerson.addRoleService(secondRoleService.id)
   await secondPerson.addRoleArea(secondRoleArea.id)
+  await firstPerson.addRoleArea(thirdRoleArea.id)
   await thirdPerson.addRoleService(secondRoleService.id)
   await thirdPerson.addRoleArea(secondRoleArea.id)
   await Person4.addRoleService(secondRoleService.id)

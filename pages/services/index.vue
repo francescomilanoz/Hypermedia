@@ -31,57 +31,58 @@ export default {
           'https://icon-library.com/images/database-png-icon/database-png-icon-22.jpg',
         services: [
           {
-            service_id: '1',
+            id: '1',
             name: 'Database Service 1',
-            preview: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            shortDescription:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
           },
           {
-            service_id: '2',
+            id: '2',
             name: 'Database Service 2',
-            preview: 'Database Service 2 Preview',
+            shortDescription: 'Database Service 2 Preview',
           },
           {
-            service_id: '3',
+            id: '3',
             name: 'Database Service 3',
-            preview: 'Database Service 3 Preview',
+            shortDescription: 'Database Service 3 Preview',
           },
           {
-            service_id: '4',
+            id: '4',
             name: 'Database Service 4',
-            preview: 'Database Service 4 Preview',
+            shortDescription: 'Database Service 4 Preview',
           },
           {
-            service_id: '5',
+            id: '5',
             name: 'Database Service 5',
-            preview: 'Database Service 5 Preview',
+            shortDescription: 'Database Service 5 Preview',
           },
           {
-            service_id: '6',
+            id: '6',
             name: 'Database Service 6',
-            preview: 'Database Service 6 Preview',
+            shortDescription: 'Database Service 6 Preview',
           },
           {
-            service_id: '7',
+            id: '7',
             name: 'Database Service 7',
-            preview: 'Database Service 7 Preview',
+            shortDescription: 'Database Service 7 Preview',
           },
         ],
       },
       {
-        area_id: '2',
+        id: '2',
         name: 'Machine Learning',
         area_logo:
           'https://icon-library.com/images/database-png-icon/database-png-icon-22.jpg',
         services: [
           {
-            service_id: '1',
+            id: '1',
             name: 'Security Service 1',
-            preview: 'Security Service 1 Preview',
+            shortDescription: 'Security Service 1 Preview',
           },
           {
-            service_id: '2',
+            id: '2',
             name: 'Security Service 2',
-            preview: 'Security Service 2 Preview',
+            shortDescription: 'Security Service 2 Preview',
           },
         ],
       },

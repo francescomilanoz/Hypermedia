@@ -79,6 +79,7 @@ a {
   .area-description {
     padding-top: 25px;
     padding-left: 1.8em;
+    font-size: 15px;
   }
 }
 
