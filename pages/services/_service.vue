@@ -14,16 +14,7 @@
     <div class="flex-container">
       <div class="flex-item-left">
         <h1>Team</h1>
-        <div class="people-container">
-          <CardImage
-            v-for="person in team"
-            :id="person.id"
-            :key="person.id"
-            link="/people/"
-            thumbnail="https://www.lago.it/wp-content/uploads/2015/03/luoghi-di-lavoro-accoglienti_L2R3272_01.jpg"
-            :name="person.name"
-          />
-        </div>
+        <PeoplePreview :people="team" />
       </div>
       <div class="flex-item-right">
         <div class="area-container">
@@ -45,10 +36,12 @@
 <script>
 import Cover from '~/components/Cover'
 import CardImage from '~/components/CardImage'
+import PeoplePreview from '~/components/people/PeoplePreview'
 export default {
   components: {
     Cover,
     CardImage,
+    PeoplePreview,
   },
   data() {
     const service = {
@@ -103,12 +96,6 @@ a {
 
 .flex-item-right {
   flex: 30%;
-}
-
-.people-container {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 40px;
 }
 
 .area-name {
