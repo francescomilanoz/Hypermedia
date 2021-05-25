@@ -23,7 +23,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .people-container {
   display: inline-flex;
   flex-wrap: wrap;
