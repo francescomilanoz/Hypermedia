@@ -23,20 +23,69 @@
           <style scoped>
             #responsible {
               display: inline;
+              padding-bottom: 30px;
             }
           </style>
         </div>
         <CardImage
           v-if="roleArea.role === 'Responsible'"
-          :id="roleArea.id"
+          :id="roleArea.area.id"
           link="/areas/"
           :thumbnail="roleArea.area.image"
           :name="roleArea.area.name"
         />
       </div>
     </div>
-    <h1>Project manager</h1>
-    <h1>Reference</h1>
+    <style scoped>
+      #project-manager {
+        display: none;
+      }
+    </style>
+    <h1 id="project-manager">Project manager</h1>
+    <div class="area-element">
+      <div v-for="roleService in person2.roleServices" :key="roleService.id">
+        <div v-if="roleService.role === 'Project manager'">
+          <style scoped>
+            #project-manager {
+              display: inline;
+              padding-bottom: 30px;
+            }
+          </style>
+        </div>
+        <CardImage
+          v-if="roleService.role === 'Project manager'"
+          :id="roleService.service.id"
+          link="/services/"
+          :thumbnail="roleService.service.image"
+          :name="roleService.service.name"
+        />
+      </div>
+    </div>
+    <style scoped>
+      #reference {
+        display: none;
+      }
+    </style>
+    <h1 id="reference">Reference</h1>
+    <div class="area-element">
+      <div v-for="roleService in person2.roleServices" :key="roleService.id">
+        <div v-if="roleService.role === 'Reference'">
+          <style scoped>
+            #reference {
+              display: inline;
+              padding-bottom: 30px;
+            }
+          </style>
+        </div>
+        <CardImage
+          v-if="roleService.role === 'Reference'"
+          :id="roleService.service.id"
+          link="/services/"
+          :thumbnail="roleService.service.image"
+          :name="roleService.service.name"
+        />
+      </div>
+    </div>
   </div>
 </template>
 

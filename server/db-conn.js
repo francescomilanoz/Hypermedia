@@ -102,9 +102,9 @@ async function insertFakeData() {
     description:
       'Services to speed up, enhance, scale your databases. Always up to date with the most modern SQL and noSQL standards. Services to speed up, enhance, scale your databases. Always up to date with the most modern SQL and noSQL standards. Services to speed up, enhance, scale your databases. Always up to date with the most modern SQL and noSQL standards. Services to speed up, enhance, scale your databases. Always up to date with the most modern SQL and noSQL standards. Services to speed up, enhance, scale your databases. Always up to date with the most modern SQL and noSQL standards.',
     image:
-      'https://icon-library.com/images/database-png-icon/database-png-icon-22.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Applications-database.svg/1200px-Applications-database.svg.png',
     bigImage:
-      'https://cdn.html.it/P0BChsd96pbJ6mXgeDR_cUzr1_U=/740x422/smart/https://www.html.it/app/uploads/2015/01/optimize-wordpress-database.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Applications-database.svg/1200px-Applications-database.svg.png',
   })
 
   const secondArea = await Area.create({
@@ -219,6 +219,13 @@ async function insertFakeData() {
   const secondRoleService = await RoleService.create({
     role: 'ciao2',
   })
+
+  const RoleService1 = await RoleService.create({
+    role: 'Project manager',
+  })
+  const RoleService2 = await RoleService.create({
+    role: 'Reference',
+  })
   await firstArea.addService(secondService.id)
   await firstArea.addService(firstService.id)
   await secondArea.addService(secondService.id)
@@ -229,11 +236,15 @@ async function insertFakeData() {
   await fourthArea.addService(firstService.id)
 
   await firstService.addRoleService(firstRoleService.id)
-  await firstArea.addRoleArea(firstRoleArea.id)
+  await firstService.addRoleService(RoleService1.id)
+  await firstService.addRoleService(RoleService2.id)
   await secondService.addRoleService(secondRoleService.id)
   await firstArea.addRoleArea(secondRoleArea.id)
   await firstArea.addRoleArea(thirdRoleArea.id)
+  await firstArea.addRoleArea(firstRoleArea.id)
   await firstPerson.addRoleService(firstRoleService.id)
+  await firstPerson.addRoleService(RoleService1.id)
+  await firstPerson.addRoleService(RoleService2.id)
   await firstPerson.addRoleArea(firstRoleArea.id)
   await secondPerson.addRoleService(secondRoleService.id)
   await secondPerson.addRoleArea(secondRoleArea.id)
