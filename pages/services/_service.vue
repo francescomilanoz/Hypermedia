@@ -107,9 +107,9 @@ a {
 }
 
 .people-container {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
-  padding-left: 10px;
+  gap: 40px;
 }
 
 .area-name {
@@ -117,16 +117,15 @@ a {
 }
 
 .area-container {
-  /* display: inline-block; */
   float: right;
 }
 
 .area-element {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 10px;
+  /* Uncomment this below for a graphically nice padding */
+  /* padding-left: 10px; */
   justify-content: center;
-  margin-right: -40px;
 }
 
 /* Responsive layout - makes a one column-layout instead of a two-column layout */
@@ -144,11 +143,6 @@ a {
   .flex-item-right,
   .flex-item-left {
     flex: 100%;
-  }
-
-  .people-container {
-    /* justify-content: center; */
-    margin-right: -40px;
   }
 
   .area-container {
