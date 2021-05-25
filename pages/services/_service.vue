@@ -4,9 +4,10 @@
       :title="service.name"
       :preview-text="service.shortDescription"
       :thumbnail="service.image"
+      parent-section-text="Services"
+      parent-section-name="services"
     />
     <div class="descritpion-container">
-      <OrientationInfo text="Services" section-name="services" />
       <h1>Descritpion</h1>
       <p>{{ service.description }}</p>
     </div>
@@ -44,12 +45,10 @@
 <script>
 import Cover from '~/components/Cover'
 import CardImage from '~/components/CardImage'
-import OrientationInfo from '~/components/navigation/OrientationInfo'
 export default {
   components: {
     Cover,
     CardImage,
-    OrientationInfo,
   },
   data() {
     const service = {

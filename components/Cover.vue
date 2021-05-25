@@ -6,6 +6,12 @@
       :style="{ backgroundImage: 'url(' + thumbnail + ')' }"
     ></div>
     <div class="bar-content">
+      <OrientationInfo
+        v-if="!(parentSectionText === '/')"
+        class="orientation-info"
+        :text="parentSectionText"
+        :section-name="parentSectionName"
+      />
       <h1>{{ title }}</h1>
       <p>{{ previewText }}</p>
     </div>
@@ -13,8 +19,12 @@
 </template>
 
 <script>
+import OrientationInfo from '~/components/navigation/OrientationInfo'
 export default {
   name: 'Cover',
+  components: {
+    OrientationInfo,
+  },
   props: {
     title: {
       type: String,
@@ -27,6 +37,16 @@ export default {
     thumbnail: {
       type: String,
       required: true,
+    },
+    parentSectionText: {
+      type: String,
+      required: false,
+      default: '/',
+    },
+    parentSectionName: {
+      type: String,
+      required: false,
+      default: '',
     },
   },
 }
@@ -73,6 +93,10 @@ export default {
   text-align: left;
   color: white;
   z-index: +2;
+}
+
+.orientation-info {
+  margin-left: -10%;
 }
 
 @media (max-width: 640px) {
