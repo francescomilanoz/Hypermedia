@@ -98,48 +98,49 @@ async function insertFakeData() {
   const firstArea = await Area.create({
     name: 'Database',
     shortDescription:
-      'Services to speed up, enhance, scale your databases. Always up to date with the most modern SQL and noSQL standards.',
+      'The broadest selection of purpose-built databases for all your application needs.',
     description:
-      'Services to speed up, enhance, scale your databases. Always up to date with the most modern SQL and noSQL standards. Services to speed up, enhance, scale your databases. Always up to date with the most modern SQL and noSQL standards. Services to speed up, enhance, scale your databases. Always up to date with the most modern SQL and noSQL standards. Services to speed up, enhance, scale your databases. Always up to date with the most modern SQL and noSQL standards. Services to speed up, enhance, scale your databases. Always up to date with the most modern SQL and noSQL standards.',
+      'Hypermood offers a choice of fully managed relational, NoSQL and in-memory databases, spanning proprietary and open-source engines, to fit the needs of modern app developers. Infrastructure management – including scalability, availability and security – is automated, saving you time and money. Focus on building applications while Hypermood managed databases make your job simpler by surfacing performance insights through embedded intelligence, scaling without limits and managing security threats.',
     image:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Applications-database.svg/1200px-Applications-database.svg.png',
+      'https://drive.google.com/uc?export=view&id=1aLQEuO-4dS5U3ML75hUn2_LsJ0ZjoM7j',
     bigImage:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Applications-database.svg/1200px-Applications-database.svg.png',
+      'https://drive.google.com/uc?export=view&id=1mOqNOciKGxl4bQgblKmF96pOpklKMK6N',
   })
 
   const secondArea = await Area.create({
-    name: 'Network',
+    name: 'Networking',
     shortDescription:
-      'Create virtual and non-virtual networks of tens to thousands of connected computers. 24/7 support in case of breakdowns.',
+      'Connect and deliver your hybrid and cloud-native applications with low-latency, zero-trust-based networking services.',
     description:
-      'Create virtual and non-virtual networks of tens to thousands of connected computers. 24/7 support in case of breakdowns. Create virtual and non-virtual networks of tens to thousands of connected computers. 24/7 support in case of breakdowns. Create virtual and non-virtual networks of tens to thousands of connected computers. 24/7 support in case of breakdowns. Create virtual and non-virtual networks of tens to thousands of connected computers. 24/7 support in case of breakdowns. Create virtual and non-virtual networks of tens to thousands of connected computers. 24/7 support in case of breakdowns. ',
+      'With more than 165,000 miles of private fibre spanning 60+ regions and 170+ network PoPs across the world, Hypermood provides the scale, performance, high availability and enterprise-grade security you need to meet your most extreme workload requirements. Deliver consistent, low-latency experience to your customers through services that work across on-premises, multi-cloud and edge location seamlessly. Focus on delivering your application logic when you use network-as-a-service offerings from Hypermood Networking.',
     image:
-      'https://cdn.iconscout.com/icon/free/png-256/internet-network-2238581-1923035.png',
-    bigImage: 'https://udinesenews.com/wp-content/uploads/2020/09/network.jpg',
+      'https://drive.google.com/uc?export=view&id=1APIDnDykl60Fe5L2QTqvQjX5S6dqcyZf',
+    bigImage:
+      'https://drive.google.com/uc?export=view&id=1APIDnDykl60Fe5L2QTqvQjX5S6dqcyZf',
   })
 
   const thirdArea = await Area.create({
     name: 'Machine Learning',
     shortDescription:
-      'Whether you need to analyze images, text or build an intelligent chatbot, we will be by your side to help you and provide you with all the computational power you need.',
+      'Putting machine learning in the hands of every developer.',
     description:
-      'Whether you need to analyze images, text or build an intelligent chatbot, we will be by your side to help you and provide you with all the computational power you need. Whether you need to analyze images, text or build an intelligent chatbot, we will be by your side to help you and provide you with all the computational power you need. Whether you need to analyze images, text or build an intelligent chatbot, we will be by your side to help you and provide you with all the computational power you need. Whether you need to analyze images, text or build an intelligent chatbot, we will be by your side to help you and provide you with all the computational power you need. ',
+      'Hypermood offers the broadest and deepest set of machine learning services and supporting cloud infrastructure, putting machine learning in the hands of every developer, data scientist and expert practitioner. Hypermood is helping more than one hundred thousand customers accelerate their machine learning journey.  Develop with your choice of tools with Jupyter Notebook, drag-and-drop designer, and automated machine learning. Create and deploy models at scale using automated and reproducible machine learning workflows.',
     image:
-      'https://i.pinimg.com/originals/a2/aa/45/a2aa45502770db5ee345064f63fdb7af.png',
+      'https://drive.google.com/uc?export=view&id=1nu7vypZl5M5ZFzPZ61H5h0Gc5eghMAEt',
     bigImage:
-      'https://www.ionos.it/digitalguide/fileadmin/DigitalGuide/Teaser/machine-learning-t.jpg',
+      'https://drive.google.com/uc?export=view&id=1nu7vypZl5M5ZFzPZ61H5h0Gc5eghMAEt',
   })
 
   const fourthArea = await Area.create({
     name: 'Security',
     shortDescription:
-      'No longer be afraid of cyber attacks or security holes. We have the most modern algorithms in existence to prevent any type of attack.',
+      'Strengthen the security of your cloud workloads with built-in services.',
     description:
-      'No longer be afraid of cyber attacks or security holes. We have the most modern algorithms in existence to prevent any type of attack. No longer be afraid of cyber attacks or security holes. We have the most modern algorithms in existence to prevent any type of attack. No longer be afraid of cyber attacks or security holes. We have the most modern algorithms in existence to prevent any type of attack. No longer be afraid of cyber attacks or security holes. We have the most modern algorithms in existence to prevent any type of attack. No longer be afraid of cyber attacks or security holes. We have the most modern algorithms in existence to prevent any type of attack. ',
+      'Protect data, apps and infrastructure quickly with built-in security services in Hypermood that include unparalleled security intelligence to help identify rapidly evolving threats early – so you can respond quickly. Implement a layered, defence-in-depth strategy across identity, data, hosts and networks. Unify security management and enable advanced threat protection across hybrid cloud environments.',
     image:
-      'https://media.istockphoto.com/vectors/security-shield-with-lock-security-icon-vector-id1137073693?k=6&m=1137073693&s=170667a&w=0&h=ayT1jnGHwSt5ANspgCTyZADdXi7DaiMKl58_UIL2GuE=',
+      'https://drive.google.com/uc?export=view&id=1ehRLeFejqkxlWwmvfIRpCa3TDCceCUUC',
     bigImage:
-      'https://www.bitmat.it/wp-content/uploads/2021/02/bigstock-Internet-Security-Firewall-Or-326464240_1024X684.png',
+      'https://drive.google.com/uc?export=view&id=1ehRLeFejqkxlWwmvfIRpCa3TDCceCUUC',
   })
   const firstService = await Service.create({
     name: 'SQL',

@@ -15,7 +15,7 @@ export default {
   name: 'AreaName',
   props: {
     id: {
-      type: String,
+      type: Number,
       required: true,
     },
     name: {
