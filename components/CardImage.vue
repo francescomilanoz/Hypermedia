@@ -1,13 +1,13 @@
 <template>
-  <nuxt-link :to="link + id">
-    <div class="container">
+  <div class="container">
+    <nuxt-link :to="link + id">
       <div
         class="img-container"
         :style="{ backgroundImage: 'url(' + thumbnail + ')' }"
       ></div>
       <div class="name-image">{{ name }}</div>
-    </div>
-  </nuxt-link>
+    </nuxt-link>
+  </div>
 </template>
 
 <script>
@@ -53,5 +53,8 @@ export default {
 .name-image {
   margin-top: 5px;
   color: var(--blue);
+}
+a {
+  text-decoration: none;
 }
 </style>

@@ -4,25 +4,17 @@
       :title="service.name"
       :preview-text="service.shortDescription"
       :thumbnail="service.image"
+      parent-section-text="Services"
+      parent-section-name="services"
     />
     <div class="descritpion-container">
-      <OrientationInfo text="Services" section-name="services" />
       <h1>Descritpion</h1>
       <p>{{ service.description }}</p>
     </div>
     <div class="flex-container">
       <div class="flex-item-left">
         <h1>Team</h1>
-        <div class="people-container">
-          <CardImage
-            v-for="person in team"
-            :id="person.id"
-            :key="person.id"
-            link="/people/"
-            thumbnail="https://www.lago.it/wp-content/uploads/2015/03/luoghi-di-lavoro-accoglienti_L2R3272_01.jpg"
-            :name="person.name"
-          />
-        </div>
+        <PeoplePreview :people="team" />
       </div>
       <div class="flex-item-right">
         <div class="area-container">
@@ -44,12 +36,12 @@
 <script>
 import Cover from '~/components/Cover'
 import CardImage from '~/components/CardImage'
-import OrientationInfo from '~/components/navigation/OrientationInfo'
+import PeoplePreview from '~/components/people/PeoplePreview'
 export default {
   components: {
     Cover,
     CardImage,
-    OrientationInfo,
+    PeoplePreview,
   },
   data() {
     const service = {
@@ -106,27 +98,20 @@ a {
   flex: 30%;
 }
 
-.people-container {
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 10px;
-}
-
 .area-name {
   text-align: center;
 }
 
 .area-container {
-  /* display: inline-block; */
   float: right;
 }
 
 .area-element {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 10px;
+  /* Uncomment this below for a graphically nice padding */
+  /* padding-left: 10px; */
   justify-content: center;
-  margin-right: -40px;
 }
 
 /* Responsive layout - makes a one column-layout instead of a two-column layout */
@@ -144,11 +129,6 @@ a {
   .flex-item-right,
   .flex-item-left {
     flex: 100%;
-  }
-
-  .people-container {
-    /* justify-content: center; */
-    margin-right: -40px;
   }
 
   .area-container {

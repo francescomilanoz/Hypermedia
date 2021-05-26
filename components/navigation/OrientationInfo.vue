@@ -34,7 +34,7 @@ export default {
 a {
   text-decoration: none;
 
-  color: var(--blue);
+  color: white;
 }
 
 h1 {
