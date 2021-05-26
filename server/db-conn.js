@@ -34,6 +34,7 @@ function defineDatabaseStructure() {
       shortDescription: DataTypes.TEXT,
       description: DataTypes.TEXT,
       image: DataTypes.STRING,
+      best: DataTypes.BOOLEAN,
     },
     {
       underscored: true,
@@ -77,6 +78,7 @@ function defineDatabaseStructure() {
   RoleService.belongsTo(Person)
   RoleService.belongsTo(Service)
   Area.hasMany(Service, { foreignKey: 'area_id' })
+  Service.belongsTo(Area)
   RoleArea.belongsTo(Person)
   RoleArea.belongsTo(Area)
 
@@ -148,6 +150,7 @@ async function insertFakeData() {
     description: 'descrizione del primo servizio',
     image:
       'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
+    best: true,
   })
   const secondService = await Service.create({
     name: 'eee',
@@ -155,6 +158,7 @@ async function insertFakeData() {
     description: 'descrizione del secondo servizio',
     image:
       'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
+    best: true,
   })
   const thirdService = await Service.create({
     name: '3',
@@ -162,6 +166,7 @@ async function insertFakeData() {
     description: 'descrizione del terzo servizio',
     image:
       'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
+    best: false,
   })
   const fourthService = await Service.create({
     name: '4',
@@ -169,6 +174,7 @@ async function insertFakeData() {
     description: 'descrizione del quarto servizio',
     image:
       'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
+    best: false,
   })
   const firstPerson = await Person.create({
     name: 'ciao',

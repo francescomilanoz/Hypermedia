@@ -5,6 +5,8 @@
       :preview-text="areaRetrieved.shortDescription"
       :thumbnail="areaRetrieved.bigImage"
     />
+
+    <OrientationInfo id="orientation-info" text="Areas" section-name="areas" />
     <h1>Description</h1>
     <div class="descritpion-container">
       <p>{{ areaRetrieved.description }}</p>
@@ -46,9 +48,11 @@
 
 <script>
 import Cover from '~/components/Cover'
+import OrientationInfo from '~/components/navigation/OrientationInfo'
 export default {
   components: {
     Cover,
+    OrientationInfo,
   },
   async asyncData({ $axios, route }) {
     const { area } = route.params
@@ -68,6 +72,10 @@ h1 {
   margin-left: 10%;
   margin-right: 10%;
   color: var(--blue);
+}
+
+#orientation-info {
+  margin-left: 10%;
 }
 
 p {

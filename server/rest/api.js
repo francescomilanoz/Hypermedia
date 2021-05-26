@@ -19,6 +19,10 @@ async function init() {
     const services = await Service.findAll()
     return res.json(services)
   })
+  app.get('/best-services', async (req, res) => {
+    const services = await Service.findAll({ where: { best: true } })
+    return res.json(services)
+  })
   app.get('/people', async (req, res) => {
     const people = await Person.findAll()
     return res.json(people)
@@ -68,6 +72,13 @@ async function init() {
     const area = await Area.findOne({
       where: { id },
       include: [{ model: RoleArea, include: [Person] }, { model: Service }],
+    })
+    return res.json(area)
+  })
+  // API to get an area and services.
+  app.get('/areaservices', async (req, res) => {
+    const area = await Area.findAll({
+      include: [{ model: Service, required: true }],
     })
     return res.json(area)
   })

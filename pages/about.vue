@@ -26,7 +26,14 @@
         </div>
       </div>
       <div class="containerColumn">
-        <img id="mapImage" src="~/assets/img/map.png" />
+        <iframe
+          id="mapImage"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2150.298457130481!2d9.190527308187068!3d45.46405331687542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6aec34636a1%3A0xab7f4e27101a2e13!2sDuomo%20di%20Milano!5e0!3m2!1sit!2sit!4v1622038308381!5m2!1sit!2sit"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+        <!-- <img id="mapImage" src="~/assets/img/map.png" /> -->
       </div>
     </div>
   </div>
@@ -52,6 +59,7 @@ export default {}
 }
 #mapImage {
   width: 100%;
+  height: 400px;
   padding-left: 10px;
 }
 
