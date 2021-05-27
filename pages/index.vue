@@ -47,7 +47,7 @@
 
 <script>
 import CardImageBig from '~/components/CardImageBig'
-import ServicesPreviewList from '~/components/Services/ServicesPreviewList.vue'
+import ServicesPreviewList from '~/components/Services/ServicesPreviewList'
 export default {
   components: {
     CardImageBig,

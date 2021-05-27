@@ -281,73 +281,6 @@ async function insertFakeData() {
       'https://drive.google.com/uc?export=view&id=1cVtrGHhhR4bHGgm1vtIg7o0xqa1DwkV1',
     best: false,
   })
-  const security1 = await Service.create({
-    name: 'DDos protection',
-    shortDescription:
-      'Protect your Hypermood resources from Distributed Denial of Service (DDoS) attacks',
-    description:
-      'Cover all resources on a virtual network when you enable Hypermood DDoS Protection via simplified configuration. Always-on traffic monitoring provides near real-time detection of a DDoS attack, with no intervention required. DDoS Protection automatically mitigates the attack as soon as it’s detected.',
-    image:
-      'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
-    best: true,
-  })
-  const security2 = await Service.create({
-    name: 'Network Firewall',
-    shortDescription:
-      'Explore Hypermood load balancing services and find the best solution for your workloads using an easy-to-use service selection tool',
-    description:
-      'Instantly scale your applications with Hypermood load balancing services for high availability and high performance. Get started with a quick needs assessment and load balancing recommendation—using the service selection tool. Get help choosing the best Hypermood cloud load balancing services for your needs. Answer a few questions about your applications, workloads, and performance requirements. You’ll get a recommendation based on architectural best practices.',
-    image:
-      'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
-    best: false,
-  })
-  const security3 = await Service.create({
-    name: 'Defender for IoT',
-    shortDescription: 'Built-in protection for your hybrid cloud workloads',
-    description:
-      'Use Hypermood Defender, integrated with Hypermood Security Center, for Hypermood and hybrid cloud workload protection and security. With Extended Detection and Response (XDR) capabilities, stand up against threats such as remote desktop protocol (RDP) brute-force attacks, and SQL injections. Streamline security with AI and automation.',
-    image:
-      'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
-    best: false,
-  })
-  const security4 = await Service.create({
-    name: 'Hypermood detective',
-    shortDescription:
-      'Analyze and visualize security data to rapidly get to the root cause of potential security issues',
-    description:
-      'Hypermood Detective makes it easy to analyze, investigate, and quickly identify the root cause of potential security issues or suspicious activities. Hypermood Detective automatically collects log data from your Hypermood resources and uses machine learning, statistical analysis, and graph theory to build a linked set of data that enables you to easily conduct faster and more efficient security investigations.',
-    image:
-      'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
-    best: false,
-  })
-  const security5 = await Service.create({
-    name: 'WAF',
-    shortDescription: 'Protect your web applications from common web exploits',
-    description:
-      'Hypermood WAF is a web application firewall that helps protect your web applications or APIs against common web exploits and bots that may affect availability, compromise security, or consume excessive resources. Hypermood WAF gives you control over how traffic reaches your applications by enabling you to create security rules that control bot traffic and block common attack patterns, such as SQL injection or cross-site scripting. You can also customize rules that filter out specific traffic patterns.',
-    image:
-      'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
-    best: false,
-  })
-  const security6 = await Service.create({
-    name: 'Certificate Manager',
-    shortDescription:
-      'Easily provision, manage, and deploy public and private SSL/TLS certificates for use with this services and your internal connected resources',
-    description:
-      'Hypermood Certificate Manager is a service that lets you easily provision, manage, and deploy public and private Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificates for use with Hypermood services and your internal connected resources. SSL/TLS certificates are used to secure network communications and establish the identity of websites over the Internet as well as resources on private networks. Hypermood Certificate Manager removes the time-consuming manual process of purchasing, uploading, and renewing SSL/TLS certificates.',
-    image:
-      'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
-    best: false,
-  })
-  const security7 = await Service.create({
-    name: 'Hypermood Macie',
-    shortDescription: 'Discover and protect your sensitive data at scale ',
-    description:
-      'As organizations manage growing volumes of data, identifying and protecting their sensitive data at scale can become increasingly complex, expensive, and time-consuming. Hypermood Macie automates the discovery of sensitive data at scale and lowers the cost of protecting your data. Macie automatically provides an inventory of Hypermood S3 buckets including a list of unencrypted buckets, publicly accessible buckets, and buckets shared with Hypermood accounts outside those you have defined in Hypermood Organizations. Then, Macie applies machine learning and pattern matching techniques to the buckets you select to identify and alert you to sensitive data, such as personally identifiable information (PII).',
-    image:
-      'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
-    best: false,
-  })
   const Machinelearning1 = await Service.create({
     name: 'SageMaker',
     shortDescription:
@@ -444,6 +377,73 @@ async function insertFakeData() {
       'https://drive.google.com/uc?export=view&id=1KIIgyUsFhtQg9IQYsYnTJgyH81V35g1Y',
     best: false,
   })
+  const security1 = await Service.create({
+    name: 'DDos protection',
+    shortDescription:
+      'Protect your Hypermood resources from Distributed Denial of Service (DDoS) attacks',
+    description:
+      'Cover all resources on a virtual network when you enable Hypermood DDoS Protection via simplified configuration. Always-on traffic monitoring provides near real-time detection of a DDoS attack, with no intervention required. DDoS Protection automatically mitigates the attack as soon as it’s detected.',
+    image:
+      'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
+    best: true,
+  })
+  const security2 = await Service.create({
+    name: 'Network Firewall',
+    shortDescription:
+      'Explore Hypermood load balancing services and find the best solution for your workloads using an easy-to-use service selection tool',
+    description:
+      'Instantly scale your applications with Hypermood load balancing services for high availability and high performance. Get started with a quick needs assessment and load balancing recommendation—using the service selection tool. Get help choosing the best Hypermood cloud load balancing services for your needs. Answer a few questions about your applications, workloads, and performance requirements. You’ll get a recommendation based on architectural best practices.',
+    image:
+      'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
+    best: false,
+  })
+  const security3 = await Service.create({
+    name: 'Defender for IoT',
+    shortDescription: 'Built-in protection for your hybrid cloud workloads',
+    description:
+      'Use Hypermood Defender, integrated with Hypermood Security Center, for Hypermood and hybrid cloud workload protection and security. With Extended Detection and Response (XDR) capabilities, stand up against threats such as remote desktop protocol (RDP) brute-force attacks, and SQL injections. Streamline security with AI and automation.',
+    image:
+      'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
+    best: false,
+  })
+  const security4 = await Service.create({
+    name: 'Hypermood detective',
+    shortDescription:
+      'Analyze and visualize security data to rapidly get to the root cause of potential security issues',
+    description:
+      'Hypermood Detective makes it easy to analyze, investigate, and quickly identify the root cause of potential security issues or suspicious activities. Hypermood Detective automatically collects log data from your Hypermood resources and uses machine learning, statistical analysis, and graph theory to build a linked set of data that enables you to easily conduct faster and more efficient security investigations.',
+    image:
+      'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
+    best: false,
+  })
+  const security5 = await Service.create({
+    name: 'WAF',
+    shortDescription: 'Protect your web applications from common web exploits',
+    description:
+      'Hypermood WAF is a web application firewall that helps protect your web applications or APIs against common web exploits and bots that may affect availability, compromise security, or consume excessive resources. Hypermood WAF gives you control over how traffic reaches your applications by enabling you to create security rules that control bot traffic and block common attack patterns, such as SQL injection or cross-site scripting. You can also customize rules that filter out specific traffic patterns.',
+    image:
+      'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
+    best: false,
+  })
+  const security6 = await Service.create({
+    name: 'Certificate Manager',
+    shortDescription:
+      'Easily provision, manage, and deploy public and private SSL/TLS certificates for use with this services and your internal connected resources',
+    description:
+      'Hypermood Certificate Manager is a service that lets you easily provision, manage, and deploy public and private Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificates for use with Hypermood services and your internal connected resources. SSL/TLS certificates are used to secure network communications and establish the identity of websites over the Internet as well as resources on private networks. Hypermood Certificate Manager removes the time-consuming manual process of purchasing, uploading, and renewing SSL/TLS certificates.',
+    image:
+      'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
+    best: false,
+  })
+  const security7 = await Service.create({
+    name: 'Hypermood Macie',
+    shortDescription: 'Discover and protect your sensitive data at scale ',
+    description:
+      'As organizations manage growing volumes of data, identifying and protecting their sensitive data at scale can become increasingly complex, expensive, and time-consuming. Hypermood Macie automates the discovery of sensitive data at scale and lowers the cost of protecting your data. Macie automatically provides an inventory of Hypermood S3 buckets including a list of unencrypted buckets, publicly accessible buckets, and buckets shared with Hypermood accounts outside those you have defined in Hypermood Organizations. Then, Macie applies machine learning and pattern matching techniques to the buckets you select to identify and alert you to sensitive data, such as personally identifiable information (PII).',
+    image:
+      'https://www.meme-arsenal.com/memes/925f3e6e213ebe0bc196d379a7281ee8.jpg',
+    best: false,
+  })
   const firstPerson = await Person.create({
     name: 'ciao',
     email: 'ciao',
@@ -518,24 +518,24 @@ async function insertFakeData() {
   await secondArea.addService(networking6.id)
   await secondArea.addService(networking7.id)
 
-  await thirdArea.addService(security1.id)
-  await thirdArea.addService(security2.id)
-  await thirdArea.addService(security3.id)
-  await thirdArea.addService(security4.id)
-  await thirdArea.addService(security5.id)
-  await thirdArea.addService(security6.id)
-  await thirdArea.addService(security7.id)
+  await thirdArea.addService(Machinelearning1.id)
+  await thirdArea.addService(Machinelearning2.id)
+  await thirdArea.addService(Machinelearning3.id)
+  await thirdArea.addService(Machinelearning4.id)
+  await thirdArea.addService(Machinelearning5.id)
+  await thirdArea.addService(Machinelearning6.id)
+  await thirdArea.addService(Machinelearning7.id)
+  await thirdArea.addService(Machinelearning8.id)
+  await thirdArea.addService(Machinelearning9.id)
+  await thirdArea.addService(Machinelearning10.id)
 
-  await fourthArea.addService(Machinelearning1.id)
-  await fourthArea.addService(Machinelearning2.id)
-  await fourthArea.addService(Machinelearning3.id)
-  await fourthArea.addService(Machinelearning4.id)
-  await fourthArea.addService(Machinelearning5.id)
-  await fourthArea.addService(Machinelearning6.id)
-  await fourthArea.addService(Machinelearning7.id)
-  await fourthArea.addService(Machinelearning8.id)
-  await fourthArea.addService(Machinelearning9.id)
-  await fourthArea.addService(Machinelearning10.id)
+  await fourthArea.addService(security1.id)
+  await fourthArea.addService(security2.id)
+  await fourthArea.addService(security3.id)
+  await fourthArea.addService(security4.id)
+  await fourthArea.addService(security5.id)
+  await fourthArea.addService(security6.id)
+  await fourthArea.addService(security7.id)
 
   await firstArea.addRoleArea(secondRoleArea.id)
   await firstArea.addRoleArea(thirdRoleArea.id)
