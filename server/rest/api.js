@@ -19,6 +19,10 @@ async function init() {
     const services = await Service.findAll()
     return res.json(services)
   })
+  app.get('/best-services', async (req, res) => {
+    const services = await Service.findAll({ where: { best: true } })
+    return res.json(services)
+  })
   app.get('/people', async (req, res) => {
     const people = await Person.findAll()
     return res.json(people)

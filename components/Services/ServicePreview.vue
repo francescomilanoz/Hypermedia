@@ -29,16 +29,18 @@ export default {
 
 <style scoped>
 h1 {
+  color: var(--lightblue);
   font-weight: bold;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 24px;
-  text-align: center;
+  text-align: left;
 }
 p {
   font-weight: normal;
-  font-size: 18px;
+  font-size: 16px;
+  color: var(--grey);
   /* line-height: 24px; */
-  text-align: center;
+  text-align: justify;
 }
 
 a {
