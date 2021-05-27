@@ -58,7 +58,7 @@ async function init() {
     const { id } = req.params
     const service = await Service.findOne({
       where: { id },
-      include: [{ model: RoleService }, { model: Area }],
+      include: [{ model: RoleService, include: [Person] }, { model: Area }],
     })
     return res.json(service)
   })

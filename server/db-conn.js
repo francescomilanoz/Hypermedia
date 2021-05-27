@@ -77,6 +77,7 @@ function defineDatabaseStructure() {
   RoleService.belongsTo(Person)
   RoleService.belongsTo(Service)
   Area.hasMany(Service, { foreignKey: 'area_id' })
+  Service.belongsTo(Area)
   RoleArea.belongsTo(Person)
   RoleArea.belongsTo(Area)
 

@@ -1,15 +1,15 @@
 <template>
   <div class="app-container">
     <Cover
-      :title="service.name"
-      :preview-text="service.shortDescription"
-      :thumbnail="service.image"
+      :title="serviceRetreived.name"
+      :preview-text="serviceRetreived.shortDescription"
+      :thumbnail="serviceRetreived.image"
       parent-section-text="Services"
       parent-section-name="services"
     />
     <div class="descritpion-container">
       <h1>Descritpion</h1>
-      <p>{{ service.description }}</p>
+      <p>{{ serviceRetreived.description }}</p>
     </div>
     <div class="flex-container">
       <div class="flex-item-left">
@@ -21,10 +21,10 @@
           <h1 class="area-name">Area</h1>
           <div class="area-element">
             <CardImage
-              :id="area.id"
+              :id="serviceRetreived.area.id"
               link="/areas/"
-              thumbnail="https://www.lago.it/wp-content/uploads/2015/03/luoghi-di-lavoro-accoglienti_L2R3272_01.jpg"
-              :name="area.name"
+              :thumbnail="serviceRetreived.area.image"
+              :name="serviceRetreived.area.name"
             />
           </div>
         </div>
@@ -43,24 +43,49 @@ export default {
     CardImage,
     PeoplePreview,
   },
-  data() {
-    const service = {
-      id: '1',
-      name: 'Amazon Aurora',
-      shortDescription:
-        'Database relazionale compatibile con MySQL e PostgreSQL creato per il cloud. Prestazioni e disponibilità dei database commerciali a un decimo del costo.',
-      image: 'https://i.ytimg.com/vi/RQ3Rj-WsGk0/maxresdefault.jpg',
-      description:
-        "Amazon Aurora è un database relazionale compatibile con MySQL e PostgreSQL creato per il cloud che unisce le prestazioni e la disponibilità dei database enterprise tradizionale alla semplicità e al costo ridotto dei database open source.  Amazon Aurora è cinque volte più veloce dei database MySQL standard e tre volte più veloce dei database PostgreSQL standard. Offre la sicurezza, la disponibilità e l'affidabilità dei database commerciali a un decimo del costo. Amazon Aurora è completamente gestito da Amazon Relational Database Service (RDS), che automatizza le attività amministrative che richiedono molto tempo quali il provisioning dell'hardware, la configurazione dei database, l'applicazione di patch e l'esecuzione di backup.",
+  async asyncData({ $axios, route }) {
+    const { service } = route.params
+    const { data } = await $axios.get(
+      `${process.env.BASE_URL}/api/services/${service}`
+    )
+    const serviceRetreived = data
+
+    // const role1 = data.roleServices[0].role
+    const person1 = data.roleServices[0].person
+
+    // const role2 = data.roleServices[1].role
+    const person2 = data.roleServices[1].person
+
+    const team = [person1, person2]
+
+    return {
+      serviceRetreived,
+      team,
     }
-    const team = [
-      { id: '1', name: 'Jessica Lucchetta' },
-      { id: '2', name: 'Pietro Lentini' },
-      { id: '3', name: 'Francesco Milano' },
-    ]
-    const area = { id: 1, name: 'Database' }
-    return { service, team, area }
   },
+  // data() {
+  //   const serviceRetreived = {
+  //     id: '1',
+  //     name: 'Amazon Aurora',
+  //     shortDescription:
+  //       'Database relazionale compatibile con MySQL e PostgreSQL creato per il cloud. Prestazioni e disponibilità dei database commerciali a un decimo del costo.',
+  //     image: 'https://i.ytimg.com/vi/RQ3Rj-WsGk0/maxresdefault.jpg',
+  //     description:
+  //       "Amazon Aurora è un database relazionale compatibile con MySQL e PostgreSQL creato per il cloud che unisce le prestazioni e la disponibilità dei database enterprise tradizionale alla semplicità e al costo ridotto dei database open source.  Amazon Aurora è cinque volte più veloce dei database MySQL standard e tre volte più veloce dei database PostgreSQL standard. Offre la sicurezza, la disponibilità e l'affidabilità dei database commerciali a un decimo del costo. Amazon Aurora è completamente gestito da Amazon Relational Database Service (RDS), che automatizza le attività amministrative che richiedono molto tempo quali il provisioning dell'hardware, la configurazione dei database, l'applicazione di patch e l'esecuzione di backup.",
+  //     roleServices: [
+  //       { id: '1', name: 'Jessica Lucchetta' },
+  //       { id: '2', name: 'Pietro Lentini' },
+  //       { id: '3', name: 'Francesco Milano' },
+  //     ],
+  //     area: {
+  //       id: 1,
+  //       name: 'Database',
+  //       image:
+  //         'https://www.lago.it/wp-content/uploads/2015/03/luoghi-di-lavoro-accoglienti_L2R3272_01.jpg',
+  //     },
+  //   }
+  //   return { serviceRetreived }
+  // },
 }
 </script>
 
