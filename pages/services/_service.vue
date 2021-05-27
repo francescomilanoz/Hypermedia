@@ -49,14 +49,19 @@ export default {
       `${process.env.BASE_URL}/api/services/${service}`
     )
     const serviceRetreived = data
+    let team
 
-    // const role1 = data.roleServices[0].role
-    const person1 = data.roleServices[0].person
+    if (data.roleServices === {}) {
+      // const role1 = data.roleServices[0].role
+      const person1 = data.roleServices[0].person
 
-    // const role2 = data.roleServices[1].role
-    const person2 = data.roleServices[1].person
+      // const role2 = data.roleServices[1].role
+      const person2 = data.roleServices[1].person
 
-    const team = [person1, person2]
+      team = [person1, person2]
+    } else {
+      team = []
+    }
 
     return {
       serviceRetreived,
