@@ -4,9 +4,9 @@
       :title="areaRetrieved.name"
       :preview-text="areaRetrieved.shortDescription"
       :thumbnail="areaRetrieved.bigImage"
+      parent-section-text="Areas"
+      parent-section-name="areas"
     />
-
-    <OrientationInfo id="orientation-info" text="Areas" section-name="areas" />
     <h1>Description</h1>
     <div class="descritpion-container">
       <p>{{ areaRetrieved.description }}</p>
@@ -48,11 +48,9 @@
 
 <script>
 import Cover from '~/components/Cover'
-import OrientationInfo from '~/components/navigation/OrientationInfo'
 export default {
   components: {
     Cover,
-    OrientationInfo,
   },
   async asyncData({ $axios, route }) {
     const { area } = route.params

@@ -19,19 +19,28 @@
       />
     </div>
     <div id="best-services-container">
-      <h3 id="white-text">Our Best Services</h3>
-      <ServicesPreviewList :services="bestServices" />
+      <div>
+        <h3 id="blue-text">Our Best Services</h3>
+      </div>
+      <div>
+        <ServicesPreviewList id="best-services-list" :services="bestServices" />
+      </div>
     </div>
     <div class="finalTwoColumns">
       <div class="containerColumn">
-        <h3 class="blue-text">LEFT</h3>
+        <h3 class="white-text">More questions?</h3>
         <div>
           <button id="button" type="button">
             <nuxt-link id="linkButton" to="/contact-us">CONTACT US</nuxt-link>
           </button>
         </div>
       </div>
-      <h3 class="blue-text">LEFT</h3>
+      <div class="containerColumn">
+        <h3 class="white-text">Discover our story</h3>
+        <button id="button" type="button">
+          <nuxt-link id="linkButton" to="/about">ABOUT US</nuxt-link>
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -44,16 +53,15 @@ export default {
     CardImageBig,
     ServicesPreviewList,
   },
-  async asyncData({ $axios, route }) {
-    const { data } = await $axios.get(`${process.env.BASE_URL}/api/areas`)
-    const allAreas = data
-    const { data2 } = await $axios.get(
-      `${process.env.BASE_URL}/api/best-services`
-    )
-    const bestServices = data2
+  async asyncData({ $axios }) {
+    const [areasData, articlesData] = await Promise.all([
+      $axios.get(`${process.env.BASE_URL}/api/areas`),
+      $axios.get(`${process.env.BASE_URL}/api/best-services`),
+    ])
+
     return {
-      allAreas,
-      bestServices,
+      allAreas: areasData.data,
+      bestServices: articlesData.data,
     }
   },
 }
@@ -69,11 +77,12 @@ export default {
   gap: 40px;
 }
 #best-services-container {
-  background-color: var(--blue);
-  margin-top: 65px;
+  padding-top: 65px;
   height: 350px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  text-align: center;
 }
 @media (max-width: 640px) {
   .areas-container {
@@ -104,7 +113,8 @@ h3 {
   color: var(--blue);
 }
 .finalTwoColumns {
-  margin-top: 100px;
+  background-color: var(--blue);
+  margin-top: 70px;
   padding-top: 20px;
   padding-bottom: 100px;
   display: flex;
@@ -114,6 +124,9 @@ h3 {
 }
 .containerColumn {
   flex: 50%;
+  justify-content: center;
+  color: white;
+  text-align: center;
 }
 #button {
   width: 130px;
@@ -122,13 +135,13 @@ h3 {
   border-radius: 30px;
   border-width: 0px;
   cursor: pointer;
-  background: var(--blue);
-  color: var(--blue);
+  background: white;
+  color: white;
   font-weight: bold;
   margin-top: 20px;
 }
 #linkButton {
-  color: white;
+  color: var(--blue);
   font-weight: bold;
   text-decoration: none;
 }
@@ -142,6 +155,12 @@ h3 {
     padding-bottom: 50px;
     padding-left: 10%;
     padding-right: 10%;
+  }
+}
+@media (max-width: 601px) {
+  #best-services-container {
+    padding-top: 250px;
+    padding-bottom: 200px;
   }
 }
 </style>
