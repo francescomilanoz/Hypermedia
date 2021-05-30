@@ -86,9 +86,9 @@ export default {
 }
 
 /* Screen larger than 1550px? 5 columns */
-@media (min-width: 1550px) {
+/* @media (min-width: 1550px) {
   .service-grid {
     grid-template-columns: repeat(5, 1fr);
   }
-}
+} */
 </style>
