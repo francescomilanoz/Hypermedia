@@ -1,12 +1,12 @@
 <template>
   <div>
     <div class="container">
-      <h2>{{ name }}</h2>
+      <h2 id="card-name">{{ name }}</h2>
       <div
         class="img-container"
         :style="{ backgroundImage: 'url(' + thumbnail + ')' }"
       ></div>
-      <p>{{ description }}</p>
+      <p id="card-description">{{ description }}</p>
       <nuxt-link id="linkButton" :to="link + id">
         <button id="button">Learn More</button></nuxt-link
       >
@@ -41,23 +41,35 @@ export default {
 
 <style scoped>
 .container {
-  display: inline-flex;
+  /* display: inline-flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   width: 250px;
   height: 400px;
   text-align: center;
   padding-bottom: 40px;
   background: var(--blue);
   border-radius: 15px;
+  position: relative;
 }
 .img-container {
+  position: absolute;
+  left: 75px;
+  top: 70px;
   width: 100px;
   height: 100px;
-  background-position: center;
+  /* background-position: center; */
   background-size: cover;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(345deg)
+    brightness(108%) contrast(102%);
+}
+#card-name {
+  padding-top: 20px;
+}
+#card-description {
+  padding-top: 140px;
 }
 .name-image {
   margin-top: 5px;
@@ -83,7 +95,10 @@ h2 {
   background: white;
   color: var(--blue);
   font-weight: bold;
-  margin-top: 20px;
+  /* margin-top: 20px; */
+  position: absolute;
+  left: 60px;
+  bottom: 40px;
 }
 #linkButton {
   color: var(--blue);
@@ -121,6 +136,9 @@ h2 {
     margin-top: 6px;
     margin-bottom: 0px;
     font-size: 10px;
+  }
+  #card-description {
+    padding-top: 90px;
   }
 }
 </style>
