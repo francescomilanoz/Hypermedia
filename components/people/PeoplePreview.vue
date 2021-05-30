@@ -1,5 +1,5 @@
 <template>
-  <div class="people-container">
+  <div v-if="!hasDescription" class="people-container">
     <CardImage
       v-for="person in people"
       :id="person.id"
@@ -7,6 +7,17 @@
       link="/people/"
       thumbnail="https://www.lago.it/wp-content/uploads/2015/03/luoghi-di-lavoro-accoglienti_L2R3272_01.jpg"
       :name="person.name"
+    />
+  </div>
+  <div v-else class="people-container">
+    <CardImage
+      v-for="person in people"
+      :id="person.id"
+      :key="person.id"
+      link="/people/"
+      thumbnail="https://www.lago.it/wp-content/uploads/2015/03/luoghi-di-lavoro-accoglienti_L2R3272_01.jpg"
+      :name="person.name"
+      :description="person.role"
     />
   </div>
 </template>
@@ -18,6 +29,11 @@ export default {
     people: {
       type: Array,
       required: true,
+    },
+    hasDescription: {
+      type: Boolean,
+      required: false,
+      default: false,
     },
   },
 }

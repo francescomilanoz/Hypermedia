@@ -14,7 +14,7 @@
     <div class="flex-container">
       <div class="flex-item-left">
         <h1>Team</h1>
-        <PeoplePreview :people="team" />
+        <PeoplePreview :people="team" has-description="true" />
       </div>
       <div class="flex-item-right">
         <div class="area-container">
@@ -49,18 +49,24 @@ export default {
       `${process.env.BASE_URL}/api/services/${service}`
     )
     const serviceRetreived = data
-    let team
+    let team = []
 
-    if (data.roleServices === {}) {
-      // const role1 = data.roleServices[0].role
-      const person1 = data.roleServices[0].person
+    if (data.roleServices === []) {
+      let person1 // person1 is the Project Manger
+      let person2 // person2 is the Reference for assistance
 
-      // const role2 = data.roleServices[1].role
-      const person2 = data.roleServices[1].person
+      if (data.roleServices[0].role === 'Project manager') {
+        person1 = data.roleServices[0].person
+        person2 = data.roleServices[1].person
+      } else {
+        person1 = data.roleServices[1].person
+        person2 = data.roleServices[0].person
+      }
 
-      team = [person1, person2]
-    } else {
-      team = []
+      const p1 = { ...person1, role: 'Project manager' }
+      const p2 = { ...person2, role: 'Reference for assistance' }
+
+      team = [p1, p2]
     }
 
     return {
@@ -77,11 +83,6 @@ export default {
   //     image: 'https://i.ytimg.com/vi/RQ3Rj-WsGk0/maxresdefault.jpg',
   //     description:
   //       "Amazon Aurora è un database relazionale compatibile con MySQL e PostgreSQL creato per il cloud che unisce le prestazioni e la disponibilità dei database enterprise tradizionale alla semplicità e al costo ridotto dei database open source.  Amazon Aurora è cinque volte più veloce dei database MySQL standard e tre volte più veloce dei database PostgreSQL standard. Offre la sicurezza, la disponibilità e l'affidabilità dei database commerciali a un decimo del costo. Amazon Aurora è completamente gestito da Amazon Relational Database Service (RDS), che automatizza le attività amministrative che richiedono molto tempo quali il provisioning dell'hardware, la configurazione dei database, l'applicazione di patch e l'esecuzione di backup.",
-  //     roleServices: [
-  //       { id: '1', name: 'Jessica Lucchetta' },
-  //       { id: '2', name: 'Pietro Lentini' },
-  //       { id: '3', name: 'Francesco Milano' },
-  //     ],
   //     area: {
   //       id: 1,
   //       name: 'Database',
@@ -89,7 +90,14 @@ export default {
   //         'https://www.lago.it/wp-content/uploads/2015/03/luoghi-di-lavoro-accoglienti_L2R3272_01.jpg',
   //     },
   //   }
-  //   return { serviceRetreived }
+  //   const p1 = { id: '1', name: 'Mario Rossi' }
+  //   const p2 = { id: '2', name: 'Rossi Mario' }
+  //   const person1 = { ...p1, role: 'Project manager' }
+  //   const person2 = { ...p2, role: 'Reference for assistance' }
+
+  //   const team = [person1, person2]
+
+  //   return { serviceRetreived, team }
   // },
 }
 </script>

@@ -6,6 +6,9 @@
         :style="{ backgroundImage: 'url(' + thumbnail + ')' }"
       ></div>
       <div class="name-image">{{ name }}</div>
+      <div v-if="!(description === '')" class="description">
+        {{ description }}
+      </div>
     </nuxt-link>
   </div>
 </template>
@@ -30,6 +33,11 @@ export default {
       type: String,
       required: true,
     },
+    description: {
+      type: String,
+      required: false,
+      default: '',
+    },
   },
 }
 </script>
@@ -53,6 +61,12 @@ export default {
 .name-image {
   margin-top: 5px;
   color: var(--blue);
+  /* font-weight: bold; */
+}
+.description {
+  color: var(--blue);
+  /* color: grey; */
+  font-size: small;
 }
 a {
   text-decoration: none;

@@ -15,7 +15,7 @@
 <script>
 import Cover from '~/components/Cover'
 import AreaName from '~/components/Areas/AreaName'
-import ServicesPreviewList from '~/components/Services/ServicesPreviewList.vue'
+import ServicesPreviewList from '~/components/Services/ServicesPreviewList'
 export default {
   components: {
     Cover,
