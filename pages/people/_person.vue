@@ -105,6 +105,18 @@ export default {
       person2,
     }
   },
+  head() {
+    return {
+      title: `${this.person2.name}'s page - Hypermood`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `${this.person2.name}'s public page at Hypermood`,
+        },
+      ],
+    }
+  },
 }
 </script>
 

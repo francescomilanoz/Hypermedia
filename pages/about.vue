@@ -40,7 +40,20 @@
 </template>
 
 <script>
-export default {}
+export default {
+  head() {
+    return {
+      title: 'About us - Hypermood',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Click here to find out more about our company Hypermood',
+        },
+      ],
+    }
+  },
+}
 </script>
 
 <style scoped>

@@ -99,6 +99,18 @@ export default {
 
   //   return { serviceRetreived, team }
   // },
+  head() {
+    return {
+      title: `${this.serviceRetreived.name} - Hypermood`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Click here to find out more about Hypermood services!',
+        },
+      ],
+    }
+  },
 }
 </script>
 

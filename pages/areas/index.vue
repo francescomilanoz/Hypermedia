@@ -2,7 +2,7 @@
   <div class="app-container">
     <Cover
       title="Areas"
-      preview-text="Hypermood operates mainly in 4 major areas: databases, networking, machine learning and security. Read this page to find out more!"
+      :preview-text="description"
       thumbnail="https://www.ciporistano.it/media/k2/items/cache/ccbca3752adf58a776d876d7a7de9edc_XL.jpg"
     />
     <div v-for="area in allAreas" id="all-areas" :key="area.area_id">
@@ -29,6 +29,24 @@ export default {
     const allAreas = data
     return {
       allAreas,
+    }
+  },
+  data() {
+    return {
+      description:
+        'Hypermood operates mainly in 4 major areas: databases, networking, machine learning and security. Read this page to find out more!',
+    }
+  },
+  head() {
+    return {
+      title: 'Areas - Hypermood',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description,
+        },
+      ],
     }
   },
 }

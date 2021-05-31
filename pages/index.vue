@@ -64,6 +64,18 @@ export default {
       bestServices: articlesData.data,
     }
   },
+  head() {
+    return {
+      title: 'Hypermood',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Hypermood home page',
+        },
+      ],
+    }
+  },
 }
 </script>
 

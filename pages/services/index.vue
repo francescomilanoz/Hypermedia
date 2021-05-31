@@ -98,6 +98,18 @@ export default {
   //   ]
   //   return { areas }
   // },
+  head() {
+    return {
+      title: 'Services - Hypermood',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Click here to find out more about Hypermood services!',
+        },
+      ],
+    }
+  },
 }
 </script>
 
