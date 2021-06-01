@@ -13,7 +13,7 @@ export default {
   ],
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'hypermood',
+    title: 'Hypermood',
     htmlAttrs: {
       lang: 'en',
     },

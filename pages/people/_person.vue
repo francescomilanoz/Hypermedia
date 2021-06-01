@@ -5,6 +5,8 @@
         :title="person2.name"
         :preview-text="person2.email"
         thumbnail="https://www.lago.it/wp-content/uploads/2015/03/luoghi-di-lavoro-accoglienti_L2R3272_01.jpg"
+        parent-section-text="People"
+        parent-section-name="people"
       />
       <h1>Bio</h1>
       <div class="description-person">
@@ -103,6 +105,18 @@ export default {
     const person2 = data
     return {
       person2,
+    }
+  },
+  head() {
+    return {
+      title: `${this.person2.name}'s page - Hypermood`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `${this.person2.name}'s public page at Hypermood`,
+        },
+      ],
     }
   },
 }

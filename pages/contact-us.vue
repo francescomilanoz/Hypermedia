@@ -34,7 +34,21 @@
 </template>
 
 <script>
-export default {}
+export default {
+  head() {
+    return {
+      title: 'Contact us - Hypermood',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'If you have any questions we’re here to help. Check here to get in touch with us.',
+        },
+      ],
+    }
+  },
+}
 </script>
 
 <style scoped>

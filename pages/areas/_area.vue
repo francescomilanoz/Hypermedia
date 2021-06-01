@@ -62,6 +62,18 @@ export default {
       areaRetrieved,
     }
   },
+  head() {
+    return {
+      title: `${this.areaRetrieved.name} - Hypermood`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `Hypermood ${this.areaRetrieved.name} area page`,
+        },
+      ],
+    }
+  },
 }
 </script>
 

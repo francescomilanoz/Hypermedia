@@ -5,6 +5,25 @@
       preview-text="Founded in Italy in 2000, today Hypermood is a multinational group that focuses its consulting offering on hard technology challenges with large-scale business impact in databases, networking, machine learning and security."
       thumbnail="https://www.sunnywayteambuilding.com/images/news/team-3373638_1920.jpg"
     />
+    <div id="filter">
+      Filter by
+      <button id="button-clicked" type="button">
+        <nuxt-link id="linkButton-clicked" to="/contact-us">ALL</nuxt-link>
+      </button>
+      <button id="button" type="button">
+        <nuxt-link id="linkButton" to="/contact-us">RESPONSIBLE</nuxt-link>
+      </button>
+      <button id="button" type="button">
+        <nuxt-link id="linkButton" to="/contact-us">PROJECT MANAGER</nuxt-link>
+      </button>
+      <button id="button" type="button">
+        <nuxt-link id="linkButton" to="/contact-us">REFERENCE</nuxt-link>
+      </button>
+      <button id="button" type="button">
+        <nuxt-link id="linkButton" to="/contact-us">WORKER</nuxt-link>
+      </button>
+    </div>
+    <br />
     <div class="people-container">
       <CardImage
         v-for="person in allPerson"
@@ -31,6 +50,18 @@ export default {
       allPerson,
     }
   },
+  head() {
+    return {
+      title: 'People - Hypermood',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Click here to find out more about Hypermood team!',
+        },
+      ],
+    }
+  },
 }
 </script>
 
@@ -55,5 +86,50 @@ a {
 }
 .app-container {
   padding-bottom: 80px;
+}
+#button-clicked {
+  min-width: 100px;
+  height: 43px;
+  border-radius: 30px;
+  border-width: 0px;
+  cursor: pointer;
+  background: var(--blue);
+  color: white;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 20px;
+}
+#button {
+  min-width: 100px;
+  height: 43px;
+  border-radius: 30px;
+  border-width: 0px;
+  cursor: pointer;
+  border-color: var(--blue);
+  border-width: 1px;
+  background: white;
+  color: var(--blue);
+  font-weight: bold;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 20px;
+}
+#filter {
+  color: var(--blue);
+  font-weight: bold;
+  margin-left: 10%;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+#linkButton {
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--blue);
+}
+#linkButton-clicked {
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
 }
 </style>
