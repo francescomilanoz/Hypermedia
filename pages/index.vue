@@ -23,7 +23,6 @@
         <h3 id="blue-text">Our Best Services</h3>
       </div>
       <div>
-        <a name="best-services"></a>
         <ServicesPreviewList id="best-services-list" :services="bestServices" />
       </div>
     </div>
@@ -31,16 +30,17 @@
       <div class="containerColumn">
         <h3 class="white-text">More questions?</h3>
         <div>
-          <button id="button" type="button">
-            <nuxt-link id="linkButton" to="/contact-us">CONTACT US</nuxt-link>
-          </button>
+          <nuxt-link id="linkButton" to="/contact-us"
+            ><button id="button" type="button">CONTACT US</button></nuxt-link
+          >
         </div>
       </div>
       <div class="containerColumn">
         <h3 class="white-text">Discover our story</h3>
-        <button id="button" type="button">
-          <nuxt-link id="linkButton" to="/about">ABOUT US</nuxt-link>
-        </button>
+
+        <nuxt-link id="linkButton" to="/about">
+          <button id="button" type="button">ABOUT US</button></nuxt-link
+        >
       </div>
     </div>
   </div>
@@ -152,6 +152,7 @@ h3 {
   color: white;
   font-weight: bold;
   margin-top: 20px;
+  color: var(--blue);
 }
 #linkButton {
   color: var(--blue);

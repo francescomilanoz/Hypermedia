@@ -20,9 +20,10 @@
         <div>
           <p>You can find our main office right next to the Milan cathedral.</p>
           <p>We are open from 9am until 18pm.</p>
-          <button id="button" type="button">
-            <nuxt-link id="linkButton" to="/contact-us">CONTACT US</nuxt-link>
-          </button>
+
+          <nuxt-link id="linkButton" to="/contact-us">
+            <button id="button" type="button">CONTACT US</button></nuxt-link
+          >
         </div>
       </div>
       <div class="containerColumn">
