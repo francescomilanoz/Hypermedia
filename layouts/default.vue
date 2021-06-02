@@ -5,9 +5,9 @@
     <TheSidenav :show="displaySidenav" @close="displaySidenav = false" />
 
     <div class="app-content">
+      <Chatbot :chat-list="list" />
       <nuxt />
     </div>
-
     <TheFooter />
   </div>
 </template>
@@ -16,12 +16,16 @@
 import TheHeader from '~/components/navigation/TheHeader'
 import TheSidenav from '~/components/navigation/TheSidenav'
 import TheFooter from '~/components/navigation/TheFooter'
+import Chatbot from '~/components/Chatbot'
+import MMCCMixin from '~/mixins/mmcc-mixin'
 export default {
   components: {
     TheHeader,
     TheSidenav,
     TheFooter,
+    Chatbot,
   },
+  mixins: [MMCCMixin],
   data() {
     return {
       displaySidenav: false,
