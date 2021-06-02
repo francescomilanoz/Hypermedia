@@ -52,12 +52,17 @@ export default {
   components: {
     Cover,
   },
-  async asyncData({ $axios, route }) {
+
+  async asyncData({ $axios, route, redirect }) {
     const { area } = route.params
+    if (isNaN(area) || isNaN(parseFloat(area))) redirect('/error')
+
     const { data } = await $axios.get(
       `${process.env.BASE_URL}/api/areas/${area}`
     )
     const areaRetrieved = data
+    if (areaRetrieved == null) redirect('/error')
+
     return {
       areaRetrieved,
     }

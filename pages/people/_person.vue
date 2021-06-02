@@ -97,12 +97,14 @@ export default {
   components: {
     Cover,
   },
-  async asyncData({ $axios, route }) {
+  async asyncData({ $axios, route, redirect }) {
     const { person } = route.params
+    if (isNaN(person) || isNaN(parseFloat(person))) redirect('/error')
     const { data } = await $axios.get(
       `${process.env.BASE_URL}/api/people/${person}`
     )
     const person2 = data
+    if (person2 == null) redirect('/error')
     return {
       person2,
     }
