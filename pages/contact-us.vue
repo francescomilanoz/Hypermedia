@@ -6,6 +6,7 @@
 "
       thumbnail="https://www.noor-uvc.com/wp-content/uploads/2020/10/cover-contactus-1.jpg"
     />
+    <a name="contact-form" class="anchor"></a>
     <h2>Fill out this form:</h2>
     <form>
       <input type="text" placeholder="Name" name="name" required /><br />

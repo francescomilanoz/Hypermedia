@@ -5,6 +5,7 @@
       preview-text="We are the leading IT consulting company in various areas. Visit this site to find out more, or click the 'contact us' button to speak directly with one of our experts!"
       thumbnail="https://www.lavoroediritti.com/wp-content/uploads/2017/07/consegna-azienda-1.jpg"
     />
+    <a name="our-areas" class="anchor"></a>
     <h3 id="blue-text">Our Areas</h3>
     <br />
     <div class="areas-container">
@@ -18,6 +19,7 @@
         :description="area.shortDescription"
       />
     </div>
+    <a name="our-best-services" class="anchor"></a>
     <div id="best-services-container">
       <div>
         <h3 id="blue-text">Our Best Services</h3>
