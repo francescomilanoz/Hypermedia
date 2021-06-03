@@ -5,24 +5,35 @@
       preview-text="Founded in Italy in 2000, today Hypermood is a multinational group that focuses its consulting offering on hard technology challenges with large-scale business impact in databases, networking, machine learning and security."
       thumbnail="https://www.lago.it/wp-content/uploads/2015/03/luoghi-di-lavoro-accoglienti_L2R3272_01.jpg"
     />
-    <TwoColumn
-      title1="Mission"
-      text1="Our mission is to empower every person and every organization on the
-          planet to achieve more."
-      title2="Vision"
-      text2="To be Earth’s most customer-centric company, where customers can find
-          and discover everything about databases, networking, machine learning
-          and security."
-    />
+    <div>
+      <div class="grid-container">
+        <div id="item-1" class="grid-item">
+          <h3 class="item-title">Mission</h3>
+          <div id="text">
+            Our mission is to empower every person and every organization on the
+            planet to achieve more.
+          </div>
+        </div>
+        <div id="item-2" class="grid-item">
+          <h3 class="item-title">Vision</h3>
+          <div id="text">
+            To be Earth’s most customer-centric company, where customers can
+            find and discover everything about databases, networking, machine
+            learning and security.
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="mapAndTextContainer">
       <div class="containerColumn">
         <h3>Our office</h3>
         <div>
           <p>You can find our main office right next to the Milan cathedral.</p>
           <p>We are open from 9am until 18pm.</p>
-          <button id="button" type="button">
-            <nuxt-link id="linkButton" to="/contact-us">CONTACT US</nuxt-link>
-          </button>
+
+          <nuxt-link id="linkButton" to="/contact-us">
+            <button id="button" type="button">CONTACT US</button></nuxt-link
+          >
         </div>
       </div>
       <div class="containerColumn">
@@ -40,7 +51,20 @@
 </template>
 
 <script>
-export default {}
+export default {
+  head() {
+    return {
+      title: 'About us - Hypermood',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Click here to find out more about our company Hypermood',
+        },
+      ],
+    }
+  },
+}
 </script>
 
 <style scoped>
@@ -107,5 +131,47 @@ p {
   color: var(--blue);
   font-weight: bold;
   text-decoration: none;
+}
+.grid-container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto;
+  padding-left: 10%;
+  padding-right: 10%;
+  column-width: 50%;
+}
+.grid-item {
+  background-color: white;
+  font-size: 30px;
+  text-align: left;
+}
+#item-2 {
+  padding-left: 10%;
+}
+#item-1 {
+  background-color: white;
+  border-right: 1px solid var(--blue);
+  padding-bottom: 30px;
+  padding-right: 5%;
+}
+@media (max-width: 640px) {
+  .grid-container {
+    grid-template-columns: auto;
+    column-width: 100%;
+  }
+  #item-1 {
+    border: none;
+  }
+  #item-2 {
+    padding-left: 0px;
+  }
+}
+.item-title {
+  color: var(--blue);
+  font-size: 37px;
+}
+#text {
+  color: var(--blue);
+  font-size: 20px;
 }
 </style>

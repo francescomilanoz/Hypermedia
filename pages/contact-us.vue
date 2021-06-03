@@ -6,6 +6,7 @@
 "
       thumbnail="https://www.noor-uvc.com/wp-content/uploads/2020/10/cover-contactus-1.jpg"
     />
+    <a name="contact-form" class="anchor"></a>
     <h2>Fill out this form:</h2>
     <form>
       <input type="text" placeholder="Name" name="name" required /><br />
@@ -34,7 +35,21 @@
 </template>
 
 <script>
-export default {}
+export default {
+  head() {
+    return {
+      title: 'Contact us - Hypermood',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'If you have any questions we’re here to help. Check here to get in touch with us.',
+        },
+      ],
+    }
+  },
+}
 </script>
 
 <style scoped>

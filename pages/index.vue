@@ -5,6 +5,7 @@
       preview-text="We are the leading IT consulting company in various areas. Visit this site to find out more, or click the 'contact us' button to speak directly with one of our experts!"
       thumbnail="https://www.lavoroediritti.com/wp-content/uploads/2017/07/consegna-azienda-1.jpg"
     />
+    <a name="our-areas" class="anchor"></a>
     <h3 id="blue-text">Our Areas</h3>
     <br />
     <div class="areas-container">
@@ -18,6 +19,7 @@
         :description="area.shortDescription"
       />
     </div>
+    <a name="our-best-services" class="anchor"></a>
     <div id="best-services-container">
       <div>
         <h3 id="blue-text">Our Best Services</h3>
@@ -30,16 +32,17 @@
       <div class="containerColumn">
         <h3 class="white-text">More questions?</h3>
         <div>
-          <button id="button" type="button">
-            <nuxt-link id="linkButton" to="/contact-us">CONTACT US</nuxt-link>
-          </button>
+          <nuxt-link id="linkButton" to="/contact-us"
+            ><button id="button" type="button">CONTACT US</button></nuxt-link
+          >
         </div>
       </div>
       <div class="containerColumn">
         <h3 class="white-text">Discover our story</h3>
-        <button id="button" type="button">
-          <nuxt-link id="linkButton" to="/about">ABOUT US</nuxt-link>
-        </button>
+
+        <nuxt-link id="linkButton" to="/about">
+          <button id="button" type="button">ABOUT US</button></nuxt-link
+        >
       </div>
     </div>
   </div>
@@ -62,6 +65,18 @@ export default {
     return {
       allAreas: areasData.data,
       bestServices: articlesData.data,
+    }
+  },
+  head() {
+    return {
+      title: 'Hypermood',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Hypermood home page',
+        },
+      ],
     }
   },
 }
@@ -139,6 +154,7 @@ h3 {
   color: white;
   font-weight: bold;
   margin-top: 20px;
+  color: var(--blue);
 }
 #linkButton {
   color: var(--blue);

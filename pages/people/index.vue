@@ -56,6 +56,18 @@ export default {
       allPerson,
     }
   },
+  head() {
+    return {
+      title: 'People - Hypermood',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Click here to find out more about Hypermood team!',
+        },
+      ],
+    }
+  },
 }
 </script>
 

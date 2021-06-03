@@ -43,12 +43,14 @@ export default {
     CardImage,
     PeoplePreview,
   },
-  async asyncData({ $axios, route }) {
+  async asyncData({ $axios, route, redirect }) {
     const { service } = route.params
+    if (isNaN(service) || isNaN(parseFloat(service))) redirect('/error')
     const { data } = await $axios.get(
       `${process.env.BASE_URL}/api/services/${service}`
     )
     const serviceRetreived = data
+    if (serviceRetreived == null) redirect('/error')
     let team = []
 
     if (data.roleServices === []) {
@@ -99,6 +101,18 @@ export default {
 
   //   return { serviceRetreived, team }
   // },
+  head() {
+    return {
+      title: `${this.serviceRetreived.name} - Hypermood`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Click here to find out more about Hypermood services!',
+        },
+      ],
+    }
+  },
 }
 </script>
 

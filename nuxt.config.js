@@ -4,6 +4,7 @@ export default {
   env: {
     // BASE_URL: 'https://hypermood.herokuapp.com', // Production URL
     BASE_URL: '', // Development URL
+    configurationId: 'ab93820d-32ae-4431-8ce6-e7a2cbece4a3', // Configuration ID for the chatbot
   },
   serverMiddleware: [
     {
@@ -13,7 +14,7 @@ export default {
   ],
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'hypermood',
+    title: 'Hypermood',
     htmlAttrs: {
       lang: 'en',
     },
@@ -32,7 +33,7 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['~/plugins/mmcc.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
