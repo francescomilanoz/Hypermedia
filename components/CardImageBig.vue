@@ -41,10 +41,6 @@ export default {
 
 <style scoped>
 .container {
-  /* display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; */
   width: 250px;
   height: 400px;
   text-align: center;
@@ -59,11 +55,7 @@ export default {
   top: 70px;
   width: 100px;
   height: 100px;
-  /* background-position: center; */
   background-size: cover;
-  /* margin-bottom: 15px; */
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(345deg)
-    brightness(108%) contrast(102%);
 }
 #card-name {
   padding-top: 20px;

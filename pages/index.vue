@@ -13,7 +13,7 @@
         :id="area.id"
         :key="area.id"
         link="/areas/"
-        :thumbnail="area.image"
+        :thumbnail="area.whiteimage"
         :name="area.name"
         :description="area.shortDescription"
       />

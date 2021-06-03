@@ -7,20 +7,26 @@
     />
     <div id="filter">
       Filter by
-      <button id="button-clicked" type="button">
-        <nuxt-link id="linkButton-clicked" to="/contact-us">ALL</nuxt-link>
+      <button
+        class="button active"
+        type="button"
+        onclick="filterSelection('all')"
+      >
+        ALL
       </button>
-      <button id="button" type="button">
-        <nuxt-link id="linkButton" to="/contact-us">RESPONSIBLE</nuxt-link>
+      <button class="button" type="button">
+        <nuxt-link class="linkButton" to="/contact-us">RESPONSIBLE</nuxt-link>
       </button>
-      <button id="button" type="button">
-        <nuxt-link id="linkButton" to="/contact-us">PROJECT MANAGER</nuxt-link>
+      <button class="button" type="button">
+        <nuxt-link class="linkButton" to="/contact-us"
+          >PROJECT MANAGER</nuxt-link
+        >
       </button>
-      <button id="button" type="button">
-        <nuxt-link id="linkButton" to="/contact-us">REFERENCE</nuxt-link>
+      <button class="button" type="button">
+        <nuxt-link class="linkButton" to="/contact-us">REFERENCE</nuxt-link>
       </button>
-      <button id="button" type="button">
-        <nuxt-link id="linkButton" to="/contact-us">WORKER</nuxt-link>
+      <button class="button" type="button">
+        <nuxt-link class="linkButton" to="/contact-us">WORKER</nuxt-link>
       </button>
     </div>
     <br />
@@ -75,7 +81,7 @@ a {
 .app-container {
   padding-bottom: 80px;
 }
-#button-clicked {
+.button.active {
   min-width: 100px;
   height: 43px;
   border-radius: 30px;
@@ -88,7 +94,7 @@ a {
   padding-right: 20px;
   margin-left: 20px;
 }
-#button {
+.button {
   min-width: 100px;
   height: 43px;
   border-radius: 30px;
@@ -110,7 +116,7 @@ a {
   font-size: 20px;
   margin-bottom: 30px;
 }
-#linkButton {
+.linkButton {
   font-weight: bold;
   text-decoration: none;
   color: var(--blue);
