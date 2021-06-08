@@ -5,34 +5,29 @@
       preview-text="Founded in Italy in 2000, today Hypermood is a multinational group that focuses its consulting offering on hard technology challenges with large-scale business impact in databases, networking, machine learning and security."
       thumbnail="https://www.sunnywayteambuilding.com/images/news/team-3373638_1920.jpg"
     />
-    <div id="filter">
-      Filter by
-      <button
-        class="button active"
-        type="button"
-        onclick="filterSelection('all')"
-      >
-        ALL
-      </button>
-      <button class="button" type="button">
-        <nuxt-link class="linkButton" to="/contact-us">RESPONSIBLE</nuxt-link>
-      </button>
-      <button class="button" type="button">
-        <nuxt-link class="linkButton" to="/contact-us"
-          >PROJECT MANAGER</nuxt-link
-        >
-      </button>
-      <button class="button" type="button">
-        <nuxt-link class="linkButton" to="/contact-us">REFERENCE</nuxt-link>
-      </button>
-      <button class="button" type="button">
-        <nuxt-link class="linkButton" to="/contact-us">WORKER</nuxt-link>
-      </button>
-    </div>
+
+    <button id="button" @click="selected = 'All'">ALL</button>
+    <button id="button" @click="selected = 'Responsible'">RESPONSIBLE</button>
+    <button id="button" @click="selected = 'Project manager'">
+      PROJECT MANAGER
+    </button>
+    <button id="button" @click="selected = 'Reference'">REFERENCE</button>
+    <button id="button" @click="selected = 'Worker'">WORKER</button>
+
     <br />
-    <div class="people-container">
+    <div v-if="selected === 'All'" class="people-container">
       <CardImage
         v-for="person in allPerson"
+        :id="person.id"
+        :key="person.id"
+        link="/people/"
+        :thumbnail="person.image"
+        :name="person.name"
+      />
+    </div>
+    <div v-if="selected === 'Project manager'" class="people-container">
+      <CardImage
+        v-for="person in projectManagers"
         :id="person.id"
         :key="person.id"
         link="/people/"
@@ -49,11 +44,34 @@ export default {
   components: {
     CardImage,
   },
+  // props: {
+  //   selected: {
+  //     type: String,
+  //     default: 'all',
+  //   },
+  // },
   async asyncData({ $axios, route }) {
     const { data } = await $axios.get(`${process.env.BASE_URL}/api/people`)
     const allPerson = data
+    const projectManagers = []
+    allPerson.forEach((person) => {
+      if (person.roleServices !== undefined) {
+        person.roleServices.forEach((roleService) => {
+          if (roleService.role === 'Project manager') {
+            projectManagers.push(person)
+          }
+        })
+      }
+    })
+
     return {
       allPerson,
+      projectManagers,
+    }
+  },
+  data() {
+    return {
+      selected: 'all',
     }
   },
   head() {
@@ -68,13 +86,21 @@ export default {
       ],
     }
   },
+  // env: {
+  //   selected: 'all',
+  // },
+  methods: {
+    changeVar(value) {
+      this.selected = value
+    },
+  },
 }
 </script>
 
 <style scoped>
 .people-container {
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 3%;
+  padding-right: 3%;
   display: inline-flex;
   flex-wrap: wrap;
   gap: 40px;
