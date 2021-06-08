@@ -6,7 +6,7 @@
       thumbnail="https://www.lavoroediritti.com/wp-content/uploads/2017/07/consegna-azienda-1.jpg"
     />
     <a name="our-areas" class="anchor"></a>
-    <h3 id="blue-text">Our Areas</h3>
+    <h2 id="blue-text">Our Areas</h2>
     <br />
     <div class="areas-container">
       <CardImageBig
@@ -22,7 +22,7 @@
     <a name="our-best-services" class="anchor"></a>
     <div id="best-services-container">
       <div>
-        <h3 id="blue-text">Our Best Services</h3>
+        <h2 id="blue-text">Our Best Services</h2>
       </div>
       <div>
         <ServicesPreviewList id="best-services-list" :services="bestServices" />
@@ -30,7 +30,7 @@
     </div>
     <div class="finalTwoColumns">
       <div class="containerColumn">
-        <h3 class="white-text">More questions?</h3>
+        <h2 class="white-text">More questions?</h2>
         <div>
           <nuxt-link id="linkButton" to="/contact-us"
             ><button id="button" type="button">CONTACT US</button></nuxt-link
@@ -38,7 +38,7 @@
         </div>
       </div>
       <div class="containerColumn">
-        <h3 class="white-text">Discover our story</h3>
+        <h2 class="white-text">Discover our story</h2>
 
         <nuxt-link id="linkButton" to="/about">
           <button id="button" type="button">ABOUT US</button></nuxt-link
@@ -114,7 +114,7 @@ a {
   padding-bottom: 80px;
 }
 
-h3 {
+h2 {
   font-size: 30px;
 }
 

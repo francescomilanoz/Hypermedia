@@ -9,11 +9,30 @@
     <a name="contact-form" class="anchor"></a>
     <h2>Fill out this form:</h2>
     <form>
-      <input type="text" placeholder="Name" name="name" required /><br />
-      <input type="text" placeholder="Surname" name="surname" required /><br />
-      <input type="email" placeholder="Email" name="email" required /><br />
+      <input
+        aria-label="Your name"
+        type="text"
+        placeholder="Name"
+        name="name"
+        required
+      /><br />
+      <input
+        aria-label="Your surname"
+        type="text"
+        placeholder="Surname"
+        name="surname"
+        required
+      /><br />
+      <input
+        aria-label="Your email"
+        type="email"
+        placeholder="Email"
+        name="email"
+        required
+      /><br />
 
       <textarea
+        aria-label="Your message"
         name="message"
         cols="40"
         rows="5"
