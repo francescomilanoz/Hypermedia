@@ -1,5 +1,5 @@
 <template>
-  <div id="theFooter">
+  <footer id="theFooter">
     <div id="footerLogo">
       <nuxt-link to="/">
         <img src="~/assets/img/logov2onlytext.svg" alt="Hypermood text logo" />
@@ -24,7 +24,7 @@
         </li>
       </ul>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script>

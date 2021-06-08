@@ -8,14 +8,14 @@
     <div>
       <div class="grid-container">
         <div id="item-1" class="grid-item">
-          <h3 class="item-title">Mission</h3>
+          <h2 class="item-title">Mission</h2>
           <div id="text">
             Our mission is to empower every person and every organization on the
             planet to achieve more.
           </div>
         </div>
         <div id="item-2" class="grid-item">
-          <h3 class="item-title">Vision</h3>
+          <h2 class="item-title">Vision</h2>
           <div id="text">
             To be Earth’s most customer-centric company, where customers can
             find and discover everything about databases, networking, machine
@@ -26,7 +26,7 @@
     </div>
     <div class="mapAndTextContainer">
       <div class="containerColumn">
-        <h3>Our office</h3>
+        <h2>Our office</h2>
         <div>
           <p>You can find our main office right next to the Milan cathedral.</p>
           <p>We are open from 9am until 18pm.</p>
@@ -103,7 +103,7 @@ export default {
     padding-right: 0%;
   }
 }
-h3 {
+h2 {
   font-size: 30px;
   color: white;
 }
