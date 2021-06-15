@@ -24,7 +24,9 @@ async function init() {
     return res.json(services)
   })
   app.get('/people', async (req, res) => {
-    const people = await Person.findAll()
+    const people = await Person.findAll({
+      include: [{ model: RoleArea }, { model: RoleService }],
+    })
     return res.json(people)
   })
   app.get('/roleareas', async (req, res) => {
