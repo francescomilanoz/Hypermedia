@@ -2,8 +2,8 @@ export default {
   ssr: true,
   target: 'server',
   env: {
-    // BASE_URL: 'https://hypermood.herokuapp.com', // Production URL
-    BASE_URL: '', // Development URL
+    BASE_URL: 'https://hypermood.herokuapp.com', // Production URL
+    // BASE_URL: '', // Development URL
     configurationId: 'ab93820d-32ae-4431-8ce6-e7a2cbece4a3', // Configuration ID for the chatbot
   },
   serverMiddleware: [
