@@ -78,4 +78,9 @@ a {
     padding-top: 25px;
   }
 }
+@media (max-width: 350px) {
+  h1 {
+    font-size: 25px;
+  }
+}
 </style>

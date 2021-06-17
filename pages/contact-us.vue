@@ -141,4 +141,9 @@ p {
   padding-bottom: 100px;
   margin-bottom: 0px;
 }
+@media (max-width: 350px) {
+  h1 {
+    font-size: 25px;
+  }
+}
 </style>

@@ -124,4 +124,9 @@ a {
 .app-container {
   padding-bottom: 80px;
 }
+@media (max-width: 350px) {
+  h1 {
+    font-size: 25px;
+  }
+}
 </style>

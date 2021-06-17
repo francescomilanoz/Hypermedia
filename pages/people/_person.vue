@@ -166,4 +166,9 @@ h1 {
 a {
   text-decoration: none;
 }
+@media (max-width: 350px) {
+  h1 {
+    font-size: 25px;
+  }
+}
 </style>

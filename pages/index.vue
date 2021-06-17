@@ -179,4 +179,9 @@ h2 {
     padding-bottom: 200px;
   }
 }
+@media (max-width: 350px) {
+  h2 {
+    font-size: 25px;
+  }
+}
 </style>

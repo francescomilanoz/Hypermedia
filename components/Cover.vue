@@ -115,4 +115,9 @@ export default {
     width: 230px;
   }
 }
+@media (max-width: 350px) {
+  h1 {
+    font-size: 24px;
+  }
+}
 </style>

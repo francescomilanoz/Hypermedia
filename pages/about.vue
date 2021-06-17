@@ -174,4 +174,12 @@ p {
   color: var(--blue);
   font-size: 20px;
 }
+@media (max-width: 350px) {
+  h1 {
+    font-size: 25px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+}
 </style>

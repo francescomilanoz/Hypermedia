@@ -48,4 +48,9 @@ h1 {
 
   vertical-align: top;
 }
+@media (max-width: 350px) {
+  h1 {
+    font-size: 25px;
+  }
+}
 </style>
