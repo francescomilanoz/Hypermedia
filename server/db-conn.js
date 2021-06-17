@@ -1,14 +1,14 @@
 const { Sequelize, DataTypes } = require('sequelize')
 
 // Development
-// const db = new Sequelize('postgres://user:user@localhost:5432/hypermood')
+const db = new Sequelize('postgres://user:user@localhost:5432/hypermood')
 // Production
-const pg = require('pg')
-pg.defaults.ssl = true
-const db = new Sequelize(process.env.DATABASE_URL, {
-  ssl: true,
-  dialectOptions: { ssl: { require: true, rejectUnauthorized: false } },
-})
+// const pg = require('pg')
+// pg.defaults.ssl = true
+// const db = new Sequelize(process.env.DATABASE_URL, {
+//   ssl: true,
+//   dialectOptions: { ssl: { require: true, rejectUnauthorized: false } },
+// })
 
 /**
  * Function to define the structure of the database
