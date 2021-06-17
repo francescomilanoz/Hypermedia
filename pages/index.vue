@@ -111,7 +111,7 @@ a {
   text-decoration: none;
 }
 .app-container {
-  padding-bottom: 80px;
+  padding-bottom: 55px;
 }
 
 h2 {
