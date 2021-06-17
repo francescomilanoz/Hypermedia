@@ -3,7 +3,7 @@
     <div v-if="isOpen" class="chat-container">
       <div id="chat-window" class="chat-window">
         <div class="chat-bar">
-          <h3>Hypermood Chatbot</h3>
+          <h4>Hypermood Chatbot</h4>
           <div v-if="isOpen" class="close" @click="isOpen = !isOpen"></div>
         </div>
         <div
@@ -157,14 +157,12 @@ export default {
   width: auto;
   background: var(--blue);
   color: white;
-  border: 1px solid var(--blue);
   border-radius: 15px;
   border-top-right-radius: 0px;
 }
 .message-content.sender {
-  background: white;
+  background: #e9e9e9;
   color: var(--blue);
-  border: 1px solid var(--blue);
   border-top-left-radius: 0px;
   border-top-right-radius: 15px;
 }
@@ -213,7 +211,7 @@ input:focus {
   color: grey;
 }
 
-h3 {
+h4 {
   margin-top: auto;
   margin-bottom: auto;
   margin-left: 10px;
