@@ -3,7 +3,7 @@
     <div v-if="isOpen" class="chat-container">
       <div id="chat-window" class="chat-window">
         <div class="chat-bar">
-          <h3>Hypermood Chatbot</h3>
+          <h4>Hypermood Chatbot</h4>
           <div v-if="isOpen" class="close" @click="isOpen = !isOpen"></div>
         </div>
         <div
@@ -40,7 +40,7 @@
             src="https://img.icons8.com/windows/2x/chatbot.png"
             alt="Chatbot icon"
           />
-          <p>Chat with me!</p>
+          Chat with me!
         </div>
       </button>
     </div>
@@ -101,7 +101,6 @@ export default {
 */
 
 #button {
-  width: 180px;
   min-width: 95px;
   height: 43px;
   border-radius: 30px;
@@ -111,7 +110,10 @@ export default {
   color: white;
   font-weight: bold;
   margin: auto;
+  padding: 15px;
   border: solid 2px white;
+  display: flex;
+  align-items: center;
   /* margin-top: 20px; */
 }
 
@@ -120,14 +122,11 @@ export default {
   padding-right: 10px;
   filter: brightness(0) invert(1);
 }
-
 .button-container {
-  display: inline-flex;
-  padding-left: 18px;
-  padding-right: 22px;
-  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 .chat-container {
   border: 1px solid var(--blue);
   border-radius: 6px;
@@ -158,13 +157,14 @@ export default {
   width: auto;
   background: var(--blue);
   color: white;
-  border: 1px solid var(--blue);
-  border-radius: 4px;
+  border-radius: 15px;
+  border-top-right-radius: 0px;
 }
 .message-content.sender {
-  background: rgb(234, 234, 234, 0.5);
+  background: #e9e9e9;
   color: var(--blue);
-  border: 1px solid var(--blue);
+  border-top-left-radius: 0px;
+  border-top-right-radius: 15px;
 }
 /* input {
   width: 98%;
@@ -211,10 +211,10 @@ input:focus {
   color: grey;
 }
 
-h3 {
+h4 {
   margin-top: auto;
   margin-bottom: auto;
-  margin-left: 5px;
+  margin-left: 10px;
   display: inline-flex;
   color: white;
   -webkit-user-select: none; /* Chrome all / Safari all */
@@ -233,7 +233,7 @@ h3:hover {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   width: 100%;
-  height: 30px;
+  height: 40px;
   background: var(--blue);
   /* position: fixed;
   bottom: 20px;
@@ -243,8 +243,8 @@ h3:hover {
 
 .close {
   position: absolute;
-  right: 20px;
-  top: 5px;
+  right: 25px;
+  top: 10px;
   /* bottom: 573px;
   right: 25px; */
   width: 20px;

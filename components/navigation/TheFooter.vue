@@ -41,9 +41,12 @@ export default {
   align-items: center;
   bottom: 0;
   width: 100%;
-  background-color: #ffff;
-  color: white;
+  border-top-width: 10px;
+  border-top-style: solid;
+  border-color: var(--blue);
+  background-color: white;
   text-align: center;
+  z-index: 1;
 }
 
 #footerList li {

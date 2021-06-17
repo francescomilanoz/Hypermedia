@@ -1,9 +1,39 @@
 <template>
-  <div>
-    <Cover
-      title="PAGE NOT FOUND!"
-      preview-text="Sorry, we couldn't find the page you requested. You can click on one of the links above to navigate to a correct page."
-      thumbnail="https://i.pinimg.com/736x/a2/25/30/a225306eaa8e89808ab4557596f3aa25.jpg"
-    />
+  <div class="app-container">
+    <div id="image">
+      <img src="~/assets/img/404.svg" alt="Page not found" />
+    </div>
+    <div id="center">
+      <nuxt-link to="/"> <button id="button">Go Home</button></nuxt-link>
+    </div>
   </div>
 </template>
+
+<style scoped>
+.app-container {
+  padding-bottom: 80px;
+}
+#image {
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+#center {
+  margin: auto;
+  width: 10%;
+  padding-bottom: 5%;
+}
+#button {
+  min-width: 150px;
+  height: 43px;
+  border-radius: 30px;
+  border-width: 0px;
+  cursor: pointer;
+  background: var(--blue);
+  color: white;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+</style>
