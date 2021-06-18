@@ -55,7 +55,7 @@ export default {
   height: 100%;
   position: relative;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   border-radius: 50%;
 }
 .name-image {

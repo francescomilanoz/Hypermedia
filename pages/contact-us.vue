@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app-container">
     <Cover
       title="Contact us"
       preview-text="Thank you for your interest in Hypermood! Please fill out the form to contact us and don't forget to check the box if you'd like to receive news, articles and insights.
@@ -8,48 +8,48 @@
     />
     <a name="contact-form" class="anchor"></a>
     <h2>Fill out this form:</h2>
-    <form>
-      <input
-        aria-label="Your name"
-        type="text"
-        placeholder="Name"
-        name="name"
-        required
-      /><br />
-      <input
-        aria-label="Your surname"
-        type="text"
-        placeholder="Surname"
-        name="surname"
-        required
-      /><br />
-      <input
-        aria-label="Your email"
-        type="email"
-        placeholder="Email"
-        name="email"
-        required
-      /><br />
+    <div id="container">
+      <form>
+        <input
+          aria-label="Your name"
+          type="text"
+          placeholder="Name"
+          name="name"
+          required
+        />
+        <input
+          aria-label="Your surname"
+          type="text"
+          placeholder="Surname"
+          name="surname"
+          required
+        />
+        <input
+          aria-label="Your email"
+          type="email"
+          placeholder="Email"
+          name="email"
+          required
+        />
 
-      <textarea
-        aria-label="Your message"
-        name="message"
-        cols="40"
-        rows="5"
-        placeholder="Write your message here"
-      ></textarea
-      ><br />
-      <br />
-      <input id="submit" type="submit" value="SUBMIT" />
-    </form>
-    <br />
-    <br />
-    <h2>Or use our contacts:</h2>
-    <p>Tel.: +39 347 2049382</p>
-    <p id="last-element">
-      Mail:
-      <a href="mailto:customer@hypermood.it">customer@hypermood.it</a>
-    </p>
+        <textarea
+          aria-label="Your message"
+          name="message"
+          cols="40"
+          rows="5"
+          placeholder="Write your message here"
+        ></textarea>
+        <input id="submit" type="submit" value="SUBMIT" />
+      </form>
+      <div>
+        <h3>Or use our contacts:</h3>
+        <p>Tel.: +39 347 2049382</p>
+        <p id="last-element">
+          Mail:
+          <a href="mailto:customer@hypermood.it">customer@hypermood.it</a>
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -72,22 +72,44 @@ export default {
 </script>
 
 <style scoped>
+.app-container {
+  padding-bottom: 90px;
+}
 h2 {
   color: var(--blue);
   padding-left: 10%;
-  padding-right: 5%;
+  margin-bottom: 0px;
+}
+h3 {
+  color: var(--blue);
+  font-size: 25px;
 }
 form {
-  padding-left: 10%;
+  display: flex;
+  flex-direction: column;
 }
-
+a {
+  padding-top: 50px;
+}
+#submit {
+  margin-top: 20px;
+}
+#container {
+  display: flex;
+  align-content: center;
+  align-items: baseline;
+  justify-items: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  flex-wrap: wrap;
+  gap: 30%;
+}
 input,
 textarea {
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 10px;
-  width: 37%;
+  width: 70%;
   min-width: 185px;
-  min-height: 25px;
   border-radius: 6px;
   border-color: var(--blue);
   box-shadow: none;
@@ -132,15 +154,10 @@ input:focus {
 }
 
 p {
-  padding-left: 10%;
   color: var(--blue);
   font-size: 15px;
-  padding-right: 5%;
 }
-#last-element {
-  padding-bottom: 100px;
-  margin-bottom: 0px;
-}
+
 @media (max-width: 350px) {
   h1 {
     font-size: 25px;

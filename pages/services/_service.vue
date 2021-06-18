@@ -8,13 +8,9 @@
       parent-section-name="services"
     />
     <div class="descritpion-container">
-      <h1>Descritpion</h1>
-      <p>{{ serviceRetreived.description }}</p>
-    </div>
-    <div class="flex-container">
-      <div class="flex-item-left">
-        <h1>Team</h1>
-        <PeoplePreview :people="team" has-description="true" />
+      <div class="description">
+        <h1>Descritpion</h1>
+        <p>{{ serviceRetreived.description }}</p>
       </div>
       <div class="flex-item-right">
         <div class="area-container">
@@ -28,6 +24,12 @@
             />
           </div>
         </div>
+      </div>
+    </div>
+    <div class="flex-container">
+      <div class="flex-item-left">
+        <h1>Team</h1>
+        <PeoplePreview :people="team" has-description="true" />
       </div>
     </div>
   </div>
@@ -76,31 +78,6 @@ export default {
       team,
     }
   },
-  // data() {
-  //   const serviceRetreived = {
-  //     id: '1',
-  //     name: 'Amazon Aurora',
-  //     shortDescription:
-  //       'Database relazionale compatibile con MySQL e PostgreSQL creato per il cloud. Prestazioni e disponibilità dei database commerciali a un decimo del costo.',
-  //     image: 'https://i.ytimg.com/vi/RQ3Rj-WsGk0/maxresdefault.jpg',
-  //     description:
-  //       "Amazon Aurora è un database relazionale compatibile con MySQL e PostgreSQL creato per il cloud che unisce le prestazioni e la disponibilità dei database enterprise tradizionale alla semplicità e al costo ridotto dei database open source.  Amazon Aurora è cinque volte più veloce dei database MySQL standard e tre volte più veloce dei database PostgreSQL standard. Offre la sicurezza, la disponibilità e l'affidabilità dei database commerciali a un decimo del costo. Amazon Aurora è completamente gestito da Amazon Relational Database Service (RDS), che automatizza le attività amministrative che richiedono molto tempo quali il provisioning dell'hardware, la configurazione dei database, l'applicazione di patch e l'esecuzione di backup.",
-  //     area: {
-  //       id: 1,
-  //       name: 'Database',
-  //       image:
-  //         'https://www.lago.it/wp-content/uploads/2015/03/luoghi-di-lavoro-accoglienti_L2R3272_01.jpg',
-  //     },
-  //   }
-  //   const p1 = { id: '1', name: 'Mario Rossi' }
-  //   const p2 = { id: '2', name: 'Rossi Mario' }
-  //   const person1 = { ...p1, role: 'Project manager' }
-  //   const person2 = { ...p2, role: 'Reference for assistance' }
-
-  //   const team = [person1, person2]
-
-  //   return { serviceRetreived, team }
-  // },
   head() {
     return {
       title: `${this.serviceRetreived.name} - Hypermood`,
@@ -131,19 +108,19 @@ a {
 }
 
 .descritpion-container {
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-.flex-container {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  gap: 5%;
   margin-left: 10%;
   margin-right: 10%;
 }
-
-.flex-item-left {
-  flex: 70%;
+.description {
+  max-width: 65%;
+}
+.flex-container {
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .flex-item-right {
@@ -199,6 +176,11 @@ a {
 @media (max-width: 350px) {
   h1 {
     font-size: 25px;
+  }
+}
+@media (max-width: 700px) {
+  .description {
+    max-width: 100%;
   }
 }
 </style>

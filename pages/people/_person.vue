@@ -18,7 +18,7 @@
         display: none;
       }
     </style>
-    <h1 id="responsible">Responsible for</h1>
+    <h1 id="responsible">Responsible for area</h1>
     <div class="area-element">
       <div v-for="roleArea in person2.roleAreas" :key="roleArea.id">
         <div v-if="roleArea.role === 'Responsible'">
@@ -43,7 +43,7 @@
         display: none;
       }
     </style>
-    <h1 id="project-manager">Project manager</h1>
+    <h1 id="project-manager">Project manager of</h1>
     <div class="area-element">
       <div v-for="roleService in person2.roleServices" :key="roleService.id">
         <div v-if="roleService.role === 'Project manager'">
@@ -68,7 +68,7 @@
         display: none;
       }
     </style>
-    <h1 id="reference">Reference</h1>
+    <h1 id="reference">Reference of</h1>
     <div class="area-element">
       <div v-for="roleService in person2.roleServices" :key="roleService.id">
         <div v-if="roleService.role === 'Reference'">
