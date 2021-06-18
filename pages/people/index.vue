@@ -5,6 +5,7 @@
       preview-text="Founded in Italy in 2000, today Hypermood is a multinational group that focuses its consulting offering on hard technology challenges with large-scale business impact in databases, networking, machine learning and security."
       thumbnail="https://www.sunnywayteambuilding.com/images/news/team-3373638_1920.jpg"
     />
+    <h1>The whole Hypermood team</h1>
     <div class="filters-container">
       <button
         v-if="selected === 'All'"
@@ -21,11 +22,11 @@
         class="button-selected"
         @click="selected = 'Responsible'"
       >
-        RESPONSIBLE
+        AREA RESPONSIBLES
       </button>
 
       <button v-else class="button" @click="selected = 'Responsible'">
-        RESPONSIBLE
+        AREA RESPONSIBLES
       </button>
 
       <button
@@ -33,11 +34,11 @@
         class="button-selected"
         @click="selected = 'Project manager'"
       >
-        PROJECT MANAGER
+        PROJECT MANAGERS
       </button>
 
       <button v-else class="button" @click="selected = 'Project manager'">
-        PROJECT MANAGER
+        PROJECT MANAGERS
       </button>
 
       <button
@@ -45,11 +46,11 @@
         class="button-selected"
         @click="selected = 'Reference'"
       >
-        REFERENCE
+        PROJECT REFERENCES
       </button>
 
       <button v-else class="button" @click="selected = 'Reference'">
-        REFERENCE
+        PROJECT REFERENCES
       </button>
 
       <button
@@ -57,14 +58,15 @@
         class="button-selected"
         @click="selected = 'Worker'"
       >
-        WORKER
+        ENGINEERS
       </button>
 
-      <button v-else class="button" @click="selected = 'Worker'">WORKER</button>
+      <button v-else class="button" @click="selected = 'Worker'">
+        ENGINEERS
+      </button>
 
       <br />
     </div>
-    <h3>Showing '{{ selected }}'</h3>
     <div v-if="selected === 'All'" class="people-container">
       <CardImage
         v-for="person in allPerson"
@@ -200,6 +202,11 @@ export default {
   flex-wrap: wrap;
   gap: 40px;
 }
+h1 {
+  color: var(--blue);
+  display: flex;
+  justify-content: center;
+}
 @media (max-width: 640px) {
   .people-container {
     padding-right: 10%;
@@ -288,5 +295,10 @@ h3 {
   padding-left: 10%;
   padding-right: 5%;
   padding-bottom: 20px;
+}
+@media (max-width: 350px) {
+  h1 {
+    font-size: 25px;
+  }
 }
 </style>

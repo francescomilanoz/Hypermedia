@@ -8,7 +8,7 @@
         parent-section-text="People"
         parent-section-name="people"
       />
-      <h1>Bio</h1>
+      <h1>Bio of {{ person2.name }}</h1>
       <div class="description-person">
         {{ person2.description }}
       </div>
@@ -18,7 +18,9 @@
         display: none;
       }
     </style>
-    <h1 id="responsible">Responsible for area</h1>
+
+    <h1 id="responsible">Responsible for Area(s):</h1>
+
     <div class="area-element">
       <div v-for="roleArea in person2.roleAreas" :key="roleArea.id">
         <div v-if="roleArea.role === 'Responsible'">
@@ -43,7 +45,9 @@
         display: none;
       }
     </style>
-    <h1 id="project-manager">Project manager of</h1>
+
+    <h1 id="project-manager">Project manager of service(s):</h1>
+
     <div class="area-element">
       <div v-for="roleService in person2.roleServices" :key="roleService.id">
         <div v-if="roleService.role === 'Project manager'">
@@ -68,7 +72,9 @@
         display: none;
       }
     </style>
-    <h1 id="reference">Reference of</h1>
+
+    <h1 id="reference">Reference for assistance for service(s):</h1>
+
     <div class="area-element">
       <div v-for="roleService in person2.roleServices" :key="roleService.id">
         <div v-if="roleService.role === 'Reference'">

@@ -5,6 +5,7 @@
       preview-text="Founded in Italy in 2000, today Hypermood is a multinational group that focuses its consulting offering on hard technology challenges with large-scale business impact in databases, networking, machine learning and security."
       thumbnail="https://www.lago.it/wp-content/uploads/2015/03/luoghi-di-lavoro-accoglienti_L2R3272_01.jpg"
     />
+    <h1>All our services, divided by areas</h1>
     <div v-for="area in areas" :key="area.id">
       <AreaName :id="area.id" :name="area.name" :logo="area.image" />
       <ServicesPreviewList :services="area.services" />
@@ -116,5 +117,15 @@ export default {
 <style scoped>
 .app-container {
   padding-bottom: 80px;
+}
+h1 {
+  color: var(--blue);
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 350px) {
+  h1 {
+    font-size: 25px;
+  }
 }
 </style>
