@@ -64,7 +64,6 @@
 
       <br />
     </div>
-    <h3>Showing '{{ selected }}'</h3>
     <div v-if="selected === 'All'" class="people-container">
       <CardImage
         v-for="person in allPerson"
