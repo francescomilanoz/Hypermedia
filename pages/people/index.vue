@@ -6,16 +6,61 @@
       thumbnail="https://www.sunnywayteambuilding.com/images/news/team-3373638_1920.jpg"
     />
     <div class="filters-container">
-      <button class="button" @click="selected = 'All'">ALL</button>
+      <button
+        v-if="selected === 'All'"
+        class="button-selected"
+        @click="selected = 'All'"
+      >
+        ALL
+      </button>
 
-      <button class="button" @click="selected = 'Responsible'">
+      <button v-else class="button" @click="selected = 'All'">ALL</button>
+
+      <button
+        v-if="selected === 'Responsible'"
+        class="button-selected"
+        @click="selected = 'Responsible'"
+      >
         RESPONSIBLE
       </button>
-      <button class="button" @click="selected = 'Project manager'">
+
+      <button v-else class="button" @click="selected = 'Responsible'">
+        RESPONSIBLE
+      </button>
+
+      <button
+        v-if="selected === 'Project manager'"
+        class="button-selected"
+        @click="selected = 'Project manager'"
+      >
         PROJECT MANAGER
       </button>
-      <button class="button" @click="selected = 'Reference'">REFERENCE</button>
-      <button class="button" @click="selected = 'Worker'">WORKER</button>
+
+      <button v-else class="button" @click="selected = 'Project manager'">
+        PROJECT MANAGER
+      </button>
+
+      <button
+        v-if="selected === 'Reference'"
+        class="button-selected"
+        @click="selected = 'Reference'"
+      >
+        REFERENCE
+      </button>
+
+      <button v-else class="button" @click="selected = 'Reference'">
+        REFERENCE
+      </button>
+
+      <button
+        v-if="selected === 'Worker'"
+        class="button-selected"
+        @click="selected = 'Worker'"
+      >
+        WORKER
+      </button>
+
+      <button v-else class="button" @click="selected = 'Worker'">WORKER</button>
 
       <br />
     </div>
@@ -200,6 +245,21 @@ a {
 .button:active {
   background: var(--blue);
   color: white;
+}
+.button-selected {
+  min-width: 100px;
+  height: 43px;
+  border-radius: 30px;
+  border-width: 0px;
+  cursor: pointer;
+  border-color: var(--blue);
+  border-width: 1px;
+  background: var(--blue);
+  color: white;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: 20px;
 }
 #filter {
   color: var(--blue);
