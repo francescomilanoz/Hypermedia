@@ -7,17 +7,17 @@
       parent-section-text="Areas"
       parent-section-name="areas"
     />
-    <h1>Description</h1>
+    <h1>Description of the {{ areaRetrieved.name }} Area</h1>
     <div class="descritpion-container">
       <p>{{ areaRetrieved.description }}</p>
     </div>
     <br />
     <br />
-    <h1>Area Services</h1>
+    <h1>Services of the {{ areaRetrieved.name }} Area</h1>
     <ServicesPreviewList :services="areaRetrieved.services" />
     <br />
     <br />
-    <h1>Area Responsible</h1>
+    <h1>Responsible of the {{ areaRetrieved.name }} Area</h1>
     <div class="people-container">
       <div v-for="roleAreas in areaRetrieved.roleAreas" :key="roleAreas.id">
         <CardImage
@@ -31,7 +31,7 @@
     </div>
     <br />
     <br />
-    <h1>Area Team</h1>
+    <h1>The area team</h1>
     <div class="people-container">
       <div v-for="roleAreas in areaRetrieved.roleAreas" :key="roleAreas.id">
         <CardImage

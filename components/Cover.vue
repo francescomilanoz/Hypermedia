@@ -83,7 +83,7 @@ export default {
 }
 
 .bar-content {
-  max-width: 750px;
+  max-width: 550px;
   /* height: 100%; */
   position: absolute;
   top: 0;
@@ -99,12 +99,6 @@ export default {
   margin-left: -10%;
 }
 
-@media (max-width: 900px) {
-  .bar-content {
-    width: 550px;
-  }
-}
-
 @media (max-width: 630px) {
   .bar-content {
     width: 350px;
@@ -117,7 +111,7 @@ export default {
 }
 @media (max-width: 350px) {
   h1 {
-    font-size: 24px;
+    font-size: 25px;
   }
 }
 </style>

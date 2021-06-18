@@ -5,6 +5,7 @@
       :preview-text="description"
       thumbnail="https://www.ciporistano.it/media/k2/items/cache/ccbca3752adf58a776d876d7a7de9edc_XL.jpg"
     />
+    <h1>Our four Areas</h1>
     <div v-for="area in allAreas" id="all-areas" :key="area.area_id">
       <AreaName
         :id="area.id"
@@ -55,5 +56,15 @@ export default {
 <style scoped>
 .app-container {
   padding-bottom: 80px;
+}
+h1 {
+  color: var(--blue);
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 350px) {
+  h1 {
+    font-size: 25px;
+  }
 }
 </style>

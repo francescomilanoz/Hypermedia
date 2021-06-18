@@ -8,17 +8,17 @@
       parent-section-name="services"
     />
     <div class="descritpion-container">
-      <h1>Descritpion</h1>
+      <h1>Description of the {{ serviceRetreived.name }} Service</h1>
       <p>{{ serviceRetreived.description }}</p>
     </div>
     <div class="flex-container">
       <div class="flex-item-left">
-        <h1>Team</h1>
+        <h1>The service team</h1>
         <PeoplePreview :people="team" has-description="true" />
       </div>
       <div class="flex-item-right">
         <div class="area-container">
-          <h1 class="area-name">Area</h1>
+          <h1 class="area-name">From the Area</h1>
           <div class="area-element">
             <CardImage
               :id="serviceRetreived.area.id"
