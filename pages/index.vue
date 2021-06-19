@@ -6,7 +6,7 @@
       thumbnail="https://www.lavoroediritti.com/wp-content/uploads/2017/07/consegna-azienda-1.jpg"
     />
     <a id="our-areas" name="our-areas" class="anchor"></a>
-    <h2 id="blue-text">Our Areas</h2>
+    <h1 id="blue-text">Our Areas</h1>
     <br />
     <div class="areas-container">
       <CardImageBig
@@ -107,7 +107,6 @@ export default {
   padding: 0;
 }
 #best-services-container {
-  padding-top: 65px;
   height: 350px;
   display: flex;
   justify-content: center;
@@ -128,9 +127,17 @@ a {
 .app-container {
   padding-bottom: 55px;
 }
+h1 {
+  margin-top: -20px;
+  font-size: 40px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
 
 h2 {
   font-size: 30px;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 #white-text {
@@ -144,7 +151,6 @@ h2 {
 }
 .finalTwoColumns {
   background-color: var(--blue);
-  margin-top: 70px;
   padding-top: 20px;
   padding-bottom: 100px;
   display: flex;
@@ -190,13 +196,21 @@ h2 {
 }
 @media (max-width: 601px) {
   #best-services-container {
-    padding-top: 250px;
+    padding-top: 80px;
     padding-bottom: 200px;
+  }
+  .finalTwoColumns {
+    margin-top: -80px;
   }
 }
 @media (max-width: 350px) {
   h2 {
     font-size: 25px;
+  }
+}
+@media (max-width: 300px) {
+  #best-services-container {
+    padding-top: 150px;
   }
 }
 </style>

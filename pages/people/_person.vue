@@ -19,7 +19,7 @@
       }
     </style>
 
-    <h1 id="responsible">Responsible for Area(s):</h1>
+    <h2 id="responsible">Responsible for Area(s):</h2>
 
     <div class="area-element">
       <div v-for="roleArea in person2.roleAreas" :key="roleArea.id">
@@ -27,7 +27,6 @@
           <style scoped>
             #responsible {
               display: inline;
-              padding-bottom: 30px;
             }
           </style>
         </div>
@@ -46,7 +45,7 @@
       }
     </style>
 
-    <h1 id="project-manager">Project manager of service(s):</h1>
+    <h2 id="project-manager">Project manager of service(s):</h2>
 
     <div class="area-element">
       <div v-for="roleService in person2.roleServices" :key="roleService.id">
@@ -54,7 +53,6 @@
           <style scoped>
             #project-manager {
               display: inline;
-              padding-bottom: 30px;
             }
           </style>
         </div>
@@ -73,7 +71,7 @@
       }
     </style>
 
-    <h1 id="reference">Reference for assistance for service(s):</h1>
+    <h2 id="reference">Reference for assistance for service(s):</h2>
 
     <div class="area-element">
       <div v-for="roleService in person2.roleServices" :key="roleService.id">
@@ -81,7 +79,6 @@
           <style scoped>
             #reference {
               display: inline;
-              padding-bottom: 30px;
             }
           </style>
         </div>
@@ -135,6 +132,14 @@ h1 {
   margin-left: 10%;
   margin-right: 10%;
   color: var(--blue);
+  margin-top: -20px;
+}
+
+h2 {
+  margin-left: 10%;
+  margin-right: 10%;
+  color: var(--blue);
+  padding-bottom: 0px;
 }
 
 .description-person {

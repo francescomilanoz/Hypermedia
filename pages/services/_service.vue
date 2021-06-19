@@ -114,6 +114,7 @@ a {
   gap: 5%;
   margin-left: 10%;
   margin-right: 10%;
+  margin-top: -20px;
 }
 .description {
   max-width: 65%;

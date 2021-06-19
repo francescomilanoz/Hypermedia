@@ -206,4 +206,9 @@ h2 {
     font-size: 25px;
   }
 }
+@media (max-width: 1475px) {
+  h3 {
+    margin-top: 30px;
+  }
+}
 </style>

@@ -8,14 +8,14 @@
     <div>
       <div class="grid-container">
         <div id="item-1" class="grid-item">
-          <h2 class="item-title">Our Mission</h2>
+          <h1 class="item-title">Our Mission</h1>
           <div id="text">
             Our mission is to empower every person and every organization on the
             planet to achieve more.
           </div>
         </div>
         <div id="item-2" class="grid-item">
-          <h2 class="item-title">Our Vision</h2>
+          <h1 class="item-title">Our Vision</h1>
           <div id="text">
             To be Earth’s most customer-centric company, where customers can
             find and discover everything about databases, networking, machine
