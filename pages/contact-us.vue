@@ -44,7 +44,8 @@
           <div>
             <input id="news" type="checkbox" />
             <label id="news-label" for="news"
-              >I want to receive news via mail.</label
+              >I confirm that I want to receive news via mail<br />and that I
+              have read and accept the Hypermood<br />Privacy Policy.</label
             ><br />
           </div>
 
@@ -184,6 +185,7 @@ p {
 #news-label {
   color: var(--blue);
   font-size: 13px;
+  max-width: 185px;
 }
 
 h2 {
