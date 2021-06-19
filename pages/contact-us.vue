@@ -10,7 +10,8 @@
     <div id="container">
       <div>
         <form>
-          <h1>Fill out this form:</h1>
+          <h1>Get in touch with us!</h1>
+          <h2>We will get back to you as soon as possible.</h2>
           <input
             aria-label="Your name"
             type="text"
@@ -40,11 +41,18 @@
             rows="5"
             placeholder="Write your message here"
           ></textarea>
+          <div>
+            <input id="news" type="checkbox" />
+            <label id="news-label" for="news"
+              >I want to receive news via mail.</label
+            ><br />
+          </div>
+
           <input id="submit" type="submit" value="SUBMIT" />
         </form>
       </div>
       <div>
-        <h3>Or use our contacts:</h3>
+        <h3>Or, if you prefer, contact us directly via:</h3>
         <p>Tel.: +39 347 2049382</p>
         <p id="last-element">
           Mail:
@@ -165,6 +173,30 @@ input:focus {
 p {
   color: var(--blue);
   font-size: 15px;
+}
+
+#news {
+  min-width: 30px;
+  max-width: 30px;
+  color: var(--blue);
+}
+
+#news-label {
+  color: var(--blue);
+  font-size: 13px;
+}
+
+h2 {
+  color: var(--blue);
+  display: flex;
+  justify-content: center;
+  font-size: 17px;
+  margin-top: -10px;
+}
+@media (max-width: 350px) {
+  h2 {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 350px) {
