@@ -32,73 +32,6 @@ export default {
       areas,
     }
   },
-  // data() {
-  //   const areas = [
-  //     {
-  //       id: '1',
-  //       name: 'Database',
-  //       image:
-  //         'https://icon-library.com/images/database-png-icon/database-png-icon-22.jpg',
-  //       services: [
-  //         {
-  //           id: '1',
-  //           name: 'Database Service 1',
-  //           shortDescription:
-  //             'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  //         },
-  //         {
-  //           id: '2',
-  //           name: 'Database Service 2',
-  //           shortDescription: 'Database Service 2 Preview',
-  //         },
-  //         {
-  //           id: '3',
-  //           name: 'Database Service 3',
-  //           shortDescription: 'Database Service 3 Preview',
-  //         },
-  //         {
-  //           id: '4',
-  //           name: 'Database Service 4',
-  //           shortDescription: 'Database Service 4 Preview',
-  //         },
-  //         {
-  //           id: '5',
-  //           name: 'Database Service 5',
-  //           shortDescription: 'Database Service 5 Preview',
-  //         },
-  //         {
-  //           id: '6',
-  //           name: 'Database Service 6',
-  //           shortDescription: 'Database Service 6 Preview',
-  //         },
-  //         {
-  //           id: '7',
-  //           name: 'Database Service 7',
-  //           shortDescription: 'Database Service 7 Preview',
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       id: '2',
-  //       name: 'Machine Learning',
-  //       image:
-  //         'https://icon-library.com/images/database-png-icon/database-png-icon-22.jpg',
-  //       services: [
-  //         {
-  //           id: '1',
-  //           name: 'Security Service 1',
-  //           shortDescription: 'Security Service 1 Preview',
-  //         },
-  //         {
-  //           id: '2',
-  //           name: 'Security Service 2',
-  //           shortDescription: 'Security Service 2 Preview',
-  //         },
-  //       ],
-  //     },
-  //   ]
-  //   return { areas }
-  // },
   head() {
     return {
       title: 'Services - Hypermood',
@@ -122,6 +55,10 @@ h1 {
   color: var(--blue);
   display: flex;
   justify-content: center;
+  margin-top: -20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
 }
 @media (max-width: 350px) {
   h1 {

@@ -56,6 +56,7 @@ a {
   text-align: left;
   height: 50px;
   color: var(--blue);
+  margin-top: 10px;
 }
 
 .area-logo {

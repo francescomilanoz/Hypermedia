@@ -40,19 +40,24 @@ export default {
 .service-container {
   margin-left: auto;
   margin-right: auto;
+  margin-top: -20px;
 }
 
 .service-grid {
   display: grid;
-  grid-gap: 0.8rem;
+  column-gap: 50px;
   max-width: 1400px;
   margin: 1rem auto;
 }
 
 .service-element {
-  padding: 1rem;
   width: 80%;
   margin: auto;
+}
+@media (max-width: 600px) {
+  .service-container {
+    margin-top: -30px;
+  }
 }
 
 /* Screen larger than 600px? 2 column*/

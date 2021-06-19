@@ -61,6 +61,7 @@ h1 {
   color: var(--blue);
   display: flex;
   justify-content: center;
+  margin-top: -20px;
 }
 @media (max-width: 350px) {
   h1 {

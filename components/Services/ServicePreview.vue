@@ -40,7 +40,6 @@ p {
   font-size: 16px;
   color: var(--grey);
   /* line-height: 24px; */
-  text-align: justify;
 }
 
 a {

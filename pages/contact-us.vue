@@ -7,40 +7,42 @@
       thumbnail="https://www.noor-uvc.com/wp-content/uploads/2020/10/cover-contactus-1.jpg"
     />
     <a name="contact-form" class="anchor"></a>
-    <h2>Fill out this form:</h2>
     <div id="container">
-      <form>
-        <input
-          aria-label="Your name"
-          type="text"
-          placeholder="Name"
-          name="name"
-          required
-        />
-        <input
-          aria-label="Your surname"
-          type="text"
-          placeholder="Surname"
-          name="surname"
-          required
-        />
-        <input
-          aria-label="Your email"
-          type="email"
-          placeholder="Email"
-          name="email"
-          required
-        />
+      <div>
+        <form>
+          <h1>Fill out this form:</h1>
+          <input
+            aria-label="Your name"
+            type="text"
+            placeholder="Name"
+            name="name"
+            required
+          />
+          <input
+            aria-label="Your surname"
+            type="text"
+            placeholder="Surname"
+            name="surname"
+            required
+          />
+          <input
+            aria-label="Your email"
+            type="email"
+            placeholder="Email"
+            name="email"
+            required
+          />
 
-        <textarea
-          aria-label="Your message"
-          name="message"
-          cols="40"
-          rows="5"
-          placeholder="Write your message here"
-        ></textarea>
-        <input id="submit" type="submit" value="SUBMIT" />
-      </form>
+          <textarea
+            aria-label="Your message"
+            name="message"
+            cols="40"
+            rows="5"
+            placeholder="Write your message here"
+          ></textarea>
+          <input id="submit" type="submit" value="SUBMIT" />
+        </form>
+      </div>
       <div>
         <h3>Or use our contacts:</h3>
         <p>Tel.: +39 347 2049382</p>
@@ -75,21 +77,18 @@ export default {
 .app-container {
   padding-bottom: 90px;
 }
-h2 {
+h1 {
   color: var(--blue);
-  padding-left: 10%;
-  margin-bottom: 0px;
+  margin-top: 0px;
 }
 h3 {
   color: var(--blue);
   font-size: 25px;
+  margin-top: 0px;
 }
 form {
   display: flex;
   flex-direction: column;
-}
-a {
-  padding-top: 50px;
 }
 #submit {
   margin-top: 20px;
@@ -97,7 +96,7 @@ a {
 #container {
   display: flex;
   align-content: center;
-  align-items: baseline;
+  align-items: center;
   justify-items: center;
   padding-left: 10%;
   padding-right: 10%;

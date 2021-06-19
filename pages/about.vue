@@ -69,8 +69,8 @@ export default {
 
 <style scoped>
 .mapAndTextContainer {
-  margin-top: 100px;
-  padding-top: 20px;
+  margin-top: 40px;
+  padding-top: 40px;
   padding-bottom: 100px;
   display: flex;
   padding-left: 10%;
@@ -138,6 +138,7 @@ p {
   grid-template-columns: auto auto;
   padding-left: 10%;
   padding-right: 10%;
+  margin-top: -30px;
   column-width: 50%;
 }
 .grid-item {
@@ -161,6 +162,7 @@ p {
   }
   #item-1 {
     border: none;
+    padding-bottom: 0px;
   }
   #item-2 {
     padding-left: 0px;

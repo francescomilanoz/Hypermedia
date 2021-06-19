@@ -91,6 +91,11 @@ export default {
   flex-wrap: wrap;
   gap: 40px;
 }
+.anchor {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
 #best-services-container {
   padding-top: 65px;
   height: 350px;

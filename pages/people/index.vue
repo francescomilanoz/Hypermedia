@@ -64,8 +64,6 @@
       <button v-else class="button" @click="selected = 'Worker'">
         ENGINEERS
       </button>
-
-      <br />
     </div>
     <div v-if="selected === 'All'" class="people-container">
       <CardImage
@@ -183,9 +181,6 @@ export default {
       ],
     }
   },
-  // env: {
-  //   selected: 'all',
-  // },
   methods: {
     changeVar(value) {
       this.selected = value
@@ -201,11 +196,16 @@ export default {
   display: inline-flex;
   flex-wrap: wrap;
   gap: 40px;
+  margin-bottom: 40px;
 }
 h1 {
   color: var(--blue);
   display: flex;
   justify-content: center;
+  margin-top: -20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
 }
 @media (max-width: 640px) {
   .people-container {
@@ -221,19 +221,6 @@ a {
 .app-container {
   padding-bottom: 80px;
 }
-/* .button.active {
-  min-width: 100px;
-  height: 43px;
-  border-radius: 30px;
-  border-width: 0px;
-  cursor: pointer;
-  background: var(--blue);
-  color: white;
-  font-weight: bold;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-left: 20px;
-} */
 .button {
   min-width: 100px;
   height: 43px;
@@ -247,7 +234,7 @@ a {
   font-weight: bold;
   padding-left: 20px;
   padding-right: 20px;
-  margin-right: 20px;
+  margin-top: 10px;
 }
 .button:active {
   background: var(--blue);
@@ -266,14 +253,7 @@ a {
   font-weight: bold;
   padding-left: 20px;
   padding-right: 20px;
-  margin-right: 20px;
-}
-#filter {
-  color: var(--blue);
-  font-weight: bold;
-  margin-left: 10%;
-  font-size: 20px;
-  margin-bottom: 30px;
+  margin-top: 10px;
 }
 .linkButton {
   font-weight: bold;
@@ -286,9 +266,14 @@ a {
   color: white;
 }
 .filters-container {
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-bottom: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  justify-content: center;
 }
 h3 {
   color: var(--blue);
