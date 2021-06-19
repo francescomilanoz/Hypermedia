@@ -6,7 +6,7 @@
 "
       thumbnail="https://www.noor-uvc.com/wp-content/uploads/2020/10/cover-contactus-1.jpg"
     />
-    <a name="contact-form" class="anchor"></a>
+    <a id="contact-form" name="contact-form" class="anchor"></a>
     <div id="container">
       <div>
         <form>
@@ -69,6 +69,16 @@ export default {
         },
       ],
     }
+  },
+  mounted() {
+    this.$nextTick(() => {
+      if (this.$route.hash) {
+        const el = document.querySelector(this.$route.hash)
+        if (el) {
+          window.scrollTo({ top: el.offsetTop, behavior: 'smooth' })
+        }
+      }
+    })
   },
 }
 </script>
