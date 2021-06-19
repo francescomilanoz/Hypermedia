@@ -18,39 +18,33 @@
     <br />
     <br />
     <h1>Responsible of the {{ areaRetrieved.name }} Area</h1>
-    <div class="people-container">
-      <div v-for="roleAreas in areaRetrieved.roleAreas" :key="roleAreas.id">
-        <CardImage
-          v-if="roleAreas.role === 'Responsible'"
-          :id="roleAreas.person.id"
-          link="/people/"
-          :thumbnail="roleAreas.person.image"
-          :name="roleAreas.person.name"
-        />
-      </div>
+    <div class="p-container">
+      <CardImage
+        v-if="responsible"
+        :id="responsible.id"
+        link="/people/"
+        :thumbnail="responsible.image"
+        :name="responsible.name"
+      />
     </div>
     <br />
     <br />
     <h1>The area team</h1>
-    <div class="people-container">
-      <div v-for="roleAreas in areaRetrieved.roleAreas" :key="roleAreas.id">
-        <CardImage
-          v-if="roleAreas.role === 'Team'"
-          :id="roleAreas.person.id"
-          link="/people/"
-          :thumbnail="roleAreas.person.image"
-          :name="roleAreas.person.name"
-        />
-      </div>
+    <div class="p-container">
+      <PeoplePreview :people="team" :has-description="false" />
     </div>
   </div>
 </template>
 
 <script>
 import Cover from '~/components/Cover'
+import CardImage from '~/components/CardImage'
+import PeoplePreview from '~/components/people/PeoplePreview'
 export default {
   components: {
     Cover,
+    CardImage,
+    PeoplePreview,
   },
 
   async asyncData({ $axios, route, redirect }) {
@@ -63,8 +57,23 @@ export default {
     const areaRetrieved = data
     if (areaRetrieved == null) redirect('/error')
 
+    const team = []
+    let responsible
+
+    areaRetrieved.roleAreas.forEach((element) => {
+      if (element.role === 'Responsible') {
+        responsible = element.person
+      }
+
+      if (element.role === 'Team') {
+        team.push(element.person)
+      }
+    })
+
     return {
       areaRetrieved,
+      responsible,
+      team,
     }
   },
   head() {
@@ -107,18 +116,9 @@ a {
   margin-right: 10%;
 }
 
-.people-container {
-  display: flex;
-  flex-wrap: wrap;
+.p-container {
   padding-left: 10%;
   padding-right: 5%;
-}
-@media (max-width: 640px) {
-  .people-container {
-    justify-content: center;
-    padding-right: 10%;
-    margin-right: -40px;
-  }
 }
 
 .app-container {
