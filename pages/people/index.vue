@@ -65,64 +65,29 @@
         ENGINEERS
       </button>
     </div>
-    <div v-if="selected === 'All'" class="people-container">
-      <CardImage
-        v-for="person in allPerson"
-        :id="person.id"
-        :key="person.id"
-        link="/people/"
-        :thumbnail="person.image"
-        :name="person.name"
-      />
+    <div v-if="selected === 'All'" class="p-container">
+      <PeoplePreview :people="allPerson" :has-description="false" />
     </div>
-    <div v-if="selected === 'Project manager'" class="people-container">
-      <CardImage
-        v-for="person in projectManagers"
-        :id="person.id"
-        :key="person.id"
-        link="/people/"
-        :thumbnail="person.image"
-        :name="person.name"
-      />
+    <div v-if="selected === 'Project manager'" class="p-container">
+      <PeoplePreview :people="projectManagers" :has-description="false" />
     </div>
-    <div v-if="selected === 'Responsible'" class="people-container">
-      <CardImage
-        v-for="person in responsibles"
-        :id="person.id"
-        :key="person.id"
-        link="/people/"
-        :thumbnail="person.image"
-        :name="person.name"
-      />
+    <div v-if="selected === 'Responsible'" class="p-container">
+      <PeoplePreview :people="responsibles" :has-description="false" />
     </div>
-    <div v-if="selected === 'Reference'" class="people-container">
-      <CardImage
-        v-for="person in references"
-        :id="person.id"
-        :key="person.id"
-        link="/people/"
-        :thumbnail="person.image"
-        :name="person.name"
-      />
+    <div v-if="selected === 'Reference'" class="p-container">
+      <PeoplePreview :people="references" :has-description="false" />
     </div>
-    <div v-if="selected === 'Worker'" class="people-container">
-      <CardImage
-        v-for="person in workers"
-        :id="person.id"
-        :key="person.id"
-        link="/people/"
-        :thumbnail="person.image"
-        :name="person.name"
-      />
+    <div v-if="selected === 'Worker'" class="p-container">
+      <PeoplePreview :people="workers" :has-description="false" />
     </div>
   </div>
 </template>
 
 <script>
-import CardImage from '~/components/CardImage'
+import PeoplePreview from '~/components/people/PeoplePreview'
 export default {
   components: {
-    CardImage,
+    PeoplePreview,
   },
 
   async asyncData({ $axios, route }) {
@@ -190,12 +155,9 @@ export default {
 </script>
 
 <style scoped>
-.people-container {
+.p-container {
   padding-left: 10%;
   padding-right: 10%;
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 40px;
   margin-bottom: 40px;
 }
 h1 {
@@ -207,11 +169,12 @@ h1 {
   margin-right: 10%;
   text-align: center;
 }
-@media (max-width: 640px) {
+@media (max-width: 740px) {
+  .p-container {
+    margin: auto;
+  }
   .people-container {
-    padding-right: 10%;
     justify-content: center;
-    padding-left: 10%;
     gap: 30px;
   }
 }
