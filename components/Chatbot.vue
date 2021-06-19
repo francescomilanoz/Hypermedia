@@ -1,11 +1,11 @@
 <template>
   <div class="chat">
     <div v-if="isOpen" class="chat-container">
-      <div id="chat-window" class="chat-window">
-        <div class="chat-bar">
-          <h4>Hypermood Chatbot</h4>
-          <div v-if="isOpen" class="close" @click="isOpen = !isOpen"></div>
-        </div>
+      <div class="chat-bar">
+        <h4>Hypermood Chatbot</h4>
+        <div id="circle"></div>
+      </div>
+      <div id="chat-window" ref="chatWindow" class="chat-window">
         <div
           v-for="(message, messageIndex) of chatList"
           :key="`message-${messageIndex}`"
@@ -26,14 +26,13 @@
         @keypress.enter="sendMessage"
       />
     </div>
-    <!-- <div class="button" @click="isOpen = !isOpen">
-      <img
-        src="https://img.icons8.com/ios-filled/452/chat--v1.png"
-        alt="Chatbot button"
-      />
-    </div> -->
-    <div @click="isOpen = !isOpen">
-      <button id="button" type="button">
+    <div
+      @click="
+        isOpen = !isOpen
+        scrollBottom()
+      "
+    >
+      <button v-if="!isOpen" id="button" type="button">
         <div class="button-container">
           <img
             id="chatbot-logo"
@@ -41,6 +40,16 @@
             alt="Chatbot icon"
           />
           Chat with me!
+        </div>
+      </button>
+      <button v-else id="button" type="button">
+        <div class="button-container">
+          <img
+            id="chatbot-logo"
+            src="https://img.icons8.com/windows/2x/chatbot.png"
+            alt="Chatbot icon"
+          />
+          Close
         </div>
       </button>
     </div>
@@ -61,6 +70,13 @@ export default {
       isOpen: false,
     }
   },
+  watch: {
+    chatList: {
+      handler() {
+        this.scrollBottom()
+      },
+    },
+  },
   methods: {
     sendMessage() {
       const { WebSocketEventBus } = require('mmcc/WebSocketEventBus')
@@ -75,6 +91,13 @@ export default {
       WebSocketEventBus.$emit('send', packet)
       this.messageToSend = ''
     },
+    scrollBottom() {
+      setTimeout(() => {
+        if (this.$refs.chatWindow) {
+          this.$refs.chatWindow.scrollTop = this.$refs.chatWindow.scrollHeight
+        }
+      }, 0)
+    },
   },
 }
 </script>
@@ -82,23 +105,10 @@ export default {
 <style scoped>
 .chat {
   position: fixed;
-  bottom: 90px;
+  bottom: 73px;
   right: 20px;
   z-index: 1000000000;
 }
-/* 
-.button {
-  height: 20px;
-  width: 20px;
-  border: 1px solid black;
-  border-radius: 100%;
-  padding: 10px;
-  float: right;
-}
-.button img {
-  width: 100%;
-} 
-*/
 
 #button {
   min-width: 95px;
@@ -128,19 +138,26 @@ export default {
   align-items: center;
 }
 .chat-container {
+  display: block;
   border: 1px solid var(--blue);
-  border-radius: 6px;
-  height: 500px;
+  border-radius: 20px;
+  height: 50%;
   width: 300px;
-  /* position: absolute; */
   position: fixed;
-  bottom: 140px;
+  bottom: 123px;
   right: 20px;
   background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 500px) {
+  .chat-container {
+    height: 40%;
+    width: 80%;
+  }
 }
 .chat-window {
   overflow-y: scroll;
-  height: calc(100% - 50px);
+  height: calc(100% - 90px);
   border-bottom: 1px solid var(--blue);
 }
 .message {
@@ -166,16 +183,10 @@ export default {
   border-top-left-radius: 0px;
   border-top-right-radius: 15px;
 }
-/* input {
-  width: 98%;
-  position: absolute;
-  z-index: 20;
-  height: 30px;
-  border-top: 1px solid black;
-} */
 
 input {
   border: none;
+  background: transparent;
   /* border-radius: 6px; */
   /* border-color: var(--blue); */
   box-shadow: none;
@@ -192,6 +203,11 @@ input {
 
 input:focus {
   outline-color: var(--blue);
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
 }
 
 ::placeholder {
@@ -214,7 +230,7 @@ input:focus {
 h4 {
   margin-top: auto;
   margin-bottom: auto;
-  margin-left: 10px;
+  margin-left: 14px;
   display: inline-flex;
   color: white;
   -webkit-user-select: none; /* Chrome all / Safari all */
@@ -230,44 +246,22 @@ h3:hover {
 .chat-bar {
   display: inline-flex;
   border-top: 1px solid var(--blue);
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
   width: 100%;
   height: 40px;
   background: var(--blue);
-  /* position: fixed;
-  bottom: 20px;
-  right: 20px; */
   z-index: 1000000000;
 }
 
-.close {
-  position: absolute;
-  right: 25px;
-  top: 10px;
-  /* bottom: 573px;
-  right: 25px; */
-  width: 20px;
-  height: 20px;
-  opacity: 1;
-  z-index: 10000000000;
-}
-.close:hover {
-  cursor: pointer;
-}
-.close:before,
-.close:after {
-  position: absolute;
-  left: 15px;
-  content: ' ';
-  height: 20px;
-  width: 2px;
-  background-color: white;
-}
-.close:before {
-  transform: rotate(45deg);
-}
-.close:after {
-  transform: rotate(-45deg);
+#circle {
+  background: greenyellow;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
 }
 </style>

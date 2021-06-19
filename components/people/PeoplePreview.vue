@@ -5,7 +5,7 @@
       :id="person.id"
       :key="person.id"
       link="/people/"
-      thumbnail="https://www.lago.it/wp-content/uploads/2015/03/luoghi-di-lavoro-accoglienti_L2R3272_01.jpg"
+      :thumbnail="person.image"
       :name="person.name"
     />
   </div>
@@ -15,7 +15,7 @@
       :id="person.id"
       :key="person.id"
       link="/people/"
-      thumbnail="https://www.lago.it/wp-content/uploads/2015/03/luoghi-di-lavoro-accoglienti_L2R3272_01.jpg"
+      :thumbnail="person.image"
       :name="person.name"
       :description="person.role"
     />

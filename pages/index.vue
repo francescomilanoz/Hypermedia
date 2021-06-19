@@ -5,7 +5,7 @@
       preview-text="We are the leading IT consulting company in various areas. Visit this site to find out more, or click the 'contact us' button to speak directly with one of our experts!"
       thumbnail="https://www.lavoroediritti.com/wp-content/uploads/2017/07/consegna-azienda-1.jpg"
     />
-    <a name="our-areas" class="anchor"></a>
+    <a id="our-areas" name="our-areas" class="anchor"></a>
     <h2 id="blue-text">Our Areas</h2>
     <br />
     <div class="areas-container">
@@ -19,7 +19,7 @@
         :description="area.shortDescription"
       />
     </div>
-    <a name="our-best-services" class="anchor"></a>
+    <a id="our-services" name="our-best-services" class="anchor"></a>
     <div id="best-services-container">
       <div>
         <h2 id="blue-text">Our Best Services</h2>
@@ -78,6 +78,16 @@ export default {
         },
       ],
     }
+  },
+  mounted() {
+    this.$nextTick(() => {
+      if (this.$route.hash) {
+        const el = document.querySelector(this.$route.hash)
+        if (el) {
+          window.scrollTo({ top: el.offsetTop, behavior: 'smooth' })
+        }
+      }
+    })
   },
 }
 </script>
