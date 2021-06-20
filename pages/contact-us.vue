@@ -52,8 +52,9 @@
           <input id="submit" type="submit" value="SUBMIT" />
         </form>
       </div>
+      <div id="gap-box"></div>
       <div>
-        <h3>Or, if you prefer, contact us directly via:</h3>
+        <h3>Or contact us directly via:</h3>
         <p>Tel.: +39 347 2049382</p>
         <p id="last-element">
           Mail:
@@ -117,11 +118,22 @@ form {
   align-content: center;
   align-items: center;
   justify-items: center;
+  /* justify-content: space-around; */
   padding-left: 10%;
   padding-right: 10%;
   flex-wrap: wrap;
-  gap: 30%;
 }
+
+#gap-box {
+  flex: 0.65 0 100px;
+}
+
+@media (max-width: 574px) {
+  #gap-box {
+    flex: 0 0 0px;
+  }
+}
+
 input,
 textarea {
   font-family: Arial, Helvetica, sans-serif;

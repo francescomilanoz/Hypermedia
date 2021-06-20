@@ -111,7 +111,6 @@ export default {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  text-align: center;
 }
 @media (max-width: 640px) {
   .areas-container {

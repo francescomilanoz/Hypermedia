@@ -46,11 +46,11 @@
         class="button-selected"
         @click="selected = 'Reference'"
       >
-        PROJECT REFERENCES
+        SERVICE REFERENCES
       </button>
 
       <button v-else class="button" @click="selected = 'Reference'">
-        PROJECT REFERENCES
+        SERVICE REFERENCES
       </button>
 
       <button
