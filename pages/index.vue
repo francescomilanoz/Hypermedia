@@ -19,7 +19,7 @@
         :description="area.shortDescription"
       />
     </div>
-    <a id="our-services" name="our-best-services" class="anchor"></a>
+    <a id="our-best-services" name="our-best-services" class="anchor"></a>
     <div id="best-services-container">
       <div>
         <h2 id="blue-text">Our Best Services</h2>

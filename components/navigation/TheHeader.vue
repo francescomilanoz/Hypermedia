@@ -1,6 +1,6 @@
 <template>
   <div class="header-container">
-    <header class="the-header">
+    <header role="navigation" aria-label="Main" class="the-header">
       <TheSideNavToggle @toggle="$emit('sidenavToggle')" />
       <div class="logo">
         <nuxt-link to="/">
