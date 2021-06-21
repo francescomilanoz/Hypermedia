@@ -185,6 +185,7 @@ export default {
 }
 
 input {
+  -webkit-appearance: textarea;
   border: none;
   background: transparent;
   /* border-radius: 6px; */
