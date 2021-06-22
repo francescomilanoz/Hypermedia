@@ -36,7 +36,7 @@
         <div class="button-container">
           <img
             id="chatbot-logo"
-            src="https://img.icons8.com/windows/2x/chatbot.png"
+            src="https://img.icons8.com/windows/10x/chatbot.png"
             alt="Chatbot icon"
           />
           Chat with me!
@@ -46,7 +46,7 @@
         <div class="button-container">
           <img
             id="chatbot-logo"
-            src="https://img.icons8.com/windows/2x/chatbot.png"
+            src="https://img.icons8.com/windows/10x/chatbot.png"
             alt="Chatbot icon"
           />
           Close
@@ -185,7 +185,6 @@ export default {
 }
 
 input {
-  -webkit-appearance: textarea;
   border: none;
   background: transparent;
   /* border-radius: 6px; */
