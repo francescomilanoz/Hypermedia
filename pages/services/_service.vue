@@ -55,7 +55,7 @@ export default {
     if (serviceRetreived == null) redirect('/error')
     let team = []
 
-    if (data.roleServices === []) {
+    if (data.roleServices !== []) {
       let person1 // person1 is the Project Manger
       let person2 // person2 is the Reference for assistance
 
@@ -172,7 +172,7 @@ a {
 }
 
 .app-container {
-  padding-bottom: 80px;
+  padding-bottom: 120px;
 }
 @media (max-width: 350px) {
   h1 {
