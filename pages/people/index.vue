@@ -7,6 +7,7 @@
     />
     <h1>The whole Hypermood team</h1>
     <div class="filters-container">
+      <p>Filter by</p>
       <button
         v-if="selected === 'All'"
         class="button-selected"
@@ -168,6 +169,11 @@ h1 {
   margin-left: 10%;
   margin-right: 10%;
   text-align: center;
+}
+p {
+  color: var(--blue);
+  font-size: 20px;
+  margin-bottom: auto;
 }
 @media (max-width: 740px) {
   .p-container {

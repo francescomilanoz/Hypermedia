@@ -10,7 +10,12 @@
       />
       <h1>Bio of {{ person2.name }}</h1>
       <div class="description-person">
-        {{ person2.description }}
+        <div id="person-img">
+          <img class="photo" :src="person2.image" alt="Person photo" />
+        </div>
+        <div id="bio">
+          {{ person2.description }}
+        </div>
       </div>
     </div>
     <style scoped>
@@ -141,15 +146,23 @@ h2 {
   color: var(--blue);
   padding-bottom: 0px;
 }
+.photo {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
 
 .description-person {
   display: flex;
-  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
   color: var(--blue);
   font-size: 16px;
-  width: 70%;
   margin-left: 10%;
+  margin-right: 10%;
   padding-bottom: 30px;
+  column-gap: 30px;
 }
 .container-person {
   width: 100px;
@@ -159,14 +172,6 @@ h2 {
   padding-right: 40px;
   padding-bottom: 40px;
   margin-left: 10%;
-}
-.person-img {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  background-position: center;
-  background-size: cover;
-  border-radius: 50%;
 }
 .area-element {
   margin-left: 10%;
@@ -180,6 +185,9 @@ a {
 @media (max-width: 350px) {
   h1 {
     font-size: 25px;
+  }
+  .description-person {
+    flex-wrap: wrap;
   }
 }
 </style>
