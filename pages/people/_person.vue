@@ -18,37 +18,18 @@
         </div>
       </div>
     </div>
-    <style scoped>
-      #responsible {
-        display: none;
-      }
-    </style>
 
-    <h2 id="responsible">Responsible for Area(s):</h2>
-
-    <div class="area-element">
-      <div v-for="roleArea in person2.roleAreas" :key="roleArea.id">
-        <div v-if="roleArea.role === 'Responsible'">
-          <style scoped>
-            #responsible {
-              display: inline;
-            }
-          </style>
-        </div>
+    <div v-if="area">
+      <h2>Responsible for Area:</h2>
+      <div class="area-element">
         <CardImage
-          v-if="roleArea.role === 'Responsible'"
-          :id="roleArea.area.id"
+          :id="area.id"
           link="/areas/"
-          :thumbnail="roleArea.area.image"
-          :name="roleArea.area.name"
+          :thumbnail="area.image"
+          :name="area.name"
         />
       </div>
     </div>
-    <style scoped>
-      #project-manager {
-        display: none;
-      }
-    </style>
 
     <div v-if="pmServices.length !== 0">
       <h2 v-if="pmServices.length === 1">Project manager for the service:</h2>
@@ -89,6 +70,13 @@ export default {
     const person2 = data
     if (person2 == null) redirect('/error')
 
+    let area
+    person2.roleAreas.forEach((element) => {
+      if (element.role === 'Responsible') {
+        area = element.area
+      }
+    })
+
     const pmServices = []
     const rServices = []
 
@@ -101,6 +89,7 @@ export default {
     })
     return {
       person2,
+      area,
       pmServices,
       rServices,
     }
@@ -166,7 +155,6 @@ h2 {
 }
 .service-elements {
   margin-top: 40px;
-  /* margin-left: 10%; */
 }
 .app-container {
   padding-bottom: 80px;
