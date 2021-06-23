@@ -50,50 +50,21 @@
       }
     </style>
 
-    <h2 id="project-manager">Project manager of service(s):</h2>
-
-    <div class="area-element">
-      <div v-for="roleService in person2.roleServices" :key="roleService.id">
-        <div v-if="roleService.role === 'Project manager'">
-          <style scoped>
-            #project-manager {
-              display: inline;
-            }
-          </style>
-        </div>
-        <CardImage
-          v-if="roleService.role === 'Project manager'"
-          :id="roleService.service.id"
-          link="/services/"
-          :thumbnail="roleService.service.image"
-          :name="roleService.service.name"
-        />
+    <div v-if="pmServices.length !== 0">
+      <h2 v-if="pmServices.length === 1">Project manager of service:</h2>
+      <h2 v-else>Project manager of services:</h2>
+      <div class="service-elements">
+        <ServicesPreviewList :services="pmServices" />
       </div>
     </div>
-    <style scoped>
-      #reference {
-        display: none;
-      }
-    </style>
 
-    <h2 id="reference">Reference for assistance for service(s):</h2>
-
-    <div class="area-element">
-      <div v-for="roleService in person2.roleServices" :key="roleService.id">
-        <div v-if="roleService.role === 'Reference'">
-          <style scoped>
-            #reference {
-              display: inline;
-            }
-          </style>
-        </div>
-        <CardImage
-          v-if="roleService.role === 'Reference'"
-          :id="roleService.service.id"
-          link="/services/"
-          :thumbnail="roleService.service.image"
-          :name="roleService.service.name"
-        />
+    <div v-if="rServices.length !== 0">
+      <h2 v-if="rServices.length === 1">
+        Reference for assistance for service:
+      </h2>
+      <h2 v-else>Reference for assistance for services:</h2>
+      <div class="service-elements">
+        <ServicesPreviewList :services="rServices" />
       </div>
     </div>
   </div>
@@ -101,9 +72,13 @@
 
 <script>
 import Cover from '~/components/Cover'
+import ServicesPreviewList from '~/components/Services/ServicesPreviewList'
+import CardImage from '~/components/CardImage'
 export default {
   components: {
     Cover,
+    CardImage,
+    ServicesPreviewList,
   },
   async asyncData({ $axios, route, redirect }) {
     const { person } = route.params
@@ -113,8 +88,21 @@ export default {
     )
     const person2 = data
     if (person2 == null) redirect('/error')
+
+    const pmServices = []
+    const rServices = []
+
+    person2.roleServices.forEach((element) => {
+      if (element.role === 'Project manager') {
+        pmServices.push(element.service)
+      } else if (element.role === 'Reference') {
+        rServices.push(element.service)
+      }
+    })
     return {
       person2,
+      pmServices,
+      rServices,
     }
   },
   head() {
@@ -175,6 +163,10 @@ h2 {
 }
 .area-element {
   margin-left: 10%;
+}
+.service-elements {
+  margin-top: 40px;
+  /* margin-left: 10%; */
 }
 .app-container {
   padding-bottom: 80px;
