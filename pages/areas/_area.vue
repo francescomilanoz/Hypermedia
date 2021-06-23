@@ -65,7 +65,7 @@ export default {
         responsible = element.person
       }
 
-      if (element.role === 'Team') {
+      if (element.role === 'Worker') {
         team.push(element.person)
       }
     })
@@ -122,7 +122,7 @@ a {
 }
 
 .app-container {
-  padding-bottom: 80px;
+  padding-bottom: 120px;
 }
 @media (max-width: 350px) {
   h1 {
