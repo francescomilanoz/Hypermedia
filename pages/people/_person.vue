@@ -51,8 +51,8 @@
     </style>
 
     <div v-if="pmServices.length !== 0">
-      <h2 v-if="pmServices.length === 1">Project manager of service:</h2>
-      <h2 v-else>Project manager of services:</h2>
+      <h2 v-if="pmServices.length === 1">Project manager for the service:</h2>
+      <h2 v-else>Project manager for the services:</h2>
       <div class="service-elements">
         <ServicesPreviewList :services="pmServices" />
       </div>
@@ -62,7 +62,7 @@
       <h2 v-if="rServices.length === 1">
         Reference for assistance for service:
       </h2>
-      <h2 v-else>Reference for assistance for services:</h2>
+      <h2 v-else>Reference for assistance for the services:</h2>
       <div class="service-elements">
         <ServicesPreviewList :services="rServices" />
       </div>

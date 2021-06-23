@@ -17,7 +17,7 @@
     <ServicesPreviewList :services="areaRetrieved.services" />
     <br />
     <br />
-    <h1>Responsible of the {{ areaRetrieved.name }} Area</h1>
+    <h1>Responsible for the {{ areaRetrieved.name }} Area</h1>
     <div class="p-container">
       <CardImage
         v-if="responsible"
