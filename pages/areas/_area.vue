@@ -25,6 +25,7 @@
         link="/people/"
         :thumbnail="responsible.image"
         :name="responsible.name"
+        alternative-text-to-append=" profile picture"
       />
     </div>
     <br />

@@ -11,7 +11,11 @@
       <h1>Bio of {{ person2.name }}</h1>
       <div class="description-person">
         <div id="person-img">
-          <img class="photo" :src="person2.image" alt="Person photo" />
+          <img
+            class="photo"
+            :src="person2.image"
+            :alt="person2.name + ' profile picture'"
+          />
         </div>
         <div id="bio">
           {{ person2.description }}
@@ -27,6 +31,7 @@
           link="/areas/"
           :thumbnail="area.image"
           :name="area.name"
+          alternative-text-to-append=" area logo"
         />
       </div>
     </div>

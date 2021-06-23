@@ -7,6 +7,7 @@
       link="/people/"
       :thumbnail="person.image"
       :name="person.name"
+      alternative-text-to-append=" profile picture"
     />
   </div>
   <div v-else class="people-container">
@@ -18,6 +19,7 @@
       :thumbnail="person.image"
       :name="person.name"
       :description="person.role"
+      alternative-text-to-append=" profile picture"
     />
   </div>
 </template>

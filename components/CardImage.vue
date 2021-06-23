@@ -4,6 +4,8 @@
       <div
         class="img-container"
         :style="{ backgroundImage: 'url(' + thumbnail + ')' }"
+        role="img"
+        :aria-label="name + alternativeTextToAppend"
       ></div>
       <div class="name-image">{{ name }}</div>
       <div v-if="!(description === '')" class="description">
@@ -37,6 +39,11 @@ export default {
       type: String,
       required: false,
       default: '',
+    },
+    alternativeTextToAppend: {
+      type: String,
+      required: false,
+      default: ' circular image',
     },
   },
 }

@@ -24,6 +24,7 @@
               link="/areas/"
               :thumbnail="serviceRetreived.area.image"
               :name="serviceRetreived.area.name"
+              alternative-text-to-append=" area logo"
             />
           </div>
         </div>
@@ -32,7 +33,7 @@
     <div v-if="team.length !== 0" class="flex-container">
       <div class="flex-item-left">
         <h1>The service team</h1>
-        <PeoplePreview :people="team" has-description="true" />
+        <PeoplePreview :people="team" :has-description="true" />
       </div>
     </div>
   </div>
