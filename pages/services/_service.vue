@@ -9,12 +9,15 @@
     />
     <div class="descritpion-container">
       <div class="description">
-        <h1>Descritpion of the {{ serviceRetreived.name }} Service</h1>
+        <h1>Descritpion of the {{ serviceRetreived.name }} service</h1>
         <p>{{ serviceRetreived.description }}</p>
       </div>
       <div class="flex-item-right">
         <div class="area-container">
           <h1 class="area-name">From the Area</h1>
+          <!-- <h1 class="area-name">
+            From the <span style="color: var(--lightblue)">Area</span>
+          </h1> -->
           <div class="area-element">
             <CardImage
               :id="serviceRetreived.area.id"
@@ -26,7 +29,7 @@
         </div>
       </div>
     </div>
-    <div class="flex-container">
+    <div v-if="team.length !== 0" class="flex-container">
       <div class="flex-item-left">
         <h1>The service team</h1>
         <PeoplePreview :people="team" has-description="true" />
