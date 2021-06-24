@@ -94,10 +94,10 @@ export default {
   async asyncData({ $axios, route }) {
     const { data } = await $axios.get(`${process.env.BASE_URL}/api/people`)
     const allPerson = data
-    const projectManagers = []
-    const responsibles = []
-    const references = []
-    const workers = []
+    let projectManagers = []
+    let responsibles = []
+    let references = []
+    let workers = []
     allPerson.forEach((person) => {
       if (person.roleServices !== undefined) {
         person.roleServices.forEach((roleService) => {
@@ -120,6 +120,34 @@ export default {
           }
         })
       }
+    })
+
+    allPerson.sort(function (person1, person2) {
+      return person1.name.localeCompare(person2.name)
+    })
+
+    projectManagers = projectManagers.filter(
+      (value, index) => projectManagers.indexOf(value) === index
+    )
+    projectManagers.sort(function (person1, person2) {
+      return person1.name.localeCompare(person2.name)
+    })
+    responsibles = responsibles.filter(
+      (value, index) => responsibles.indexOf(value) === index
+    )
+    responsibles.sort(function (person1, person2) {
+      return person1.name.localeCompare(person2.name)
+    })
+    references = references.filter(
+      (value, index) => references.indexOf(value) === index
+    )
+    references.sort(function (person1, person2) {
+      return person1.name.localeCompare(person2.name)
+    })
+    workers = workers.filter((value, index) => workers.indexOf(value) === index)
+
+    workers.sort(function (person1, person2) {
+      return person1.name.localeCompare(person2.name)
     })
 
     return {
