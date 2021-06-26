@@ -2,7 +2,7 @@
   <div id="app-container">
     <Cover
       title="Services"
-      preview-text="Founded in Italy in 2000, today Hypermood is a multinational group that focuses its consulting offering on hard technology challenges with large-scale business impact in databases, networking, machine learning and security."
+      preview-text="Solve your business problems with Hypermood services. Please feel free to take a look and explore as much as you like."
       thumbnail="https://static.wixstatic.com/media/357df1_02076c63bb6646aca086fd34f7f60292~mv2.jpg"
     />
     <h1 class="blue-title">All our services, divided by areas</h1>
