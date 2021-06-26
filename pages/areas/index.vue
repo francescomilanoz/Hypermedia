@@ -1,11 +1,11 @@
 <template>
-  <div class="app-container">
+  <div id="app-container">
     <Cover
       title="Areas"
       :preview-text="description"
       thumbnail="https://static.wixstatic.com/media/357df1_2bc8afdf6a7049e4ba767b04521c8bb6~mv2.jpg"
     />
-    <h1>Our four Areas</h1>
+    <h1 class="blue-title">Our four Areas</h1>
     <div v-for="area in allAreas" id="all-areas" :key="area.area_id">
       <AreaName
         :id="area.id"
@@ -54,13 +54,10 @@ export default {
 </script>
 
 <style scoped>
-.app-container {
+#app-container {
   padding-bottom: 80px;
 }
 h1 {
-  color: var(--blue);
-  display: flex;
-  justify-content: center;
   margin-top: -20px;
 }
 @media (max-width: 350px) {

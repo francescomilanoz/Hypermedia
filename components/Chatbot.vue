@@ -1,7 +1,7 @@
 <template>
-  <div class="chat">
-    <div v-if="isOpen" class="chat-container">
-      <div class="chat-bar">
+  <div id="chat">
+    <div v-if="isOpen" id="chat-container">
+      <div id="chat-bar">
         <h4>Hypermood Chatbot</h4>
         <div id="circle"></div>
       </div>
@@ -103,7 +103,7 @@ export default {
 </script>
 
 <style scoped>
-.chat {
+#chat {
   position: fixed;
   bottom: 73px;
   right: 20px;
@@ -137,7 +137,7 @@ export default {
   justify-content: center;
   align-items: center;
 }
-.chat-container {
+#chat-container {
   display: block;
   border: 1px solid var(--blue);
   border-radius: 20px;
@@ -150,7 +150,7 @@ export default {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 500px) {
-  .chat-container {
+  #chat-container {
     height: 40%;
     width: 80%;
   }
@@ -243,7 +243,7 @@ h3:hover {
   cursor: default;
 }
 
-.chat-bar {
+#chat-bar {
   display: inline-flex;
   border-top: 1px solid var(--blue);
   border-top-left-radius: 18px;

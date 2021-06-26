@@ -1,12 +1,12 @@
 <template>
-  <div class="app-container">
+  <div id="app-container">
     <Cover
       title="People"
       preview-text="Founded in Italy in 2000, today Hypermood is a multinational group that focuses its consulting offering on hard technology challenges with large-scale business impact in databases, networking, machine learning and security."
       thumbnail="https://static.wixstatic.com/media/357df1_9c36c10331734c9b8bea7357fb13431e~mv2.jpg"
     />
-    <h1>The whole Hypermood team</h1>
-    <div class="filters-container">
+    <h1 class="blue-title">The whole Hypermood team</h1>
+    <div id="filters-container">
       <p>Filter by</p>
       <button
         v-if="selected === 'All'"
@@ -190,9 +190,6 @@ export default {
   margin-bottom: 40px;
 }
 h1 {
-  color: var(--blue);
-  display: flex;
-  justify-content: center;
   margin-top: -20px;
   margin-left: 10%;
   margin-right: 10%;
@@ -215,7 +212,7 @@ p {
 a {
   text-decoration: none;
 }
-.app-container {
+#app-container {
   padding-bottom: 80px;
 }
 .button {
@@ -262,7 +259,7 @@ a {
   text-decoration: none;
   color: white;
 }
-.filters-container {
+#filters-container {
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 10px;

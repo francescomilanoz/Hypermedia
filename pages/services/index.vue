@@ -1,11 +1,11 @@
 <template>
-  <div class="app-container">
+  <div id="app-container">
     <Cover
       title="Services"
       preview-text="Founded in Italy in 2000, today Hypermood is a multinational group that focuses its consulting offering on hard technology challenges with large-scale business impact in databases, networking, machine learning and security."
       thumbnail="https://static.wixstatic.com/media/357df1_02076c63bb6646aca086fd34f7f60292~mv2.jpg"
     />
-    <h1>All our services, divided by areas</h1>
+    <h1 class="blue-title">All our services, divided by areas</h1>
     <div v-for="area in areas" :key="area.id">
       <AreaName :id="area.id" :name="area.name" :logo="area.image" />
       <ServicesPreviewList :services="area.services" />
@@ -48,13 +48,10 @@ export default {
 </script>
 
 <style scoped>
-.app-container {
+#app-container {
   padding-bottom: 80px;
 }
 h1 {
-  color: var(--blue);
-  display: flex;
-  justify-content: center;
   margin-top: -20px;
   margin-left: 10%;
   margin-right: 10%;

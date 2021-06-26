@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container">
+  <div id="app-container">
     <Cover
       title="Contact us"
       preview-text="Thank you for your interest in Hypermood! Please fill out the form to contact us and don't forget to check the box if you'd like to receive news, articles and insights.
@@ -94,7 +94,7 @@ export default {
 </script>
 
 <style scoped>
-.app-container {
+#app-container {
   padding-bottom: 90px;
 }
 h1 {

@@ -1,10 +1,10 @@
 <template>
   <div>
     <nuxt-link :to="'/areas/' + id"
-      ><div class="area-container">
-        <img class="area-logo" :src="logo" :alt="name" />
-        <h1 class="area-name">{{ name }}</h1>
-        <p class="area-description">{{ description }}</p>
+      ><div id="area-container">
+        <img id="area-logo" :src="logo" :alt="name" />
+        <h1 id="area-name">{{ name }}</h1>
+        <p id="area-description">{{ description }}</p>
       </div></nuxt-link
     >
   </div>
@@ -45,28 +45,28 @@ a {
   text-decoration: none;
 }
 
-.area-container {
+#area-container {
   padding-left: 10%;
   padding-right: 10%;
   max-width: 1550px;
   margin: auto;
 }
 
-.area-name {
+#area-name {
   text-align: left;
   height: 50px;
   color: var(--blue);
   margin-top: 10px;
 }
 
-.area-logo {
+#area-logo {
   width: 3rem;
   height: 3rem;
   float: left;
   margin: -6px 24px 0 0;
 }
 
-.area-description {
+#area-description {
   color: var(--blue);
   font-size: 16px;
   grid-template-columns: auto;

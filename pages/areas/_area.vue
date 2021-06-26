@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container">
+  <div id="app-container">
     <Cover
       :title="areaRetrieved.name"
       :preview-text="areaRetrieved.shortDescription"
@@ -8,7 +8,7 @@
       parent-section-name="areas"
     />
     <h1>Description of the {{ areaRetrieved.name }} Area</h1>
-    <div class="descritpion-container">
+    <div id="descritpion-container">
       <p>{{ areaRetrieved.description }}</p>
     </div>
     <br />
@@ -112,7 +112,7 @@ a {
   text-decoration: none;
 }
 
-.descritpion-container {
+#descritpion-container {
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -122,7 +122,7 @@ a {
   padding-right: 5%;
 }
 
-.app-container {
+#app-container {
   padding-bottom: 120px;
 }
 @media (max-width: 350px) {

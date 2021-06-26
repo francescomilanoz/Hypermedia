@@ -1,14 +1,14 @@
 <template>
-  <div class="app-container">
+  <div id="app-container">
     <Cover
       title="HYPERMOOD"
       preview-text="We are the leading IT consulting company in various areas. Visit this site to find out more, or click the 'contact us' button to speak directly with one of our experts!"
       thumbnail="https://static.wixstatic.com/media/357df1_cc84f45d47ac48fc833c9d9323448087~mv2.jpg"
     />
     <a id="our-areas" name="our-areas" class="anchor"></a>
-    <h1 id="blue-text">Our Areas</h1>
+    <h1 class="blue-title">Our Areas</h1>
     <br />
-    <div class="areas-container">
+    <div id="areas-container">
       <CardImageBig
         v-for="area in allAreas"
         :id="area.id"
@@ -22,26 +22,30 @@
     <a id="our-best-services" name="our-best-services" class="anchor"></a>
     <div id="best-services-container">
       <div>
-        <h2 id="blue-text">Our Best Services</h2>
+        <h2 class="blue-title">Our Best Services</h2>
       </div>
       <div>
         <ServicesPreviewList id="best-services-list" :services="bestServices" />
       </div>
     </div>
-    <div class="finalTwoColumns">
+    <div id="finalTwoColumns">
       <div class="containerColumn">
         <h2 class="white-text">More questions?</h2>
         <div>
-          <nuxt-link id="linkButton" to="/contact-us"
-            ><button id="button" type="button">CONTACT US</button></nuxt-link
+          <nuxt-link class="link-white-button" to="/contact-us"
+            ><button class="white-button" type="button">
+              CONTACT US
+            </button></nuxt-link
           >
         </div>
       </div>
       <div class="containerColumn">
         <h2 class="white-text">Discover our story</h2>
 
-        <nuxt-link id="linkButton" to="/about">
-          <button id="button" type="button">ABOUT US</button></nuxt-link
+        <nuxt-link class="link-white-button" to="/about">
+          <button class="white-button" type="button">
+            ABOUT US
+          </button></nuxt-link
         >
       </div>
     </div>
@@ -93,7 +97,7 @@ export default {
 </script>
 
 <style scoped>
-.areas-container {
+#areas-container {
   padding-left: 10%;
   padding-right: 10%;
   display: flex;
@@ -113,7 +117,7 @@ export default {
   flex-direction: column;
 }
 @media (max-width: 640px) {
-  .areas-container {
+  #areas-container {
     padding-right: 1%;
     justify-content: center;
     padding-left: 1%;
@@ -123,7 +127,7 @@ export default {
 a {
   text-decoration: none;
 }
-.app-container {
+#app-container {
   padding-bottom: 55px;
 }
 h1 {
@@ -143,12 +147,7 @@ h2 {
   color: white;
 }
 
-#blue-text {
-  display: flex;
-  justify-content: center;
-  color: var(--blue);
-}
-.finalTwoColumns {
+#finalTwoColumns {
   background-color: var(--blue);
   padding-top: 20px;
   padding-bottom: 100px;
@@ -163,26 +162,9 @@ h2 {
   color: white;
   text-align: center;
 }
-#button {
-  width: 130px;
-  min-width: 95px;
-  height: 43px;
-  border-radius: 30px;
-  border-width: 0px;
-  cursor: pointer;
-  background: white;
-  color: white;
-  font-weight: bold;
-  margin-top: 20px;
-  color: var(--blue);
-}
-#linkButton {
-  color: var(--blue);
-  font-weight: bold;
-  text-decoration: none;
-}
+
 @media (max-width: 640px) {
-  .finalTwoColumns {
+  #finalTwoColumns {
     display: block;
     padding-left: 0%;
     padding-right: 0%;
@@ -198,7 +180,7 @@ h2 {
     padding-top: 80px;
     padding-bottom: 200px;
   }
-  .finalTwoColumns {
+  #finalTwoColumns {
     margin-top: -80px;
   }
 }

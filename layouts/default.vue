@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container">
+  <div id="app-container">
     <TheHeader @sidenavToggle="displaySidenav = !displaySidenav" />
 
     <TheSidenav :show="displaySidenav" @close="displaySidenav = false" />
@@ -41,7 +41,7 @@ body {
   height: 100%;
   width: 100%;
 }
-.app-container {
+#app-container {
   min-height: 84vh;
   display: flex;
   flex-direction: column;

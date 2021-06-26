@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container">
+  <div id="app-container">
     <div id="image">
       <img src="~/assets/img/404.svg" alt="Page not found" />
     </div>
@@ -10,7 +10,7 @@
 </template>
 
 <style scoped>
-.app-container {
+#app-container {
   padding-bottom: 80px;
 }
 #image {

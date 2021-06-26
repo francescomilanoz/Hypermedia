@@ -1,8 +1,8 @@
 <template>
-  <div class="container">
+  <div id="container">
     <nuxt-link :to="link + id">
       <div
-        class="img-container"
+        id="img-container"
         :style="{ backgroundImage: 'url(' + thumbnail + ')' }"
         role="img"
         :aria-label="name + alternativeTextToAppend"
@@ -50,14 +50,14 @@ export default {
 </script>
 
 <style scoped>
-.container {
+#container {
   width: 100px;
   height: 100px;
   position: relative;
   text-align: center;
   padding-bottom: 40px;
 }
-.img-container {
+#img-container {
   width: 100%;
   height: 100%;
   position: relative;

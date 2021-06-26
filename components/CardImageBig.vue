@@ -1,14 +1,14 @@
 <template>
   <div>
-    <div class="container">
+    <div id="container">
       <h2 id="card-name">{{ name }}</h2>
       <div
-        class="img-container"
+        id="img-container"
         :style="{ backgroundImage: 'url(' + thumbnail + ')' }"
       ></div>
       <p id="card-description">{{ description }}</p>
-      <nuxt-link id="linkButton" :to="link + id">
-        <button id="button">Learn More</button></nuxt-link
+      <nuxt-link class="link-white-button" :to="link + id">
+        <button id="button" class="white-button">Learn More</button></nuxt-link
       >
     </div>
   </div>
@@ -40,7 +40,7 @@ export default {
 </script>
 
 <style scoped>
-.container {
+#container {
   width: 250px;
   height: 400px;
   text-align: center;
@@ -49,7 +49,7 @@ export default {
   border-radius: 15px;
   position: relative;
 }
-.img-container {
+#img-container {
   position: absolute;
   left: 75px;
   top: 70px;
@@ -78,33 +78,18 @@ h2 {
   font-size: 22px;
 }
 #button {
-  width: 130px;
-  min-width: 95px;
-  height: 43px;
-  border-radius: 30px;
-  border-width: 0px;
-  cursor: pointer;
-  background: white;
-  color: var(--blue);
-  font-weight: bold;
-  /* margin-top: 20px; */
   position: absolute;
   left: 60px;
   bottom: 40px;
 }
-#linkButton {
-  color: var(--blue);
-  font-weight: bold;
-  text-decoration: none;
-}
 @media (max-width: 685px) {
-  .container {
+  #container {
     width: 200px;
     height: 280px;
     padding-bottom: 24px;
     border-radius: 9px;
   }
-  .img-container {
+  #img-container {
     width: 60px;
     height: 60px;
     margin-bottom: 6px;

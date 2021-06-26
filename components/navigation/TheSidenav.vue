@@ -1,8 +1,8 @@
 <template>
-  <div class="sidenav-container">
-    <div v-if="show" class="sidenav-backdrop" @click="$emit('close')"></div>
+  <div id="sidenav-container">
+    <div v-if="show" id="sidenav-backdrop" @click="$emit('close')"></div>
     <transition name="slide-side">
-      <div v-if="show" class="sidenav">
+      <div v-if="show" id="sidenav">
         <div class="logo">
           <nuxt-link to="/">
             <img
@@ -11,7 +11,7 @@
             />
           </nuxt-link>
         </div>
-        <ul class="nav-list" @click="$emit('close')">
+        <ul id="nav-list" @click="$emit('close')">
           <li class="nav-item"><nuxt-link to="/areas">AREAS</nuxt-link></li>
           <li class="nav-item">
             <nuxt-link to="/services">SERVICES</nuxt-link>
@@ -47,12 +47,12 @@ export default {
   opacity: 1;
 }
 
-.sidenav-container {
+#sidenav-container {
   height: 100%;
   width: 100%;
 }
 
-.sidenav-backdrop {
+#sidenav-backdrop {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
@@ -62,7 +62,7 @@ export default {
   left: 0;
 }
 
-.sidenav {
+#sidenav {
   height: 100%;
   width: 300px;
   background-color: white;
@@ -83,7 +83,7 @@ export default {
   transform: translateX(-100%);
 }
 
-.nav-list {
+#nav-list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -113,7 +113,7 @@ export default {
     opacity: 1;
   }
 
-  .sidenav {
+  #sidenav {
     height: 100%;
     width: 200px;
     background-color: white;

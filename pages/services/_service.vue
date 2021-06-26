@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container">
+  <div id="app-container">
     <Cover
       :title="serviceRetreived.name"
       :preview-text="serviceRetreived.shortDescription"
@@ -7,18 +7,15 @@
       parent-section-text="Services"
       parent-section-name="services"
     />
-    <div class="descritpion-container">
-      <div class="description">
-        <h1>Descritpion of the {{ serviceRetreived.name }} service</h1>
+    <div id="descritpion-container">
+      <div id="description">
+        <h1>Description of the {{ serviceRetreived.name }} service</h1>
         <p>{{ serviceRetreived.description }}</p>
       </div>
-      <div class="flex-item-right">
-        <div class="area-container">
-          <h1 class="area-name">From the Area</h1>
-          <!-- <h1 class="area-name">
-            From the <span style="color: var(--lightblue)">Area</span>
-          </h1> -->
-          <div class="area-element">
+      <div id="flex-item-right">
+        <div id="area-container">
+          <h1 id="area-name">From the Area</h1>
+          <div id="area-element">
             <CardImage
               :id="serviceRetreived.area.id"
               link="/areas/"
@@ -30,8 +27,8 @@
         </div>
       </div>
     </div>
-    <div v-if="team.length !== 0" class="flex-container">
-      <div class="flex-item-left">
+    <div v-if="team.length !== 0" id="flex-container">
+      <div id="flex-item-left">
         <h1>The service team</h1>
         <PeoplePreview :people="team" :has-description="true" />
       </div>
@@ -111,7 +108,7 @@ a {
   text-decoration: none;
 }
 
-.descritpion-container {
+#descritpion-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -120,62 +117,52 @@ a {
   margin-right: 10%;
   margin-top: -20px;
 }
-.description {
+#description {
   max-width: 65%;
 }
-.flex-container {
+#flex-container {
   margin-left: 10%;
   margin-right: 10%;
 }
 
-.flex-item-right {
+#flex-item-right {
   flex: 30%;
 }
 
-.area-name {
+#area-name {
   text-align: center;
 }
 
-.area-container {
+#area-container {
   float: right;
 }
 
-.area-element {
+#area-element {
   display: flex;
   flex-wrap: wrap;
-  /* Uncomment this below for a graphically nice padding */
-  /* padding-left: 10px; */
   justify-content: center;
 }
 
-/* Responsive layout - makes a one column-layout instead of a two-column layout */
 @media (max-width: 700px) {
-  /* Uncomment this below if you want to center the titles in this page when the screen is on a small screen */
-  /* h1 {
-    text-align: center;
-  } */
-
-  /* Comment this below to center the area-name */
-  .area-name {
+  #area-name {
     text-align: left;
   }
 
-  .flex-item-right,
-  .flex-item-left {
+  #flex-item-right,
+  #flex-item-left {
     flex: 100%;
   }
 
-  .area-container {
+  #area-container {
     float: unset;
   }
 
-  /* Comment this below to center the area-element */
-  .area-element {
+  #area-element {
     justify-content: left;
   }
 }
 
-.app-container {
+#app-container {
   padding-bottom: 120px;
 }
 @media (max-width: 350px) {
@@ -184,7 +171,7 @@ a {
   }
 }
 @media (max-width: 700px) {
-  .description {
+  #description {
     max-width: 100%;
   }
 }

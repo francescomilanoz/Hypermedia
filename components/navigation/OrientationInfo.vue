@@ -2,7 +2,7 @@
   <div>
     <nuxt-link :to="'/' + sectionName">
       <div>
-        <h1 class="back-arrow">&#8249;</h1>
+        <h1 id="back-arrow">&#8249;</h1>
 
         <h1>{{ text }}</h1>
       </div>
@@ -43,7 +43,7 @@ h1 {
   font-weight: normal;
 }
 
-.back-arrow {
+#back-arrow {
   font-size: 30px;
 
   vertical-align: top;

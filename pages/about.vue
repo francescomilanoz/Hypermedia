@@ -6,7 +6,7 @@
       thumbnail="https://static.wixstatic.com/media/357df1_61c14cc3209648238ae672cb3f3ffa43~mv2.jpg"
     />
     <div>
-      <div class="grid-container">
+      <div id="grid-container">
         <div id="item-1" class="grid-item">
           <h1 class="item-title">Our Mission</h1>
           <div id="text">
@@ -24,15 +24,17 @@
         </div>
       </div>
     </div>
-    <div class="mapAndTextContainer">
+    <div id="mapAndTextContainer">
       <div class="containerColumn">
         <h2>Our office</h2>
         <div>
           <p>P.za del Duomo, 20122 Milano MI (right next to the cathedral)</p>
           <p>We are open from 9am until 18pm.</p>
 
-          <nuxt-link id="linkButton" to="/contact-us">
-            <button id="button" type="button">CONTACT US</button></nuxt-link
+          <nuxt-link class="link-white-button" to="/contact-us">
+            <button id="button" class="white-button" type="button">
+              CONTACT US
+            </button></nuxt-link
           >
         </div>
       </div>
@@ -68,7 +70,7 @@ export default {
 </script>
 
 <style scoped>
-.mapAndTextContainer {
+#mapAndTextContainer {
   margin-top: 40px;
   padding-top: 40px;
   padding-bottom: 100px;
@@ -88,7 +90,7 @@ export default {
 }
 
 @media (max-width: 640px) {
-  .mapAndTextContainer {
+  #mapAndTextContainer {
     display: block;
     padding-left: 0%;
     padding-right: 0%;
@@ -116,23 +118,9 @@ p {
   font-size: 20px;
 }
 #button {
-  width: 130px;
-  min-width: 95px;
-  height: 43px;
-  border-radius: 30px;
-  border-width: 0px;
-  cursor: pointer;
-  background: white;
-  color: var(--blue);
-  font-weight: bold;
   margin-top: 20px;
 }
-#linkButton {
-  color: var(--blue);
-  font-weight: bold;
-  text-decoration: none;
-}
-.grid-container {
+#grid-container {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: auto auto;
@@ -156,7 +144,7 @@ p {
   padding-right: 5%;
 }
 @media (max-width: 640px) {
-  .grid-container {
+  #grid-container {
     grid-template-columns: auto;
     column-width: 100%;
   }

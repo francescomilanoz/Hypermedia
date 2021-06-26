@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container">
+  <div id="app-container">
     <div>
       <Cover
         :title="person2.name"
@@ -9,10 +9,10 @@
         parent-section-name="people"
       />
       <h1>Bio of {{ person2.name }}</h1>
-      <div class="description-person">
+      <div id="description-person">
         <div id="person-img">
           <img
-            class="photo"
+            id="photo"
             :src="person2.image"
             :alt="person2.name + ' profile picture'"
           />
@@ -128,13 +128,13 @@ h2 {
   color: var(--blue);
   padding-bottom: 0px;
 }
-.photo {
+#photo {
   border-radius: 50%;
   height: 100px;
   width: 100px;
 }
 
-.description-person {
+#description-person {
   display: flex;
   align-content: center;
   align-items: center;
@@ -161,7 +161,7 @@ h2 {
 .service-elements {
   margin-top: 40px;
 }
-.app-container {
+#app-container {
   padding-bottom: 80px;
 }
 a {
@@ -171,7 +171,7 @@ a {
   h1 {
     font-size: 25px;
   }
-  .description-person {
+  #description-person {
     flex-wrap: wrap;
   }
 }

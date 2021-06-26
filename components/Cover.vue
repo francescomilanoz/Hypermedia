@@ -1,14 +1,14 @@
 <template>
-  <div class="container">
-    <div class="patina"></div>
+  <div id="container">
+    <div id="patina"></div>
     <div
-      class="bar-container"
+      id="bar-container"
       :style="{ backgroundImage: 'url(' + thumbnail + ')' }"
     ></div>
-    <div class="bar-content">
+    <div id="bar-content">
       <OrientationInfo
         v-if="!(parentSectionText === '/')"
-        class="orientation-info"
+        id="orientation-info"
         :text="parentSectionText"
         :section-name="parentSectionName"
       />
@@ -53,7 +53,7 @@ export default {
 </script>
 
 <style scoped>
-.container {
+#container {
   width: 100%;
   height: 400px;
   position: relative;
@@ -63,7 +63,7 @@ export default {
   top: -60px; /* Same size as header - It makes it go under it from the beginning */
 }
 
-.bar-container {
+#bar-container {
   width: 100%;
   height: 400px;
   position: relative;
@@ -71,7 +71,7 @@ export default {
   background-size: cover;
   z-index: -1;
 }
-.patina {
+#patina {
   width: 100%;
   height: 400px;
   position: absolute;
@@ -82,9 +82,8 @@ export default {
   z-index: +1;
 }
 
-.bar-content {
+#bar-content {
   max-width: 550px;
-  /* height: 100%; */
   position: absolute;
   top: 0;
   left: 0;
@@ -95,17 +94,17 @@ export default {
   z-index: +2;
 }
 
-.orientation-info {
+#orientation-info {
   margin-left: -10%;
 }
 
 @media (max-width: 630px) {
-  .bar-content {
+  #bar-content {
     width: 350px;
   }
 }
 @media (max-width: 400px) {
-  .bar-content {
+  #bar-content {
     width: 230px;
   }
 }

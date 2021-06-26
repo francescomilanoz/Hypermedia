@@ -1,15 +1,15 @@
 <template>
-  <div class="header-container">
+  <div id="header-container">
     <header role="navigation" aria-label="Main" class="the-header">
       <TheSideNavToggle @toggle="$emit('sidenavToggle')" />
-      <div class="logo">
+      <div id="logo">
         <nuxt-link to="/">
           <img src="~/assets/img/Logov2.svg" alt="Hypermood logo" />
         </nuxt-link>
       </div>
-      <div class="spacer"></div>
-      <div class="navigation-items">
-        <ul class="nav-list">
+      <div id="spacer"></div>
+      <div id="navigation-items">
+        <ul id="nav-list">
           <li class="nav-item"><nuxt-link to="/areas">AREAS</nuxt-link></li>
           <li class="nav-item">
             <nuxt-link to="/services">SERVICES</nuxt-link>
@@ -37,7 +37,7 @@ export default {
 </script>
 
 <style scoped>
-.header-container {
+#header-container {
   height: 60px;
   top: 0;
 }
@@ -56,7 +56,7 @@ export default {
   top: 0;
 }
 
-.logo img {
+#logo img {
   margin: 0 10px;
   float: left;
   height: 50px;
@@ -65,7 +65,7 @@ export default {
 }
 
 @media (max-width: 400px) {
-  .logo img {
+  #logo img {
     margin: 0 10px;
     float: left;
     height: 40px;
@@ -73,21 +73,21 @@ export default {
   }
 }
 
-.spacer {
+#spacer {
   flex: 1;
 }
 
-.navigation-items {
+#navigation-items {
   display: none;
 }
 
 @media (min-width: 768px) {
-  .navigation-items {
+  #navigation-items {
     display: block;
   }
 }
 
-.nav-list {
+#nav-list {
   list-style: none;
   padding: 0;
   margin: 0;

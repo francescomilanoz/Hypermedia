@@ -1,3 +1,5 @@
+/* This file contains the styles of the classes that have been used several times identical within the site. Instead, we preferred to insert styles like 'blue-button' and 'app-container' directly into the various pages with a <style scoped> tag because they were always different depending on the page you are on. */
+
 :root {
   --blue: #2d3482;
   --grey: #4c4c51;
@@ -9,4 +11,30 @@
   display: block;
   padding-top: 100px;
   margin-top: -100px;
+}
+
+.white-button {
+  width: 130px;
+  min-width: 95px;
+  height: 43px;
+  border-radius: 30px;
+  border-width: 0px;
+  cursor: pointer;
+  background: white;
+  color: white;
+  font-weight: bold;
+  margin-top: 20px;
+  color: var(--blue);
+}
+
+.link-white-button {
+  color: var(--blue);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.blue-title {
+  display: flex;
+  justify-content: center;
+  color: var(--blue);
 }

@@ -1,12 +1,8 @@
 <template>
   <div>
-    <div class="service-container">
-      <div class="service-grid">
-        <div
-          v-for="service in services"
-          :key="service.id"
-          class="service-element"
-        >
+    <div id="service-container">
+      <div id="service-grid">
+        <div v-for="service in services" id="service-element" :key="service.id">
           <div>
             <ServicePreview
               :id="service.id"
@@ -37,40 +33,40 @@ export default {
 </script>
 
 <style scoped>
-.service-container {
+#service-container {
   margin-left: auto;
   margin-right: auto;
   margin-top: -20px;
 }
 
-.service-grid {
+#service-grid {
   display: grid;
   column-gap: 50px;
   max-width: 1400px;
   margin: 1rem auto;
 }
 
-.service-element {
+#service-element {
   width: 80%;
   margin: auto;
 }
 @media (max-width: 600px) {
-  .service-container {
+  #service-container {
     margin-top: -30px;
   }
 }
 
 /* Screen larger than 600px? 2 column*/
 @media (min-width: 600px) {
-  .service-grid {
+  #service-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   /* Adds a margin to reach the beginning of the word (same size as image before area name + margin) */
-  .service-container {
+  #service-container {
     margin-left: 10%;
     margin-right: 10%;
   }
-  .service-element {
+  #service-element {
     width: auto;
     margin: 0;
   }
@@ -78,22 +74,15 @@ export default {
 
 /* Screen larger than 950px? 3 column */
 @media (min-width: 950px) {
-  .service-grid {
+  #service-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 /* Screen larger than 1200px? 4 column */
 @media (min-width: 1200px) {
-  .service-grid {
+  #service-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-
-/* Screen larger than 1550px? 5 columns */
-/* @media (min-width: 1550px) {
-  .service-grid {
-    grid-template-columns: repeat(5, 1fr);
-  }
-} */
 </style>

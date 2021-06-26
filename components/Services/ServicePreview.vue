@@ -1,6 +1,6 @@
 <template>
   <nuxt-link :to="'/services/' + id">
-    <div class="container">
+    <div id="container">
       <h1>{{ name }}</h1>
       <p>{{ previewText }}</p>
     </div>
@@ -46,7 +46,7 @@ a {
   text-decoration: none;
 }
 
-.container {
+#container {
   color: var(--blue);
   /* margin: auto; */
   width: 100%;
