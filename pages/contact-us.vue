@@ -4,7 +4,7 @@
       title="Contact us"
       preview-text="Thank you for your interest in Hypermood! Please fill out the form to contact us and don't forget to check the box if you'd like to receive news, articles and insights.
 "
-      thumbnail="https://www.noor-uvc.com/wp-content/uploads/2020/10/cover-contactus-1.jpg"
+      thumbnail="https://static.wixstatic.com/media/357df1_35d59b13166147dc820d4ff70688a9fe~mv2.jpg"
     />
     <a id="contact-form" name="contact-form" class="anchor"></a>
     <div id="container">

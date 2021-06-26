@@ -3,7 +3,7 @@
     <Cover
       title="HYPERMOOD"
       preview-text="We are the leading IT consulting company in various areas. Visit this site to find out more, or click the 'contact us' button to speak directly with one of our experts!"
-      thumbnail="https://www.lavoroediritti.com/wp-content/uploads/2017/07/consegna-azienda-1.jpg"
+      thumbnail="https://static.wixstatic.com/media/357df1_cc84f45d47ac48fc833c9d9323448087~mv2.jpg"
     />
     <a id="our-areas" name="our-areas" class="anchor"></a>
     <h1 id="blue-text">Our Areas</h1>

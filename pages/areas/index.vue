@@ -3,7 +3,7 @@
     <Cover
       title="Areas"
       :preview-text="description"
-      thumbnail="https://www.ciporistano.it/media/k2/items/cache/ccbca3752adf58a776d876d7a7de9edc_XL.jpg"
+      thumbnail="https://static.wixstatic.com/media/357df1_2bc8afdf6a7049e4ba767b04521c8bb6~mv2.jpg"
     />
     <h1>Our four Areas</h1>
     <div v-for="area in allAreas" id="all-areas" :key="area.area_id">
