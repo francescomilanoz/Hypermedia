@@ -459,7 +459,7 @@ async function insertFakeData() {
     description:
       "She's empathetic and patient. Of course she's also tolerant, calm and adventurous, but they're far less prominent, especially compared to impulses of being argumentative as well. Her empathy though, this is what she's so well-liked for. Friends tend to count on this and her sense of balance especially when they need comforting or support.",
     image:
-      'https://drive.google.com/uc?export=view&id=1t5JQOUI1LuPfxdbmo3QS6zI3sjAY7paQ',
+      'https://static.wixstatic.com/media/357df1_96785c13b4f846fa9ce8fa3cb28262cb~mv2.jpg',
   })
   const person2 = await Person.create({
     name: 'Gregorio Harber',
