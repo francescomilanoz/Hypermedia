@@ -3,7 +3,7 @@
     <Cover
       title="People"
       preview-text="Founded in Italy in 2000, today Hypermood is a multinational group that focuses its consulting offering on hard technology challenges with large-scale business impact in databases, networking, machine learning and security."
-      thumbnail="https://static.wixstatic.com/media/357df1_be1dc08f819b40d198dc046f44514ba5~mv2.jpg"
+      thumbnail="https://static.wixstatic.com/media/357df1_9c36c10331734c9b8bea7357fb13431e~mv2.jpg"
     />
     <h1>The whole Hypermood team</h1>
     <div class="filters-container">
