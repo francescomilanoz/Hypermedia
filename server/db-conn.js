@@ -775,9 +775,6 @@ async function insertFakeData() {
   const RoleArea3 = await RoleArea.create({
     role: 'Responsible',
   })
-  const RoleArea33 = await RoleArea.create({
-    role: 'Worker',
-  })
   const RoleArea34 = await RoleArea.create({
     role: 'Worker',
   })
@@ -825,9 +822,6 @@ async function insertFakeData() {
   })
   const RoleArea4 = await RoleArea.create({
     role: 'Responsible',
-  })
-  const RoleArea44 = await RoleArea.create({
-    role: 'Worker',
   })
   const RoleArea45 = await RoleArea.create({
     role: 'Worker',
@@ -1120,7 +1114,6 @@ async function insertFakeData() {
   await secondArea.addRoleArea(RoleArea224.id)
   await secondArea.addRoleArea(RoleArea225.id)
   await thirdArea.addRoleArea(RoleArea3.id)
-  await thirdArea.addRoleArea(RoleArea33.id)
   await thirdArea.addRoleArea(RoleArea34.id)
   await thirdArea.addRoleArea(RoleArea35.id)
   await thirdArea.addRoleArea(RoleArea36.id)
@@ -1137,7 +1130,6 @@ async function insertFakeData() {
   await thirdArea.addRoleArea(RoleArea333.id)
   await thirdArea.addRoleArea(RoleArea339.id)
   await fourthArea.addRoleArea(RoleArea4.id)
-  await fourthArea.addRoleArea(RoleArea44.id)
   await fourthArea.addRoleArea(RoleArea45.id)
   await fourthArea.addRoleArea(RoleArea46.id)
   await fourthArea.addRoleArea(RoleArea47.id)
