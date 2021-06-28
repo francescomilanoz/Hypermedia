@@ -38,7 +38,6 @@ export default {
 <style scoped>
 h1 {
   margin-top: 3rem;
-  margin-bottom: -1rem;
 }
 
 a {
