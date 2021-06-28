@@ -892,6 +892,18 @@ async function insertFakeData() {
   const RoleService290 = await RoleService.create({
     role: 'Reference',
   })
+  const RoleService300 = await RoleService.create({
+    role: 'Project manager',
+  })
+  const RoleService3001 = await RoleService.create({
+    role: 'Reference',
+  })
+  const RoleService32 = await RoleService.create({
+    role: 'Project manager',
+  })
+  const RoleService322 = await RoleService.create({
+    role: 'Reference',
+  })
 
   await firstArea.addService(database1.id)
   await firstArea.addService(database2.id)
@@ -964,11 +976,11 @@ async function insertFakeData() {
   await networking5.addRoleService(RoleService120.id)
   await networking6.addRoleService(RoleService13.id)
   await networking6.addRoleService(RoleService130.id)
-  await networking7.addRoleService(RoleService12.id)
-  await networking7.addRoleService(RoleService120.id)
+  await networking7.addRoleService(RoleService300.id)
+  await networking7.addRoleService(RoleService3001.id)
 
-  await Machinelearning1.addRoleService(RoleService13.id)
-  await Machinelearning1.addRoleService(RoleService130.id)
+  await Machinelearning1.addRoleService(RoleService32.id)
+  await Machinelearning1.addRoleService(RoleService322.id)
   await Machinelearning2.addRoleService(RoleService14.id)
   await Machinelearning2.addRoleService(RoleService140.id)
   await Machinelearning3.addRoleService(RoleService15.id)
@@ -1006,6 +1018,7 @@ async function insertFakeData() {
   await person1.addRoleService(RoleService1.id)
   await person1.addRoleService(RoleService16.id)
   await person1.addRoleService(RoleService22.id)
+  await person1.addRoleService(RoleService322.id)
   await person1.addRoleArea(RoleArea1.id)
   await person2.addRoleService(RoleService11.id)
   await person2.addRoleService(RoleService17.id)
@@ -1086,10 +1099,13 @@ async function insertFakeData() {
   await person27.addRoleService(RoleService210.id)
   await person27.addRoleArea(RoleArea44.id)
   await person28.addRoleService(RoleService15.id)
+  await person28.addRoleService(RoleService300.id)
   await person28.addRoleArea(RoleArea44.id)
   await person29.addRoleService(RoleService150.id)
+  await person29.addRoleService(RoleService3001.id)
   await person29.addRoleArea(RoleArea44.id)
   await person30.addRoleService(RoleService160.id)
+  await person30.addRoleService(RoleService32.id)
   await person30.addRoleArea(RoleArea44.id)
 }
 /**
