@@ -1,14 +1,14 @@
 const { Sequelize, DataTypes } = require('sequelize')
 
 // Development
-const db = new Sequelize('postgres://user:user@localhost:5432/hypermood')
+// const db = new Sequelize('postgres://user:user@localhost:5432/hypermood')
 // Production
-// const pg = require('pg')
-// pg.defaults.ssl = true
-// const db = new Sequelize(process.env.DATABASE_URL, {
-//   ssl: true,
-//   dialectOptions: { ssl: { require: true, rejectUnauthorized: false } },
-// })
+const pg = require('pg')
+pg.defaults.ssl = true
+const db = new Sequelize(process.env.DATABASE_URL, {
+  ssl: true,
+  dialectOptions: { ssl: { require: true, rejectUnauthorized: false } },
+})
 
 /**
  * Function to define the structure of the database
@@ -700,10 +700,76 @@ async function insertFakeData() {
   const RoleArea11 = await RoleArea.create({
     role: 'Worker',
   })
+  const RoleArea12 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea13 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea14 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea15 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea16 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea17 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea18 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea19 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea111 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea112 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea113 = await RoleArea.create({
+    role: 'Worker',
+  })
   const RoleArea2 = await RoleArea.create({
     role: 'Responsible',
   })
   const RoleArea22 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea23 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea24 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea25 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea26 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea27 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea28 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea29 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea222 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea223 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea224 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea225 = await RoleArea.create({
     role: 'Worker',
   })
   const RoleArea3 = await RoleArea.create({
@@ -712,10 +778,97 @@ async function insertFakeData() {
   const RoleArea33 = await RoleArea.create({
     role: 'Worker',
   })
+  const RoleArea34 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea35 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea36 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea37 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea38 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea39 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea332 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea333 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea334 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea335 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea336 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea337 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea338 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea339 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea331 = await RoleArea.create({
+    role: 'Worker',
+  })
   const RoleArea4 = await RoleArea.create({
     role: 'Responsible',
   })
   const RoleArea44 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea45 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea46 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea47 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea48 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea49 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea444 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea445 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea446 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea447 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea448 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea449 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea4441 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea4442 = await RoleArea.create({
+    role: 'Worker',
+  })
+  const RoleArea4443 = await RoleArea.create({
     role: 'Worker',
   })
   const RoleService1 = await RoleService.create({
@@ -942,12 +1095,63 @@ async function insertFakeData() {
 
   await firstArea.addRoleArea(RoleArea1.id)
   await firstArea.addRoleArea(RoleArea11.id)
+  await firstArea.addRoleArea(RoleArea12.id)
+  await firstArea.addRoleArea(RoleArea13.id)
+  await firstArea.addRoleArea(RoleArea14.id)
+  await firstArea.addRoleArea(RoleArea15.id)
+  await firstArea.addRoleArea(RoleArea16.id)
+  await firstArea.addRoleArea(RoleArea17.id)
+  await firstArea.addRoleArea(RoleArea18.id)
+  await firstArea.addRoleArea(RoleArea19.id)
+  await firstArea.addRoleArea(RoleArea111.id)
+  await firstArea.addRoleArea(RoleArea112.id)
+  await firstArea.addRoleArea(RoleArea113.id)
   await secondArea.addRoleArea(RoleArea2.id)
   await secondArea.addRoleArea(RoleArea22.id)
+  await secondArea.addRoleArea(RoleArea23.id)
+  await secondArea.addRoleArea(RoleArea24.id)
+  await secondArea.addRoleArea(RoleArea25.id)
+  await secondArea.addRoleArea(RoleArea26.id)
+  await secondArea.addRoleArea(RoleArea27.id)
+  await secondArea.addRoleArea(RoleArea28.id)
+  await secondArea.addRoleArea(RoleArea29.id)
+  await secondArea.addRoleArea(RoleArea222.id)
+  await secondArea.addRoleArea(RoleArea223.id)
+  await secondArea.addRoleArea(RoleArea224.id)
+  await secondArea.addRoleArea(RoleArea225.id)
   await thirdArea.addRoleArea(RoleArea3.id)
   await thirdArea.addRoleArea(RoleArea33.id)
+  await thirdArea.addRoleArea(RoleArea34.id)
+  await thirdArea.addRoleArea(RoleArea35.id)
+  await thirdArea.addRoleArea(RoleArea36.id)
+  await thirdArea.addRoleArea(RoleArea37.id)
+  await thirdArea.addRoleArea(RoleArea38.id)
+  await thirdArea.addRoleArea(RoleArea39.id)
+  await thirdArea.addRoleArea(RoleArea331.id)
+  await thirdArea.addRoleArea(RoleArea332.id)
+  await thirdArea.addRoleArea(RoleArea334.id)
+  await thirdArea.addRoleArea(RoleArea335.id)
+  await thirdArea.addRoleArea(RoleArea336.id)
+  await thirdArea.addRoleArea(RoleArea337.id)
+  await thirdArea.addRoleArea(RoleArea338.id)
+  await thirdArea.addRoleArea(RoleArea333.id)
+  await thirdArea.addRoleArea(RoleArea339.id)
   await fourthArea.addRoleArea(RoleArea4.id)
   await fourthArea.addRoleArea(RoleArea44.id)
+  await fourthArea.addRoleArea(RoleArea45.id)
+  await fourthArea.addRoleArea(RoleArea46.id)
+  await fourthArea.addRoleArea(RoleArea47.id)
+  await fourthArea.addRoleArea(RoleArea48.id)
+  await fourthArea.addRoleArea(RoleArea49.id)
+  await fourthArea.addRoleArea(RoleArea444.id)
+  await fourthArea.addRoleArea(RoleArea445.id)
+  await fourthArea.addRoleArea(RoleArea446.id)
+  await fourthArea.addRoleArea(RoleArea447.id)
+  await fourthArea.addRoleArea(RoleArea448.id)
+  await fourthArea.addRoleArea(RoleArea449.id)
+  await fourthArea.addRoleArea(RoleArea4441.id)
+  await fourthArea.addRoleArea(RoleArea4442.id)
+  await fourthArea.addRoleArea(RoleArea4443.id)
 
   await database1.addRoleService(RoleService1.id)
   await database1.addRoleService(RoleService11.id)
@@ -1015,98 +1219,127 @@ async function insertFakeData() {
   await security7.addRoleService(RoleService29.id)
   await security7.addRoleService(RoleService290.id)
 
-  await person1.addRoleService(RoleService1.id)
-  await person1.addRoleService(RoleService16.id)
-  await person1.addRoleService(RoleService22.id)
-  await person1.addRoleService(RoleService322.id)
   await person1.addRoleArea(RoleArea1.id)
-  await person2.addRoleService(RoleService11.id)
-  await person2.addRoleService(RoleService17.id)
   await person2.addRoleArea(RoleArea2.id)
-  await person3.addRoleService(RoleService2.id)
-  await person3.addRoleService(RoleService18.id)
   await person3.addRoleArea(RoleArea3.id)
-  await person4.addRoleService(RoleService22.id)
-  await person4.addRoleService(RoleService19.id)
   await person4.addRoleArea(RoleArea4.id)
   await person5.addRoleService(RoleService3.id)
   await person5.addRoleService(RoleService20.id)
   await person5.addRoleArea(RoleArea11.id)
+  await person5.addRoleArea(RoleArea34.id)
   await person6.addRoleService(RoleService33.id)
   await person6.addRoleService(RoleService21.id)
-  await person6.addRoleArea(RoleArea11.id)
+  await person6.addRoleArea(RoleArea12.id)
+  await person6.addRoleArea(RoleArea35.id)
   await person7.addRoleService(RoleService4.id)
   await person7.addRoleService(RoleService22.id)
-  await person7.addRoleArea(RoleArea11.id)
+  await person7.addRoleService(RoleService1.id)
+  await person7.addRoleService(RoleService16.id)
+  await person7.addRoleService(RoleService22.id)
+  await person7.addRoleService(RoleService322.id)
+  await person7.addRoleArea(RoleArea13.id)
+  await person7.addRoleArea(RoleArea36.id)
   await person8.addRoleService(RoleService44.id)
   await person8.addRoleService(RoleService23.id)
-  await person8.addRoleArea(RoleArea22.id)
+  await person8.addRoleArea(RoleArea14.id)
+  await person8.addRoleArea(RoleArea45.id)
   await person9.addRoleService(RoleService5.id)
   await person9.addRoleService(RoleService24.id)
-  await person9.addRoleArea(RoleArea22.id)
+  await person9.addRoleService(RoleService11.id)
+  await person9.addRoleService(RoleService17.id)
+  await person9.addRoleArea(RoleArea15.id)
+  await person9.addRoleArea(RoleArea37.id)
+  await person9.addRoleArea(RoleArea46.id)
   await person10.addRoleService(RoleService55.id)
   await person10.addRoleService(RoleService25.id)
-  await person10.addRoleArea(RoleArea22.id)
+  await person10.addRoleArea(RoleArea16.id)
+  await person10.addRoleArea(RoleArea47.id)
   await person11.addRoleService(RoleService6.id)
   await person11.addRoleService(RoleService26.id)
-  await person11.addRoleArea(RoleArea22.id)
+  await person11.addRoleArea(RoleArea17.id)
+  await person11.addRoleArea(RoleArea48.id)
   await person12.addRoleService(RoleService66.id)
   await person12.addRoleService(RoleService27.id)
-  await person12.addRoleArea(RoleArea22.id)
+  await person12.addRoleArea(RoleArea18.id)
+  await person12.addRoleArea(RoleArea49.id)
   await person13.addRoleService(RoleService7.id)
   await person13.addRoleService(RoleService28.id)
-  await person13.addRoleArea(RoleArea22.id)
+  await person13.addRoleArea(RoleArea19.id)
+  await person13.addRoleArea(RoleArea444.id)
   await person14.addRoleService(RoleService77.id)
   await person14.addRoleService(RoleService29.id)
-  await person14.addRoleArea(RoleArea22.id)
+  await person14.addRoleArea(RoleArea445.id)
+  await person14.addRoleArea(RoleArea111.id)
   await person15.addRoleService(RoleService8.id)
   await person15.addRoleService(RoleService130.id)
   await person15.addRoleArea(RoleArea22.id)
   await person16.addRoleService(RoleService88.id)
   await person16.addRoleService(RoleService180.id)
-  await person16.addRoleArea(RoleArea22.id)
+  await person16.addRoleService(RoleService2.id)
+  await person16.addRoleArea(RoleArea38.id)
+  await person16.addRoleArea(RoleArea23.id)
+  await person16.addRoleArea(RoleArea113.id)
   await person17.addRoleService(RoleService9.id)
   await person17.addRoleService(RoleService190.id)
-  await person17.addRoleArea(RoleArea22.id)
+  await person17.addRoleService(RoleService10.id)
+  await person17.addRoleService(RoleService18.id)
+  await person17.addRoleArea(RoleArea24.id)
+  await person17.addRoleArea(RoleArea39.id)
   await person18.addRoleService(RoleService99.id)
   await person18.addRoleService(RoleService200.id)
-  await person18.addRoleArea(RoleArea33.id)
+  await person18.addRoleArea(RoleArea25.id)
+  await person18.addRoleArea(RoleArea333.id)
   await person19.addRoleService(RoleService100.id)
   await person19.addRoleService(RoleService220.id)
-  await person19.addRoleArea(RoleArea33.id)
+  await person19.addRoleArea(RoleArea26.id)
+  await person19.addRoleArea(RoleArea331.id)
   await person20.addRoleService(RoleService111.id)
   await person20.addRoleService(RoleService230.id)
-  await person20.addRoleArea(RoleArea33.id)
+  await person20.addRoleArea(RoleArea27.id)
+  await person20.addRoleArea(RoleArea446.id)
   await person21.addRoleService(RoleService110.id)
   await person21.addRoleService(RoleService240.id)
-  await person21.addRoleArea(RoleArea33.id)
+  await person21.addRoleArea(RoleArea447.id)
+  await person21.addRoleArea(RoleArea28.id)
   await person22.addRoleService(RoleService12.id)
   await person22.addRoleService(RoleService250.id)
-  await person22.addRoleArea(RoleArea33.id)
+  await person22.addRoleArea(RoleArea29.id)
+  await person22.addRoleArea(RoleArea448.id)
   await person23.addRoleService(RoleService120.id)
   await person23.addRoleService(RoleService260.id)
-  await person23.addRoleArea(RoleArea33.id)
+  await person23.addRoleArea(RoleArea222.id)
+  await person23.addRoleArea(RoleArea449.id)
   await person24.addRoleService(RoleService13.id)
   await person24.addRoleService(RoleService270.id)
-  await person24.addRoleArea(RoleArea33.id)
+  await person24.addRoleService(RoleService22.id)
+  await person24.addRoleService(RoleService19.id)
+  await person24.addRoleArea(RoleArea112.id)
+  await person24.addRoleArea(RoleArea223.id)
+  await person24.addRoleArea(RoleArea4441.id)
+  await person24.addRoleArea(RoleArea332.id)
   await person25.addRoleService(RoleService170.id)
   await person25.addRoleService(RoleService280.id)
-  await person25.addRoleArea(RoleArea33.id)
+  await person25.addRoleArea(RoleArea339.id)
+  await person25.addRoleArea(RoleArea4442.id)
   await person26.addRoleService(RoleService14.id)
   await person26.addRoleService(RoleService290.id)
-  await person26.addRoleArea(RoleArea44.id)
+  await person26.addRoleArea(RoleArea334.id)
+  await person26.addRoleArea(RoleArea4443.id)
   await person27.addRoleService(RoleService140.id)
   await person27.addRoleService(RoleService210.id)
-  await person27.addRoleArea(RoleArea44.id)
+  await person27.addRoleArea(RoleArea335.id)
   await person28.addRoleService(RoleService15.id)
   await person28.addRoleService(RoleService300.id)
-  await person28.addRoleArea(RoleArea44.id)
+  await person28.addRoleArea(RoleArea224.id)
+  await person28.addRoleArea(RoleArea336.id)
   await person29.addRoleService(RoleService150.id)
   await person29.addRoleService(RoleService3001.id)
-  await person29.addRoleArea(RoleArea44.id)
+  await person29.addRoleService(RoleService222.id)
+  await person29.addRoleArea(RoleArea337.id)
+  await person29.addRoleArea(RoleArea225.id)
   await person30.addRoleService(RoleService160.id)
   await person30.addRoleService(RoleService32.id)
-  await person30.addRoleArea(RoleArea44.id)
+  await person30.addRoleArea(RoleArea338.id)
 }
 /**
  * Function to initialize the database. This is exported and called in the main api.js file
