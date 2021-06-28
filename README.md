@@ -11,7 +11,10 @@ https://hypermood.herokuapp.com
 * [Contribution](#contribution)
 * [Technologies used](#technologies)
 * [Components developed](#components)
+* [Plugins](#plugins)
+* [Comments about the usage of the framework](#comments)
 * [Known issues](#known)
+* [Build setup](#build)
 * [Authors](#authors)
 
 <a name="about"></a>
@@ -50,6 +53,11 @@ To find out more click [here](https://sequelize.org).
 
 <a name="components"></a>
 ## Components developed
+
+### Areas
+
+#### AreaName
+This component consists mainly of a logo and a text and is used to show the area with the respective logo on the services and areas page. Clicking on it allows you to visit the area page with the required id to be provided. It also includes an optional description. All information is provided through attributes. It helps us for consistency between pages and code readability.
 
 ### Navigation
 
@@ -115,6 +123,18 @@ Vuex is a state management pattern and library for Vue.js applications. It serve
 We used this plugin to manage the Multi Modal Chatbot messages.
 To find out more about the Vuex click [here](https://vuex.vuejs.org/#what-is-a-state-management-pattern).
 
+### ESLint
+EsLint is a program that comes to the rescue in order to write JavaScript correctly. It statically analyzes your code to quickly find problems.  
+ESLint is built into most text editors and you can run ESLint as part of your continuous integration pipeline.  
+It helped us work more fluidly on our own and as a team.  
+To find out more about the ESLint click [here](https://eslint.org).
+
+### Prettier
+Prettier is an opinionated code formatter. It enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary.  
+It helped us work more fluidly on our own and as a team.  
+To find out more about the Prettier click [here](https://prettier.io).
+
+<a name="commments"></a>
 ## Comments about the usage of the framework
 Thanks to Nuxt.js and Vue.js we were able to:
 
@@ -132,7 +152,8 @@ Thanks to Nuxt.js and Vue.js we were able to:
 * Browsing the site using HTTP protocol instead of HTTPS causes issues in retrieving correctly the pages.
 * Heroku's dyno if not used for a long time may crash on the first boot. This is due to the usage of Heroku's free plan.
 
-## Build Setup
+<a name="build"></a>
+## Build setup
 
 ```bash
 # install dependencies

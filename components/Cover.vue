@@ -78,7 +78,7 @@ export default {
   top: 0;
   left: 0;
   background-color: black;
-  opacity: 0.5;
+  opacity: 0.6;
   z-index: +1;
 }
 
